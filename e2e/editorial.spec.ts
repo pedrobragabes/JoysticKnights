@@ -33,6 +33,16 @@ test("home apresenta o perfil e conteúdo editorial atual", async ({ page }) => 
   expect(violations.violations.filter((item) => item.impact === "critical")).toEqual([]);
 });
 
+test("destaques navegam como carrossel por controles e indicadores", async ({ page }) => {
+  await page.goto("/");
+  const carousel = page.getByTestId("featured-carousel");
+  await carousel.hover();
+  await expect(carousel.getByRole("button", { name: "Próximo destaque" })).toBeVisible();
+  await carousel.getByRole("button", { name: "Próximo destaque" }).click();
+  await expect(carousel.getByRole("button", { name: "Ir para destaque 2" })).toHaveAttribute("aria-current", "true");
+  await expect(carousel.getByRole("link").nth(1)).toBeVisible();
+});
+
 test("tema começa escuro, alterna para claro e preserva a escolha", async ({ page }) => {
   await page.goto("/");
 
@@ -96,6 +106,25 @@ test("matéria atual renderiza conteúdo, autoria, SEO e espaço de anúncio", a
 
   const violations = await new AxeBuilder({ page }).analyze();
   expect(violations.violations.filter((item) => item.impact === "critical")).toEqual([]);
+});
+
+test("imagens da matéria abrem galeria navegável", async ({ page }) => {
+  const { story } = getEditorialFixture();
+  await page.goto(story.path);
+  const articleImages = page.locator('.article-body img[role="button"]');
+  test.skip(await articleImages.count() === 0, "A matéria editorial descoberta não contém galeria.");
+
+  await articleImages.first().click();
+  const dialog = page.getByRole("dialog", { name: "Galeria de imagens da matéria" });
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByRole("button", { name: "Fechar galeria" })).toBeFocused();
+  const imageCount = await articleImages.count();
+  if (imageCount > 1) {
+    await dialog.getByRole("button", { name: "Próxima imagem" }).click();
+    await expect(dialog.getByText(`Imagem 2 de ${imageCount}`, { exact: true })).toBeVisible();
+  }
+  await page.keyboard.press("Escape");
+  await expect(dialog).toBeHidden();
 });
 
 test("página institucional publicada é servida pelo front", async ({ page }) => {

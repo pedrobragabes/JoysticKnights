@@ -1,7 +1,8 @@
 import type { ArticleHeading } from "@/lib/content/sanitize";
+import { ArticleGallery } from "./article-gallery";
 
 export function ArticleBody({ html }: { html: string }) {
-  return <div className="article-body" dangerouslySetInnerHTML={{ __html: html }} />;
+  return <ArticleGallery html={html} />;
 }
 
 export function ArticleToc({ headings }: { headings: ArticleHeading[] }) {

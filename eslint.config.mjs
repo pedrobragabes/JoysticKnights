@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+    "arquivoswordpress/**",
     "next-env.d.ts",
   ]),
 ]);

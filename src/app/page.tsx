@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const [{ items: stories }, categories] = await Promise.all([
-    getHomepageStories(18),
+    getHomepageStories(24),
     getCategories(),
   ]);
 
-  const heroStories = stories.slice(0, 4);
-  const highlights = stories.slice(4, 12);
-  const latest = stories.slice(12);
+  const heroStories = stories.slice(0, 8);
+  const highlights = stories.slice(8, 16);
+  const latest = stories.slice(16);
   const channels = siteConfig.featuredChannelSlugs
     .map((slug) => categories.find((category) => category.slug === slug))
     .filter((category) => category !== undefined);

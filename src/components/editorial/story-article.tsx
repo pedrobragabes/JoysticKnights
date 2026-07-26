@@ -12,7 +12,7 @@ import { ArticleBody, ArticleToc } from "./article-body";
 import { StoryCard } from "./story-card";
 
 export async function StoryArticle({ story, preview = false }: { story: Story; preview?: boolean }) {
-  const article = prepareArticleContent(story.content);
+  const article = prepareArticleContent(story.content, { featuredImageUrl: story.image?.url });
   const [related, comments] = await Promise.all([
     getStories({ categoryId: story.primaryCategory?.id, exclude: [story.id], perPage: 3 }),
     preview ? Promise.resolve([]) : getCommentsByPostId(story.id),

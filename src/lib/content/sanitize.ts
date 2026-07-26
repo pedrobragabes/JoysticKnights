@@ -8,8 +8,28 @@ export type ArticleHeading = {
   level: 2 | 3;
 };
 
-function sanitize(html: string) {
+type PrepareArticleOptions = {
+  featuredImageUrl?: string;
+};
+
+function imageKey(value: string | undefined) {
+  if (!value || value.startsWith("data:image/")) return "";
+  try {
+    const url = new URL(value, "https://wordpress.invalid");
+    return decodeURIComponent(url.pathname)
+      .replace(/-\d+x\d+(?=\.[a-z0-9]+$)/i, "")
+      .replace(/-scaled(?=\.[a-z0-9]+$)/i, "")
+      .toLowerCase();
+  } catch {
+    return value.split(/[?#]/, 1)[0].toLowerCase();
+  }
+}
+
+function sanitize(html: string, options: PrepareArticleOptions = {}) {
   const internalHosts = new Set<string>();
+  const seenImages = new Set<string>();
+  const featuredImageKey = imageKey(options.featuredImageUrl);
+  if (featuredImageKey) seenImages.add(featuredImageKey);
   for (const value of [getSiteUrl(), siteConfig.defaultSiteUrl, process.env.WORDPRESS_API_URL ?? siteConfig.defaultWordPressApiUrl]) {
     try {
       internalHosts.add(new URL(value).hostname.replace(/^www\./, ""));
@@ -68,6 +88,12 @@ function sanitize(html: string) {
         if (lazySrc && hasPlaceholder) safeAttributes.src = lazySrc;
         if (lazySrcset && !attribs.srcset) safeAttributes.srcset = lazySrcset;
 
+        const key = imageKey(safeAttributes.src);
+        if (key && seenImages.has(key)) {
+          return { tagName: "span", attribs: { "data-duplicate-image": "true" } };
+        }
+        if (key) seenImages.add(key);
+
         safeAttributes.loading = attribs.loading ?? "lazy";
         safeAttributes.decoding = "async";
         return { tagName, attribs: safeAttributes };
@@ -77,13 +103,13 @@ function sanitize(html: string) {
         attribs: { ...attribs, loading: "lazy" },
       }),
     },
-  });
+  }).replace(/<span data-duplicate-image="true"><\/span>/g, "");
 }
 
-export function prepareArticleContent(html: string) {
+export function prepareArticleContent(html: string, options: PrepareArticleOptions = {}) {
   const usedIds = new Map<string, number>();
   const headings: ArticleHeading[] = [];
-  const safeHtml = sanitize(html).replace(
+  const safeHtml = sanitize(html, options).replace(
     /<h([23])([^>]*)>([\s\S]*?)<\/h\1>/gi,
     (match, rawLevel: string, rawAttributes: string, innerHtml: string) => {
       const label = plainText(innerHtml);

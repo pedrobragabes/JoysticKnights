@@ -249,6 +249,24 @@ img {
   width: 100%;
   height: auto;
   border-radius: var(--radius-card);
+  cursor: zoom-in;
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+.article-body figure img:hover,
+.article-body > img:hover,
+.article-body .wp-block-image img:hover {
+  filter: brightness(1.06);
+}
+
+.article-body img[role="button"]:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 4px;
+}
+
+.article-body figure:not(:has(img, picture, video, iframe)),
+.article-body p:empty {
+  display: none;
 }
 
 .article-body figcaption {

@@ -36,6 +36,24 @@ describe("prepareArticleContent", () => {
     expect(result.html).toContain('srcset="https://joysticknights.com.br/wp-content/uploads/capa-400.webp 400w"');
     expect(result.html).toContain('loading="lazy"');
   });
+
+  it("remove do corpo a imagem que já aparece como destaque", () => {
+    const result = prepareArticleContent(
+      '<figure><img src="https://joysticknights.com.br/wp-content/uploads/2026/07/capa-1024x576.webp" alt="Capa"><figcaption>Imagem de divulgação</figcaption></figure><p>Começo da matéria.</p>',
+      { featuredImageUrl: "https://cms.joysticknights.com.br/wp-content/uploads/2026/07/capa.webp" },
+    );
+
+    expect(result.html).not.toContain("<img");
+    expect(result.html).toContain("Começo da matéria.");
+  });
+
+  it("mantém somente uma ocorrência de imagens repetidas no conteúdo", () => {
+    const result = prepareArticleContent(
+      '<figure><img src="https://joysticknights.com.br/wp-content/uploads/cena.jpg" alt="Cena"></figure><figure><img src="https://joysticknights.com.br/wp-content/uploads/cena-800x450.jpg" alt="Cena repetida"></figure>',
+    );
+
+    expect(result.html.match(/<img/g)).toHaveLength(1);
+  });
 });
 
 describe("sanitizeCommentHtml", () => {
