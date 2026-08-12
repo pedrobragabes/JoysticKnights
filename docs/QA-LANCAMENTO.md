@@ -10,10 +10,10 @@
 | ESLint | aprovado |
 | TypeScript / route types | aprovado |
 | Testes unitários | 12 aprovados em 4 arquivos |
-| Build Next.js 16 | aprovado; 44 páginas/handlers gerados |
+| Build Next.js 16 | aprovado; 171 páginas/handlers gerados no baseline atual |
 | E2E Chromium desktop/mobile | 13 aprovados; 1 cenário desktop corretamente ignorado por ser exclusivo de mobile |
 | Acessibilidade automatizada | nenhuma violação crítica do axe na home e matéria |
-| Auditoria npm moderada+ | 0 vulnerabilidades após override compatível do PostCSS 8.5.10 |
+| Auditoria npm moderada+ | 0 vulnerabilidades após atualização do PostCSS 8.5.26 e Nano ID 3.3.18 |
 | REST WordPress | 508 posts, 14 categorias e 9 autores auditados |
 | SEO técnico | sitemap, robots e JSON-LD verificados por E2E |
 | Segurança editorial | preview/revalidação sem segredo retornam 401; webhook válido coberto por E2E |

@@ -230,7 +230,6 @@ REVALIDATE_SECRET=<segredo-do-provedor-diferente>
 7. No repositório, valide a build:
 
 ```powershell
-Set-Location .\web
 npm ci
 npm run check
 npm run test:e2e

@@ -1,0 +1,39 @@
+name: Uptime smoke test
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: joysticknights-uptime
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SITE_URL: https://joysticknights.com.br
+      CMS_URL: ${{ vars.JOYSTICK_CMS_URL }}
+    steps:
+      - name: Check public endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          for path in / /robots.txt /sitemap.xml; do
+            curl --fail --silent --show-error --location \
+              --retry 2 --retry-delay 3 --max-time 20 \
+              "${SITE_URL}${path}" > /dev/null
+          done
+
+      - name: Check WordPress REST API
+        if: env.CMS_URL != ''
+        shell: bash
+        run: |
+          curl --fail --silent --show-error --location \
+            --retry 2 --retry-delay 3 --max-time 20 \
+            "${CMS_URL%/}/wp-json/wp/v2/posts?per_page=1&_fields=id" > /dev/null

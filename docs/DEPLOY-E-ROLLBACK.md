@@ -16,34 +16,34 @@ O alvo preferencial é Vercel para o Next.js e a hospedagem atual para o WordPre
 
 ## Estratégia de domínio
 
-1. Baixe o TTL de `promogamesbr.com` e `www` para 300 segundos pelo menos 24 horas antes.
-2. Crie `cms.promogamesbr.com` apontando para a origem WordPress, com HTTPS e autenticação forte no painel.
+1. Baixe o TTL de `joysticknights.com.br` e `www` para 300 segundos pelo menos 24 horas antes.
+2. Crie `cms.joysticknights.com.br` apontando para a origem WordPress, com HTTPS e autenticação forte no painel.
 3. Garanta que REST, Application Passwords e uploads funcionem nesse host.
-4. Configure `WORDPRESS_API_URL=https://cms.promogamesbr.com/wp-json/wp/v2` no front.
+4. Configure `WORDPRESS_API_URL=https://cms.joysticknights.com.br/wp-json/wp/v2` no front.
 5. Preserve mídia com uma destas opções:
    - manter `/wp-content/uploads/*` em proxy para a origem WordPress; ou
-   - reescrever URLs para `cms.promogamesbr.com`/CDN. O Next já aceita os dois hosts.
+   - reescrever URLs para `cms.joysticknights.com.br`/CDN. O Next já aceita os dois hosts.
 6. Depois do staging aprovado, aponte o domínio público ao Next.js.
 
 Se o WordPress precisar continuar no domínio principal durante a transição, o edge deve enviar `/wp-json/*`, `/wp-admin/*`, `/wp-login.php` e `/wp-content/uploads/*` à origem WordPress e todo o restante ao Next.js.
 
 ## Deploy de staging
 
-1. Crie o projeto do front com diretório raiz `web` e Node.js 22.
-2. Cadastre todas as variáveis de [web/.env.example](../web/.env.example). Use segredos diferentes entre preview e produção.
+1. Crie o projeto do front usando a raiz do repositório e Node.js 22.
+2. Cadastre todas as variáveis de [.env.example](../.env.example). Use segredos diferentes entre preview e produção.
 3. Rode `npm ci`, `npm run check` e `npm run test:e2e` no build/CI.
-4. Publique em `novo.promogamesbr.com`.
+4. Publique em `beta.joysticknights.com.br`, com indexação desabilitada.
 5. Copie `wordpress/promogames-core` para `wp-content/plugins/`, ative o plugin e configure no `wp-config.php`:
 
 ```php
-define('PROMOGAMES_FRONTEND_URL', 'https://novo.promogamesbr.com');
+define('PROMOGAMES_FRONTEND_URL', 'https://beta.joysticknights.com.br');
 define('PROMOGAMES_PREVIEW_SECRET', 'mesmo-valor-de-DRAFT_MODE_SECRET');
-define('PROMOGAMES_REVALIDATE_URL', 'https://novo.promogamesbr.com/api/revalidate/');
+define('PROMOGAMES_REVALIDATE_URL', 'https://beta.joysticknights.com.br/api/revalidate/');
 define('PROMOGAMES_REVALIDATE_SECRET', 'mesmo-valor-de-REVALIDATE_SECRET');
 ```
 
 6. Crie um usuário técnico somente com a capacidade necessária e uma Application Password exclusiva.
-7. Execute `npm run verify:production -- https://novo.promogamesbr.com` e o checklist de QA.
+7. Execute `npm run verify:production -- https://beta.joysticknights.com.br` e o checklist de QA.
 
 ## Cutover
 

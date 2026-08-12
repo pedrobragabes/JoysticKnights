@@ -160,7 +160,6 @@ Não use literalmente os textos em maiúsculas. Os pares precisam coincidir, mas
 No computador, a partir da raiz deste projeto:
 
 ```powershell
-Set-Location .\web
 npm ci
 npm run check
 npm run test:e2e
@@ -177,7 +176,7 @@ No plano Business:
 2. Comece no domínio temporário da Hostinger.
 3. Escolha **Next.js** e **Node.js 22**.
 4. Conecte o GitHub ou envie ZIP.
-5. Este repositório guarda o app em `web/`. Defina `web` como raiz do projeto. Se o formulário não oferecer essa opção, envie um ZIP com o conteúdo de `web` na raiz, de modo que `package.json` não fique dentro de uma pasta extra.
+5. Este repositório guarda o app na própria raiz. Mantenha a raiz do projeto vazia no formulário da Hostinger (ou use `.` quando ele exigir um valor) e confirme que `package.json` aparece no nível superior.
 6. Use instalação `npm ci`, build `npm run build` e início `npm run start`.
 7. Não use exportação estática: preview, comentários, revalidação, SSR e ISR precisam do servidor Node.
 8. Cadastre as variáveis abaixo no hPanel e faça o deploy.
@@ -225,7 +224,6 @@ Teste em desktop e celular:
 Execute também:
 
 ```powershell
-Set-Location .\web
 npm run verify:production -- https://beta.joysticknights.com.br
 ```
 
