@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "overrides": {
-    "sharp": "0.35.0",
+    "sharp": "0.35.3",
     "next": {
       "postcss": "8.5.26"
     }
@@ -22,9 +22,9 @@
     "verify:production": "node scripts/verify-production.mjs"
   },
   "dependencies": {
-    "next": "16.2.11",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "sanitize-html": "^2.17.6",
     "server-only": "^0.0.1"
   },
@@ -37,7 +37,7 @@
     "@types/react-dom": "^19",
     "@types/sanitize-html": "^2.16.1",
     "eslint": "^9",
-    "eslint-config-next": "16.2.11",
+    "eslint-config-next": "16.3.0",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.10"
