@@ -79,17 +79,27 @@ const nextConfig: NextConfig = {
     ];
   },
   async headers() {
-    return [{
-      source: "/(.*)",
-      headers: [
-        { key: "Content-Security-Policy", value: contentSecurityPolicy },
-        { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-        { key: "X-Content-Type-Options", value: "nosniff" },
-        { key: "X-Frame-Options", value: "SAMEORIGIN" },
-        { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
-        ...(isDevelopment ? [] : [{ key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" }]),
-      ],
-    }];
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "Content-Security-Policy", value: contentSecurityPolicy },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
+          ...(isDevelopment ? [] : [{ key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" }]),
+        ],
+      },
+      {
+        // Hostinger's edge cache cannot be purged by Next.js revalidateTag/revalidatePath.
+        // Keep Next's data cache, but make editorial HTML/RSC bypass the external CDN.
+        source: "/((?!api|_next/static|_next/image|wp-json|wp-content|wp-includes|feed|ads\\.txt|robots\\.txt|sitemap\\.xml|favicon\\.ico).*)",
+        headers: [
+          { key: "Cache-Control", value: "private, no-cache, no-store, max-age=0, must-revalidate" },
+        ],
+      },
+    ];
   },
 };
 
