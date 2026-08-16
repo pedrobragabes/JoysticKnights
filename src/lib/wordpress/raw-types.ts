@@ -61,7 +61,9 @@ export type RawPost = {
   slug: string;
   link: string;
   date: string;
+  date_gmt?: string | null;
   modified: string;
+  modified_gmt?: string | null;
   title: RawRendered;
   excerpt: RawRendered;
   content?: RawRendered;
@@ -95,7 +97,9 @@ export type RawPage = {
   slug: string;
   link: string;
   date: string;
+  date_gmt?: string | null;
   modified: string;
+  modified_gmt?: string | null;
   title: RawRendered;
   excerpt?: RawRendered;
   content?: RawRendered;

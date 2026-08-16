@@ -10,7 +10,9 @@ import type { Paginated, Story, StoryQuery, WordPressAuthor, WordPressComment, W
 const LIST_FIELDS = [
   "id",
   "date",
+  "date_gmt",
   "modified",
+  "modified_gmt",
   "slug",
   "link",
   "title",
@@ -27,7 +29,7 @@ const LIST_FIELDS = [
 ].join(",");
 
 const DETAIL_FIELDS = `${LIST_FIELDS},content`;
-const PAGE_LIST_FIELDS = "id,date,modified,slug,link,title,excerpt,parent,menu_order,promogames_seo";
+const PAGE_LIST_FIELDS = "id,date,date_gmt,modified,modified_gmt,slug,link,title,excerpt,parent,menu_order,promogames_seo";
 const PAGE_DETAIL_FIELDS = `${PAGE_LIST_FIELDS},content`;
 const COMMENT_FIELDS = "id,post,parent,author_name,date,content,status,type";
 const TERM_FIELDS = "id,name,slug,link,taxonomy,parent,count,description";

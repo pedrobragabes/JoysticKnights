@@ -8,7 +8,9 @@ function rawPost(link: string): RawPost {
     slug: "uma-grande-materia",
     link,
     date: "2026-07-20T12:00:00",
+    date_gmt: "2026-07-20T15:00:00",
     modified: "2026-07-20T13:00:00",
+    modified_gmt: "2026-07-20T16:00:00",
     title: { rendered: "Uma grande matéria" },
     excerpt: { rendered: "<p>Resumo</p>" },
     content: { rendered: "<p>Conteúdo</p>" },
@@ -25,6 +27,8 @@ describe("mapeamento de permalinks WordPress", () => {
     expect(mapPost(rawPost("https://promogamesbr.com/uma-grande-materia/"))).toMatchObject({
       href: "/uma-grande-materia/",
       commentStatus: "open",
+      publishedAt: "2026-07-20T15:00:00Z",
+      modifiedAt: "2026-07-20T16:00:00Z",
     });
     expect(mapPost(rawPost("https://joysticknights.com.br/analises/uma-grande-materia/")).href).toBe("/analises/uma-grande-materia/");
   });
@@ -118,7 +122,9 @@ describe("mapPage", () => {
       slug: "sobre",
       link: "https://joysticknights.com.br/sobre/",
       date: "2026-07-01T10:00:00",
+      date_gmt: "2026-07-01T13:00:00",
       modified: "2026-07-02T10:00:00",
+      modified_gmt: "2026-07-02T13:00:00",
       title: { rendered: "Sobre &amp; equipe" },
       excerpt: { rendered: "<p>Conheça o projeto.</p>" },
       content: { rendered: "<h2>Nossa história</h2><p>Texto</p>" },
@@ -140,6 +146,8 @@ describe("mapPage", () => {
       excerpt: "Conheça o projeto.",
       parentId: 0,
       menuOrder: 2,
+      publishedAt: "2026-07-01T13:00:00Z",
+      modifiedAt: "2026-07-02T13:00:00Z",
       seo: {
         title: "Conheça a equipe",
         description: "Quem escreve no site.",

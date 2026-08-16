@@ -34,7 +34,7 @@ test("matéria real renderiza Gutenberg e autoria", async ({ page }) => {
   await expect(page.locator(".article-body")).toContainText("Avatar");
   await expect(page.getByText("Sobre o autor")).toBeVisible();
   expect(await page.locator('script[type="application/ld+json"]').textContent()).toContain("NewsArticle");
-  await expect(page.getByLabel("Publicidade")).toHaveCSS("min-height", "180px");
+  await expect(page.getByLabel("Publicidade")).toHaveCount(0);
   const violations = await new AxeBuilder({ page }).analyze();
   expect(violations.violations.filter((item) => item.impact === "critical")).toEqual([]);
 });

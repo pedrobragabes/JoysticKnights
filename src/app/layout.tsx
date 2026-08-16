@@ -21,7 +21,7 @@ const displayFont = Bricolage_Grotesque({
 });
 
 const siteUrl = getSiteUrl();
-const indexingEnabled = process.env.NEXT_PUBLIC_INDEXING_ENABLED !== "false";
+const indexingEnabled = process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true";
 const themeBootScript = `try{document.documentElement.dataset.theme=localStorage.getItem("joysticknights-theme")==="light"?"light":"dark"}catch{document.documentElement.dataset.theme="dark"}`;
 
 export const metadata: Metadata = {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { siteConfig } from "@/lib/site-config";
 import type { WordPressImage } from "@/lib/wordpress/types";
 
 export function StoryImage({
@@ -27,7 +28,15 @@ export function StoryImage({
         />
       ) : (
         <div className="absolute inset-0 grid place-items-center p-6 text-center font-display text-2xl font-black text-white/90">
-          PROMOGAMES
+          {siteConfig.profile === "joysticknights" ? (
+            <Image
+              src="/joysticknights-logo.webp"
+              width={240}
+              height={72}
+              alt=""
+              className="h-auto w-full max-w-60 object-contain"
+            />
+          ) : siteConfig.name.toUpperCase()}
         </div>
       )}
     </div>

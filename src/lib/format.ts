@@ -1,10 +1,12 @@
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: "America/Sao_Paulo",
   day: "2-digit",
   month: "short",
   year: "numeric",
 });
 
 const fullDateFormatter = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: "America/Sao_Paulo",
   day: "2-digit",
   month: "long",
   year: "numeric",

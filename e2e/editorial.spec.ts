@@ -93,7 +93,7 @@ test("navegação abre uma categoria existente no perfil", async ({ page, isMobi
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(new RegExp(escapeRegExp(selected.title), "i"));
 });
 
-test("matéria atual renderiza conteúdo, autoria, SEO e espaço de anúncio", async ({ page }) => {
+test("matéria atual renderiza conteúdo e oculta publicidade sem consentimento", async ({ page }) => {
   const { story } = getEditorialFixture();
   const response = await page.goto(story.path);
 
@@ -102,7 +102,7 @@ test("matéria atual renderiza conteúdo, autoria, SEO e espaço de anúncio", a
   await expect(page.locator(".article-body")).not.toBeEmpty();
   await expect(page.getByText("Sobre o autor")).toBeVisible();
   expect(await page.locator('script[type="application/ld+json"]').textContent()).toContain("NewsArticle");
-  await expect(page.getByLabel("Publicidade").first()).toHaveCSS("min-height", "180px");
+  await expect(page.getByLabel("Publicidade")).toHaveCount(0);
 
   const violations = await new AxeBuilder({ page }).analyze();
   expect(violations.violations.filter((item) => item.impact === "critical")).toEqual([]);
@@ -183,4 +183,19 @@ test("SEO técnico referencia a matéria descoberta", async ({ request }) => {
   const robots = await request.get("/robots.txt");
   expect(robots.status()).toBe(200);
   expect(await robots.text()).toContain("Sitemap:");
+});
+
+test("rotas inválidas não são indexáveis e aliases de matéria redirecionam", async ({ request }) => {
+  const { story } = getEditorialFixture();
+  const missing = await request.get("/rota-que-nao-existe-joysticknights-404/");
+  expect(missing.status()).toBe(404);
+  expect(await missing.text()).toMatch(/<meta[^>]+name=["']robots["'][^>]+noindex/i);
+
+  if (story.path !== `/${story.slug}/`) {
+    const alias = await request.get(`/${story.slug}/`, { maxRedirects: 0 });
+    expect(alias.status()).toBe(308);
+    const locations = alias.headers().location?.split(",").map((location) => location.trim()) ?? [];
+    expect(locations.length).toBeGreaterThan(0);
+    expect(locations.every((location) => location === story.path)).toBe(true);
+  }
 });

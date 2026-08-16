@@ -36,7 +36,17 @@ export async function StoryArticle({ story, preview = false }: { story: Story; p
         dateModified: story.modifiedAt,
         mainEntityOfPage: storyUrl,
         author: { "@type": "Person", name: story.author.name, url: `${siteUrl}${story.author.href}` },
-        publisher: { "@type": "Organization", name: siteConfig.name, url: siteUrl },
+        publisher: {
+          "@type": "Organization",
+          name: siteConfig.name,
+          url: siteUrl,
+          logo: {
+            "@type": "ImageObject",
+            url: `${siteUrl}/joysticknights-icon.png`,
+            width: 512,
+            height: 512,
+          },
+        },
         articleSection: story.primaryCategory?.name,
         keywords: [...story.categories, ...story.tags].map((term) => term.name).join(", "),
       },

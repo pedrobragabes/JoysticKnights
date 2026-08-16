@@ -35,10 +35,12 @@ export function AdSlot({
   name,
   format = "leaderboard",
   slot,
+  className = "",
 }: {
   name: string;
   format?: AdFormat;
   slot?: string;
+  className?: string;
 }) {
   const { hasConsent, isReady } = useConsent();
   const requestedRef = useRef<string | null>(null);
@@ -61,30 +63,28 @@ export function AdSlot({
     requestedRef.current = requestKey;
   }, [canRequestAd, requestKey]);
 
+  if (!canRequestAd || !client || !normalizedSlot) return null;
+
+  const activeRequestKey = `${client}:${normalizedSlot}`;
+
   return (
     <aside
-      className={`ad-slot ad-slot--${format} relative`}
+      className={`ad-slot ad-slot--${format} relative ${className}`}
       aria-label="Publicidade"
       data-ad-slot={name}
       data-ad-format={format}
-      data-ad-status={canRequestAd ? "requested" : isConfigured ? "awaiting-consent" : "unconfigured"}
+      data-ad-status="requested"
     >
-      {canRequestAd && client && normalizedSlot ? (
-        <>
-          <span className="pointer-events-none absolute left-2 top-1 text-[0.55rem] opacity-60">Publicidade</span>
-          <ins
-            key={requestKey}
-            className="adsbygoogle block min-h-full w-full"
-            style={{ display: "block" }}
-            data-ad-client={client}
-            data-ad-slot={normalizedSlot}
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          />
-        </>
-      ) : (
-        <span>Publicidade</span>
-      )}
+      <span className="pointer-events-none absolute left-2 top-1 text-[0.55rem] opacity-60">Publicidade</span>
+      <ins
+        key={activeRequestKey}
+        className="adsbygoogle block min-h-full w-full"
+        style={{ display: "block" }}
+        data-ad-client={client}
+        data-ad-slot={normalizedSlot}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </aside>
   );
 }

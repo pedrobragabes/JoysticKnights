@@ -124,6 +124,14 @@ function toPlatforms(value: string[] | string | undefined) {
   return value ? value.split(",").map((item) => item.trim()).filter(Boolean) : [];
 }
 
+function fromWordPressGmt(value: string | null | undefined, localFallback: string) {
+  const gmt = value?.trim();
+  if (gmt) return gmt.endsWith("Z") ? gmt : `${gmt}Z`;
+
+  const fallback = new Date(localFallback);
+  return Number.isNaN(fallback.getTime()) ? localFallback : fallback.toISOString();
+}
+
 export function mapPost(post: RawPost): Story {
   const terms = getTerms(post);
   const categories = terms.filter((term) => term.taxonomy === "category");
@@ -143,8 +151,8 @@ export function mapPost(post: RawPost): Story {
     excerpt: truncateText(post.excerpt.rendered),
     content,
     deck: plainText(post.meta?.promogames_deck ?? "") || undefined,
-    publishedAt: post.date,
-    modifiedAt: post.modified,
+    publishedAt: fromWordPressGmt(post.date_gmt, post.date),
+    modifiedAt: fromWordPressGmt(post.modified_gmt, post.modified),
     author: mapAuthor(post._embedded?.author?.[0]),
     image: mapImage(post._embedded?.["wp:featuredmedia"]?.[0]),
     seo: mapSeo(post.promogames_seo),
@@ -169,8 +177,8 @@ export function mapPage(page: RawPage): WordPressPage {
     title: plainText(page.title.rendered),
     excerpt: truncateText(page.excerpt?.rendered ?? ""),
     content: page.content?.rendered ?? "",
-    publishedAt: page.date,
-    modifiedAt: page.modified,
+    publishedAt: fromWordPressGmt(page.date_gmt, page.date),
+    modifiedAt: fromWordPressGmt(page.modified_gmt, page.modified),
     parentId: page.parent,
     menuOrder: page.menu_order,
     seo: mapSeo(page.promogames_seo),

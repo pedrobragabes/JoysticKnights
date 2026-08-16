@@ -45,7 +45,11 @@ export default async function Home() {
         </div>
       </section>
 
-      <div className="px-4 pt-8 sm:px-6 lg:px-10"><div className="mx-auto max-w-[1460px]"><AdSlot name="home-top" slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME_TOP} /></div></div>
+      <AdSlot
+        name="home-top"
+        slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME_TOP}
+        className="mx-4 mt-8 sm:mx-6 lg:mx-10 2xl:mx-auto 2xl:max-w-[1460px]"
+      />
 
       <section className="px-4 pt-16 sm:px-6 lg:px-10">
         <div className="mx-auto max-w-[1460px]">
