@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { useConsent } from "./consent-provider";
 
@@ -17,9 +18,10 @@ function normalizeAdsenseSlot(value: string | undefined) {
 }
 
 export function AdSenseAutoAds() {
+  const pathname = usePathname();
   const { hasConsent, isReady } = useConsent();
   const client = normalizeAdsenseClient(process.env.NEXT_PUBLIC_ADSENSE_CLIENT);
-  if (!client || !isReady || !hasConsent("marketing")) return null;
+  if (!client || !isReady || !hasConsent("marketing") || pathname.startsWith("/preview/") || pathname.startsWith("/contato")) return null;
 
   return (
     <Script
@@ -42,12 +44,13 @@ export function AdSlot({
   slot?: string;
   className?: string;
 }) {
+  const pathname = usePathname();
   const { hasConsent, isReady } = useConsent();
   const requestedRef = useRef<string | null>(null);
   const client = normalizeAdsenseClient(process.env.NEXT_PUBLIC_ADSENSE_CLIENT);
   const normalizedSlot = normalizeAdsenseSlot(slot);
   const isConfigured = Boolean(client && normalizedSlot);
-  const canRequestAd = isReady && hasConsent("marketing") && isConfigured;
+  const canRequestAd = isReady && hasConsent("marketing") && isConfigured && !pathname.startsWith("/preview/");
   const requestKey = client && normalizedSlot ? `${client}:${normalizedSlot}` : null;
 
   useEffect(() => {

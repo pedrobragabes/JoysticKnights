@@ -26,6 +26,20 @@ function imageKey(value: string | undefined) {
 }
 
 function sanitize(html: string, options: PrepareArticleOptions = {}) {
+  // Spectra paints rating stars with SVG. Preserve the saved numeric score
+  // without trusting its legacy structured data or executing plugin scripts.
+  html = html.replace(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi, (_match, json: string) => {
+    try {
+      const review = JSON.parse(json);
+      const rating = review?.["@type"] === "Review" ? review.reviewRating : null;
+      const value = Number(rating?.ratingValue);
+      const maximum = Number(rating?.bestRating ?? 5);
+      if (rating && Number.isFinite(value) && Number.isFinite(maximum) && maximum > 0 && value >= 0 && value <= maximum) {
+        return `<p class="editorial-legacy-rating"><strong>Nota: ${value} / ${maximum}</strong></p>`;
+      }
+    } catch { /* Malformed plugin data is discarded with other scripts. */ }
+    return "";
+  });
   const internalHosts = new Set<string>();
   const seenImages = new Set<string>();
   const featuredImageKey = imageKey(options.featuredImageUrl);
@@ -59,6 +73,9 @@ function sanitize(html: string, options: PrepareArticleOptions = {}) {
       "video",
       "source",
       "picture",
+      "audio",
+      "details",
+      "summary",
     ]),
     allowedAttributes: {
       "*": ["class", "id", "role", "aria-*", "data-*"],
@@ -67,9 +84,13 @@ function sanitize(html: string, options: PrepareArticleOptions = {}) {
       iframe: ["src", "title", "width", "height", "allow", "allowfullscreen", "loading"],
       video: ["src", "controls", "poster", "preload", "width", "height"],
       source: ["src", "srcset", "type", "media"],
+      audio: ["src", "controls", "preload"],
+      details: ["open"],
+      td: ["colspan", "rowspan"],
+      th: ["colspan", "rowspan", "scope"],
     },
     allowedSchemes: ["http", "https", "mailto"],
-    allowedIframeHostnames: ["www.youtube.com", "youtube.com", "player.vimeo.com"],
+    allowedIframeHostnames: ["www.youtube.com", "youtube.com", "www.youtube-nocookie.com", "player.vimeo.com", "open.spotify.com", "w.soundcloud.com", "store.steampowered.com"],
     transformTags: {
       a: (tagName, attribs) => {
         const safeAttributes: Record<string, string> = { ...attribs };
@@ -98,10 +119,17 @@ function sanitize(html: string, options: PrepareArticleOptions = {}) {
         safeAttributes.decoding = "async";
         return { tagName, attribs: safeAttributes };
       },
-      iframe: (tagName, attribs) => ({
-        tagName,
-        attribs: { ...attribs, loading: "lazy" },
-      }),
+      iframe: (tagName, attribs) => {
+        let src = attribs.src ?? "";
+        try {
+          const url = new URL(src);
+          if (["youtube.com", "www.youtube.com"].includes(url.hostname)) {
+            url.hostname = "www.youtube-nocookie.com";
+            src = url.href;
+          }
+        } catch { src = ""; }
+        return { tagName, attribs: { ...attribs, src, title: attribs.title || "Conteúdo incorporado", loading: "lazy" } };
+      },
     },
   }).replace(/<span data-duplicate-image="true"><\/span>/g, "");
 }

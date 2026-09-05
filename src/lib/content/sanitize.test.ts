@@ -2,6 +2,20 @@ import { describe, expect, it } from "vitest";
 import { prepareArticleContent, sanitizeCommentHtml } from "./sanitize";
 
 describe("prepareArticleContent", () => {
+  it("recovers the numeric Spectra rating without publishing legacy schema", () => {
+    const { html } = prepareArticleContent('<script type="application/ld+json">{"@type":"Review","reviewRating":{"ratingValue":3.5,"bestRating":5}}</script>');
+    expect(html).toContain("Nota: 3.5 / 5");
+    expect(html).not.toContain("script");
+  });
+  it("preserves interactive editorial blocks while blocking executable markup", () => {
+    const { html } = prepareArticleContent('<details open><summary>Requisitos</summary><p>PC</p></details><audio controls src="https://example.com/audio.mp3"></audio><iframe src="https://www.youtube.com/embed/abc" onload="alert(1)"></iframe><iframe src="https://evil.example/embed"></iframe>');
+    expect(html).toContain("<details open>");
+    expect(html).toContain("<summary>Requisitos</summary>");
+    expect(html).toContain("<audio controls");
+    expect(html).toContain("www.youtube-nocookie.com/embed/abc");
+    expect(html).not.toContain("evil.example");
+    expect(html).not.toContain("onload");
+  });
   it("remove scripts, preserva blocos editoriais e constrói sumário", () => {
     const result = prepareArticleContent('<script>alert(1)</script><h2>Primeira fase</h2><p>Texto</p><h3>Chefe final</h3><h2>Primeira fase</h2>');
     expect(result.html).not.toContain("script");

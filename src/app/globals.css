@@ -264,7 +264,7 @@ img {
   outline-offset: 4px;
 }
 
-.article-body figure:not(:has(img, picture, video, iframe)),
+.article-body figure:empty,
 .article-body p:empty {
   display: none;
 }
@@ -291,6 +291,24 @@ img {
   overflow-x: auto;
   border-collapse: collapse;
 }
+
+.article-body details { border: 1px solid var(--line); border-radius: var(--radius-card); padding: 1rem; margin-block: 1rem; }
+.article-body summary { cursor: pointer; font-weight: 750; }
+.article-body details[open] summary { margin-bottom: 1rem; }
+.article-body audio { width: 100%; margin-block: 1rem; }
+.article-body .wp-block-columns { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.article-body .wp-block-column { flex: 1 1 240px; min-width: 0; }
+.article-body .wp-block-gallery,
+.article-body .wp-block-uagb-image-gallery .uagb-slick-carousel { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; }
+.article-body .wp-block-gallery figure { margin: 0; }
+.article-body .uagb-slider-container .swiper-wrapper { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; }
+.article-body img { max-width: 100%; height: auto; }
+.article-body .uagb-slider-child-wrap { flex: 0 0 100%; scroll-snap-align: start; }
+.article-body .wp-block-uagb-review { padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--surface); }
+.article-body .uagb-rating-title { font-weight: 800; }
+.article-body .wp-block-uagb-info-box { border-left: 3px solid var(--brand); padding: 1rem; }
+.article-body .wp-block-embed-twitter { border: 1px solid var(--line); padding: 1rem; border-radius: var(--radius-card); }
+.article-body .wp-block-embed-twitter blockquote { margin: 0; }
 
 .article-body th,
 .article-body td {

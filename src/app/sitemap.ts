@@ -16,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     { url: siteUrl, lastModified: new Date(), changeFrequency: "hourly", priority: 1 },
+    { url: `${siteUrl}/contato/`, changeFrequency: "monthly", priority: 0.5 },
     ...pages
       .filter((page) => !utilityPageSlugs.has(page.slug))
       .map((page) => ({ url: `${siteUrl}${page.href}`, lastModified: page.modifiedAt, changeFrequency: "monthly" as const, priority: 0.6 })),

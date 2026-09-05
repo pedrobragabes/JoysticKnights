@@ -52,6 +52,11 @@ export function ArticleGallery({ html }: { html: string }) {
   useEffect(() => {
     const container = bodyRef.current;
     if (!container) return;
+    container.querySelectorAll<HTMLElement>(".uagb-slider-container .swiper-wrapper").forEach((slider) => {
+      slider.tabIndex = 0;
+      slider.setAttribute("role", "region");
+      slider.setAttribute("aria-label", "Galeria horizontal. Use as setas para navegar.");
+    });
     const articleImages = Array.from(container.querySelectorAll<HTMLImageElement>("img"));
     articleImages.forEach((image) => {
       image.tabIndex = 0;

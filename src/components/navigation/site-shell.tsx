@@ -60,6 +60,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <p className="text-xs font-black uppercase tracking-[0.12em] text-ink">Institucional</p>
               <nav aria-label="Links institucionais" className="mt-3 flex flex-col gap-2 text-sm font-semibold text-muted">
                 <Link href="/sobre/" className="hover:text-brand">Sobre</Link>
+                <Link href="/contato/" className="hover:text-brand">Contato</Link>
                 <Link href="/politica-de-privacidade/" className="hover:text-brand">Política de privacidade</Link>
                 <Link href="/termos-e-condicoes/" className="hover:text-brand">Termos e condições</Link>
                 <Link href="/politica-de-cookies-br/" className="hover:text-brand">Política de cookies</Link>

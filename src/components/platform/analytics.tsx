@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useConsent } from "./consent-provider";
 
@@ -28,6 +29,7 @@ function safeInlineJson(value: unknown) {
 }
 
 export function Analytics() {
+  const pathname = usePathname();
   const { hasConsent, isReady } = useConsent();
   const statistics = isReady && hasConsent("statistics");
   const marketing = isReady && hasConsent("marketing");
@@ -53,7 +55,7 @@ export function Analytics() {
     });
   }, [isReady, marketing, statistics]);
 
-  if (!tagId || !statistics) return null;
+  if (!tagId || !statistics || pathname.startsWith("/preview/")) return null;
 
   const consentState = getGoogleConsentState(statistics, marketing);
   const bootstrap = `

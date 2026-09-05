@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PromoGames Core
  * Description: Integração editorial headless: metacampos, SEO, curadoria, preview e revalidação.
- * Version: 1.3.0
+ * Version: 1.4.0
  * Author: PromoGames
  * Requires at least: 6.5
  * Requires PHP: 8.1
@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-const PROMOGAMES_CORE_VERSION = '1.3.0';
+const PROMOGAMES_CORE_VERSION = '1.4.0';
 
 /**
  * Registra os metacampos que formam o contrato editorial do front headless.
@@ -68,6 +68,58 @@ function promogames_core_register_meta(): void
     ]);
 }
 add_action('init', 'promogames_core_register_meta');
+
+// Contact messages stay private in WordPress and never enter public REST/search.
+add_action('init', static function (): void {
+    register_post_type('pg_contact', [
+        'labels' => ['name' => 'Mensagens do site', 'singular_name' => 'Mensagem'],
+        'public' => false, 'publicly_queryable' => false, 'exclude_from_search' => true,
+        'show_ui' => true, 'show_in_rest' => false, 'rewrite' => false,
+        'menu_icon' => 'dashicons-email-alt', 'supports' => ['title', 'editor'],
+        'capabilities' => [
+            'edit_post' => 'manage_options', 'read_post' => 'manage_options', 'delete_post' => 'manage_options',
+            'edit_posts' => 'manage_options', 'edit_others_posts' => 'manage_options',
+            'publish_posts' => 'do_not_allow', 'read_private_posts' => 'manage_options',
+            'delete_posts' => 'manage_options', 'create_posts' => 'do_not_allow',
+        ], 'map_meta_cap' => false,
+    ]);
+});
+
+add_action('rest_api_init', static function (): void {
+    register_rest_route('promogames/v1', '/contact', [
+        'methods' => 'POST', 'permission_callback' => 'promogames_core_comments_permission',
+        'callback' => 'promogames_core_receive_contact',
+    ]);
+});
+
+function promogames_core_receive_contact(WP_REST_Request $request): WP_REST_Response|WP_Error
+{
+    $input = $request->get_json_params();
+    if (!is_array($input)) return new WP_Error('invalid', 'Dados inválidos.', ['status' => 400]);
+    foreach (['authorName', 'authorEmail', 'subject', 'content', 'fingerprint'] as $key) {
+        if (!isset($input[$key]) || !is_string($input[$key])) return new WP_Error('invalid', 'Dados inválidos.', ['status' => 400]);
+    }
+    $name = sanitize_text_field($input['authorName']);
+    $email = sanitize_email($input['authorEmail']);
+    $subject = sanitize_text_field($input['subject']);
+    $content = sanitize_textarea_field($input['content']);
+    if (strlen($name) < 2 || strlen($name) > 320 || !is_email($email) || strlen($email) > 254
+        || strlen($subject) < 3 || strlen($subject) > 480 || strlen($content) < 3 || strlen($content) > 20000
+        || !preg_match('/^[a-f0-9]{64}$/', $input['fingerprint'])) {
+        return new WP_Error('invalid', 'Dados inválidos.', ['status' => 400]);
+    }
+    $key = 'pg_contact_' . hash_hmac('sha256', $input['fingerprint'], wp_salt('nonce'));
+    $attempts = (int) get_transient($key);
+    if ($attempts >= 3) return new WP_Error('limited', 'Aguarde antes de enviar novamente.', ['status' => 429]);
+    set_transient($key, $attempts + 1, 10 * MINUTE_IN_SECONDS);
+    $id = wp_insert_post(wp_slash([
+        'post_type' => 'pg_contact', 'post_status' => 'private',
+        'post_title' => $subject,
+        'post_content' => "Nome: {$name}\nE-mail: {$email}\n\n{$content}",
+    ]), true);
+    if (is_wp_error($id) || !$id) return new WP_Error('storage', 'Falha ao registrar.', ['status' => 500]);
+    return new WP_REST_Response(['status' => 'received'], 201);
+}
 
 function promogames_core_sanitize_editorial_type(mixed $value): string
 {
