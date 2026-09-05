@@ -23,6 +23,17 @@ function rawPost(link: string): RawPost {
 }
 
 describe("mapeamento de permalinks WordPress", () => {
+  it("maps structured reviews without inventing missing facts and rejects invalid ratings", () => {
+    const post = rawPost("https://cms.joysticknights.com.br/analises/game/");
+    post.meta = { promogames_editorial_type: "analise", promogames_review_game: "Game &amp; DLC", promogames_review_pros: "Arte\r\n\nSom", promogames_review_cons: "Performance", promogames_review_score: 8.8 };
+    expect(mapPost(post)).toMatchObject({ reviewScore: 8.8, review: { game: "Game & DLC", pros: ["Arte", "Som"], cons: ["Performance"], developer: "" } });
+    post.meta.promogames_review_score = 11;
+    expect(mapPost(post).reviewScore).toBeUndefined();
+    post.meta.promogames_review_score = 0;
+    expect(mapPost(post).reviewScore).toBeUndefined();
+    post.promogames_review_rating = 0;
+    expect(mapPost(post).reviewScore).toBe(0);
+  });
   it("mantém posts de raiz e preserva posts com /%category%/%postname%/", () => {
     expect(mapPost(rawPost("https://promogamesbr.com/uma-grande-materia/"))).toMatchObject({
       href: "/uma-grande-materia/",

@@ -39,3 +39,4 @@ jobs:
           php-version: "8.1"
           coverage: none
       - run: php -l wordpress/promogames-core/promogames-core.php
+      - run: php wordpress/promogames-core/contract-test.php

@@ -10,12 +10,16 @@ import { getCommentsByPostId, getStories } from "@/lib/wordpress/queries";
 import type { Story } from "@/lib/wordpress/types";
 import { ArticleBody, ArticleToc } from "./article-body";
 import { StoryCard } from "./story-card";
+import { ReviewSummary } from "./review-summary";
+import { ReadingProgress } from "./reading-progress";
 
 export async function StoryArticle({ story, preview = false }: { story: Story; preview?: boolean }) {
   const article = prepareArticleContent(story.content, { featuredImageUrl: story.image?.url });
-  const [related, comments] = await Promise.all([
+  const [related, comments, previous, next] = await Promise.all([
     getStories({ categoryId: story.primaryCategory?.id, exclude: [story.id], perPage: 3 }),
     preview ? Promise.resolve([]) : getCommentsByPostId(story.id),
+    preview ? Promise.resolve(null) : getStories({ before: story.publishedAt, perPage: 1 }).catch(() => null),
+    preview ? Promise.resolve(null) : getStories({ after: story.publishedAt, order: "asc", perPage: 1 }).catch(() => null),
   ]);
   const siteUrl = getSiteUrl();
   const storyUrl = `${siteUrl}${story.href}`;
@@ -27,7 +31,12 @@ export async function StoryArticle({ story, preview = false }: { story: Story; p
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "NewsArticle",
+        "@type": story.editorialType === "analise" ? "Review" : "NewsArticle",
+        ...(story.editorialType === "analise" ? {
+          itemReviewed: { "@type": "VideoGame", name: story.review?.game || story.title },
+          ...(story.reviewScore !== undefined ? { reviewRating: { "@type": "Rating", ratingValue: story.reviewScore, bestRating: 10, worstRating: 0 } } : {}),
+          reviewBody: story.review?.verdict || story.excerpt,
+        } : {}),
         "@id": `${storyUrl}#article`,
         headline: story.title,
         description: story.deck ?? story.excerpt,
@@ -63,6 +72,7 @@ export async function StoryArticle({ story, preview = false }: { story: Story; p
 
   return (
     <article className="pb-20">
+      <ReadingProgress />
       {!preview ? <StructuredData data={jsonLd} /> : null}
       <header className="border-b border-line bg-surface px-4 py-10 sm:px-6 sm:py-14 lg:px-10 lg:py-16">
         <div className="mx-auto max-w-[1220px]">
@@ -94,7 +104,7 @@ export async function StoryArticle({ story, preview = false }: { story: Story; p
               <a href={`https://wa.me/?text=${shareTitle}%20${shareUrl}`} target="_blank" rel="noreferrer" className="grid size-11 place-items-center rounded-full border border-line bg-surface text-xs font-black transition hover:border-brand hover:text-brand" aria-label="Compartilhar no WhatsApp">WA</a>
             </aside>
 
-            <ArticleBody html={article.html} />
+            <div id="article-content"><ReviewSummary story={story} /><ArticleBody html={article.html} /></div>
 
             <div className="h-fit space-y-5 lg:sticky lg:top-6">
               <aside className="rounded-card border border-line bg-surface p-5">
@@ -113,6 +123,9 @@ export async function StoryArticle({ story, preview = false }: { story: Story; p
           </div>
 
           <AdSlot name="article-inline" format="billboard" slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_ARTICLE_INLINE} />
+          {previous?.items[0] || next?.items[0] ? <nav aria-label="Matérias anterior e próxima" className="grid gap-5 border-t border-line py-8 sm:grid-cols-2">
+            {([["Matéria anterior", previous?.items[0]], ["Próxima matéria", next?.items[0]]] as const).map(([label, item]) => item ? <Link key={label} href={item.href} className="rounded-card border border-line p-5 transition hover:border-brand"><span className="block text-sm text-muted">{label}</span><span className="mt-2 block font-bold">{item.title}</span></Link> : <div key={label} />)}
+          </nav> : null}
 
           {related.items.length ? (
             <section className="border-t border-line py-12 lg:py-16">

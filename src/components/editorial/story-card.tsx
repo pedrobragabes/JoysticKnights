@@ -2,6 +2,12 @@ import Link from "next/link";
 import { formatDate } from "@/lib/format";
 import type { Story } from "@/lib/wordpress/types";
 import { StoryImage } from "./story-image";
+import { Icon } from "@/components/icons";
+
+function Platforms({ story }: { story: Story }) {
+  const platforms = ["playstation", "xbox", "nintendo", "pc"] as const;
+  return <span className="mt-2 flex flex-wrap gap-2">{platforms.filter((platform) => story.platforms.includes(platform)).map((platform) => <span key={platform} title={platform === "pc" ? "PC" : platform} className="inline-flex items-center gap-1 text-xs text-muted"><Icon name={platform} className="size-4" /><span>{platform === "pc" ? "PC" : platform === "playstation" ? "PlayStation" : platform === "xbox" ? "Xbox" : "Nintendo"}</span></span>)}</span>;
+}
 
 export function StoryCard({ story, priority = false }: { story: Story; priority?: boolean }) {
   return (
@@ -16,6 +22,7 @@ export function StoryCard({ story, priority = false }: { story: Story; priority?
             {story.title}
           </h3>
           <p className="mt-3 line-clamp-2 text-sm leading-6 text-muted">{story.excerpt}</p>
+          <Platforms story={story} />
           <p className="mt-3 text-[0.7rem] font-bold uppercase tracking-[0.06em] text-muted">
             {formatDate(story.publishedAt)} · {story.readingMinutes} min
           </p>
@@ -35,9 +42,10 @@ export function StoryListItem({ story }: { story: Story }) {
           <h3 className="font-display mt-1 text-lg font-extrabold leading-tight tracking-[-0.03em] transition group-hover:text-brand sm:text-xl">
             {story.title}
           </h3>
+          <Platforms story={story} />
         </div>
         <p className="col-start-2 text-[0.7rem] font-bold uppercase text-muted sm:col-auto">
-          {formatDate(story.publishedAt)}
+          <time dateTime={story.publishedAt}>{formatDate(story.publishedAt, true)}</time>
         </p>
       </Link>
     </article>

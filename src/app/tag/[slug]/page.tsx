@@ -13,7 +13,7 @@ function isTagHref(href: string, slug: string) {
 }
 
 function getPageHref(href: string, page: number) {
-  return page > 1 ? `${href}?page=${page}` : href;
+  return page > 1 ? `${href}page/${page}/` : href;
 }
 
 export async function generateStaticParams() {
@@ -35,12 +35,12 @@ export default async function TagPage({ params, searchParams }: PageProps<"/tag/
   if (!isTagHref(tag.href, slug)) permanentRedirect(getPageHref(tag.href, page));
 
   const result = await getStories({ tagId: tag.id, page, perPage: 12 });
-  if (page > 1 && result.totalPages > 0 && page > result.totalPages) notFound();
+  if (page > 1 && page > result.totalPages) notFound();
 
   return (
     <>
       <ArchiveHeader eyebrow="Assunto" title={tag.name} description={tag.description || `Notícias, análises e matérias sobre ${tag.name} no ${siteConfig.name}.`} count={result.total} />
-      <StoryArchive result={result} emptyMessage={`Ainda não há matérias sobre ${tag.name}.`} />
+      <StoryArchive basePath={tag.href} result={result} emptyMessage={`Ainda não há matérias sobre ${tag.name}.`} />
     </>
   );
 }

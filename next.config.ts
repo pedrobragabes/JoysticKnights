@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const isDevelopment = process.env.NODE_ENV === "development";
 const siteProfile = process.env.NEXT_PUBLIC_SITE_PROFILE === "promogames" ? "promogames" : "joysticknights";
 const defaultSiteUrl = siteProfile === "joysticknights" ? "https://joysticknights.com.br" : "https://promogamesbr.com";
-const defaultWordPressApiUrl = `${defaultSiteUrl}/wp-json/wp/v2`;
+const defaultWordPressApiUrl = siteProfile === "joysticknights" ? "https://cms.joysticknights.com.br/wp-json/wp/v2" : `${defaultSiteUrl}/wp-json/wp/v2`;
 const siteOrigin = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? defaultSiteUrl).origin;
 const wordpressOrigin = new URL(process.env.WORDPRESS_API_URL ?? defaultWordPressApiUrl).origin;
 const newsletterOrigin = (() => {
@@ -42,6 +42,14 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   trailingSlash: true,
+  experimental: {
+    cpus: 2,
+    // The shared WordPress host has a tight resource ceiling. Keep static
+    // generation from creating a burst of parallel REST requests during CI.
+    staticGenerationRetryCount: 2,
+    staticGenerationMaxConcurrency: 2,
+    staticGenerationMinPagesPerWorker: 100,
+  },
   images: {
     remotePatterns: [
       ...mediaHosts.map((hostname) => ({
@@ -58,6 +66,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/:path*", has: [{ type: "host", value: `www.${new URL(siteOrigin).hostname}` }], destination: `${siteOrigin}/:path*`, permanent: true },
       { source: "/inicio", destination: "/", permanent: true },
       { source: "/postagens", destination: "/", permanent: true },
       { source: "/pesquisar", destination: "/buscar/", permanent: true },
@@ -71,12 +80,15 @@ const nextConfig: NextConfig = {
     ];
   },
   async rewrites() {
-    if (!usesSeparateWordPressOrigin) return [];
-    return [
+    return { beforeFiles: [
+      { source: "/page/:page(\\d+)", destination: "/?page=:page" },
+      { source: "/:section(category|categoria|tag|author|autor)/:path+/page/:page(\\d+)", destination: "/:section/:path*/?page=:page" },
+      { source: "/:section(noticias|analises|guias|playstation|xbox|nintendo|pc)/page/:page(\\d+)", destination: "/:section/?page=:page" },
+    ], afterFiles: usesSeparateWordPressOrigin ? [
       { source: "/wp-content/:path*", destination: `${wordpressOrigin}/wp-content/:path*` },
       { source: "/wp-includes/:path*", destination: `${wordpressOrigin}/wp-includes/:path*` },
       { source: "/wp-json/:path*", destination: `${wordpressOrigin}/wp-json/:path*` },
-    ];
+    ] : [], fallback: [] };
   },
   async headers() {
     return [

@@ -5,7 +5,7 @@ const PROFILE_NAMES = {
 
 const PROFILE_API_URLS = {
   promogames: "https://promogamesbr.com/wp-json/wp/v2",
-  joysticknights: "https://joysticknights.com.br/wp-json/wp/v2",
+  joysticknights: "https://cms.joysticknights.com.br/wp-json/wp/v2",
 };
 
 const SEARCH_STOP_WORDS = new Set([

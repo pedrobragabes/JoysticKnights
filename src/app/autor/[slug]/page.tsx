@@ -13,7 +13,7 @@ function isAuthorHref(href: string, prefix: string, slug: string) {
 }
 
 function getPageHref(href: string, page: number) {
-  return page > 1 ? `${href}?page=${page}` : href;
+  return page > 1 ? `${href}page/${page}/` : href;
 }
 
 export async function generateStaticParams() {
@@ -36,12 +36,12 @@ export default async function AuthorPage({ params, searchParams }: PageProps<"/a
   if (!isAuthorHref(author.href, "autor", slug)) permanentRedirect(getPageHref(author.href, page));
 
   const result = await getStories({ authorId: author.id, page, perPage: 12 });
-  if (page > 1 && result.totalPages > 0 && page > result.totalPages) notFound();
+  if (page > 1 && page > result.totalPages) notFound();
 
   return (
     <>
       <ArchiveHeader eyebrow="Autor" title={author.name} description={author.description || `Redação, apuração e opinião no ${siteConfig.name}.`} count={result.total} avatarUrl={author.avatarUrl} />
-      <StoryArchive result={result} emptyMessage="Este autor ainda não publicou matérias." />
+      <StoryArchive basePath={author.href} result={result} emptyMessage="Este autor ainda não publicou matérias." />
     </>
   );
 }

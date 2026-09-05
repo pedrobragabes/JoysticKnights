@@ -6,6 +6,7 @@ export class WordPressApiError extends Error {
     message: string,
     readonly status?: number,
     readonly path?: string,
+    readonly code?: string,
   ) {
     super(message);
     this.name = "WordPressApiError";
@@ -19,6 +20,8 @@ export type WordPressResponse<T> = {
 };
 
 type QueryValue = string | number | boolean | Array<string | number> | undefined;
+const TRANSIENT_STATUSES = new Set([429, 500, 502, 503, 504]);
+const MAX_ATTEMPTS = 3;
 
 export function getWordPressApiUrl() {
   return (process.env.WORDPRESS_API_URL ?? siteConfig.defaultWordPressApiUrl).replace(/\/$/, "");
@@ -57,20 +60,37 @@ export async function wordPressRequest<T>(
   const cacheOptions = init?.cache === "no-store"
     ? {}
     : { next: { revalidate: 300, tags } };
-  const response = await fetch(url, {
-    ...init,
-    headers: {
-      Accept: "application/json",
-      ...init?.headers,
-    },
-    ...cacheOptions,
-  });
+  let response: Response | undefined;
 
-  if (!response.ok) {
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
+    try {
+      response = await fetch(url, {
+        signal: AbortSignal.timeout(15000),
+        ...init,
+        headers: {
+          Accept: "application/json",
+          ...init?.headers,
+        },
+        ...(attempt === 1 ? cacheOptions : { cache: "no-store" }),
+      });
+    } catch {
+      if (attempt === MAX_ATTEMPTS) throw new WordPressApiError("Não foi possível conectar ao WordPress.", 503, url.pathname);
+      await new Promise((resolve) => setTimeout(resolve, attempt * 200));
+      continue;
+    }
+    if (response.ok || !TRANSIENT_STATUSES.has(response.status) || attempt === MAX_ATTEMPTS) break;
+
+    await response.body?.cancel();
+    await new Promise((resolve) => setTimeout(resolve, attempt * 200));
+  }
+
+  if (!response?.ok) {
+    const payload = await response?.json().catch(() => null) as { code?: string } | null;
     throw new WordPressApiError(
-      `WordPress respondeu ${response.status} para ${url.pathname}`,
-      response.status,
+      `WordPress respondeu ${response?.status ?? "sem resposta"} para ${url.pathname}`,
+      response?.status,
       url.pathname,
+      payload?.code,
     );
   }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CategoryHighlights } from "@/components/editorial/category-highlights";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ArchiveHeader, StoryArchive } from "@/components/editorial/archive";
 import { InstitutionalPage } from "@/components/editorial/institutional-page";
@@ -61,17 +62,18 @@ export default async function SlugPage({ params, searchParams }: PageProps<"/[se
   if (!content) notFound();
 
   if (content.kind === "category") {
-    if (!matchesRootHref(content.category.href, slug)) permanentRedirect(content.category.href);
+    if (!matchesRootHref(content.category.href, slug)) permanentRedirect(parsePage((await searchParams).page) > 1 ? `${content.category.href}page/${parsePage((await searchParams).page)}/` : content.category.href);
 
     const query = await searchParams;
     const page = parsePage(query.page);
     const result = await getStories({ categoryId: content.category.id, page, perPage: 12 });
-    if (page > 1 && result.totalPages > 0 && page > result.totalPages) notFound();
+    if (page > 1 && page > result.totalPages) notFound();
 
     return (
       <>
         <ArchiveHeader eyebrow="Universo" title={content.category.name} description={content.category.description || `Notícias, análises e novidades de ${content.category.name} selecionadas pela redação ${siteConfig.name}.`} count={result.total} />
-        <StoryArchive result={result} emptyMessage={`Ainda não há matérias em ${content.category.name}.`} />
+        {page === 1 ? <CategoryHighlights categoryId={content.category.id} /> : null}
+        <StoryArchive basePath={content.category.href} result={result} emptyMessage={`Ainda não há matérias em ${content.category.name}.`} />
       </>
     );
   }

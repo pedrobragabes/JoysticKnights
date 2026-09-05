@@ -1,0 +1,5161 @@
+{
+  "checkedAt": "2026-09-05T21:50:41.546Z",
+  "origin": "https://joysticknights.com.br",
+  "total": 706,
+  "failures": [
+    {
+      "url": "https://joysticknights.com.br/noticias/demo-de-yakuza-kiwami-3-ja-disponivel/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/streamer-ultrapassa-a-marca-de-4-500-pacotes-abertos-sem-nenhuma-carta-toty/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/upgrade-premium-de-forza-horizon-6-no-brasil-custa-o-mesmo-que-o-jogo-base/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/galgun-o-exclusivo-que-abandonou-o-xbox/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/toty-12-jogador-e-mencoes-honrosas-chegam-ao-ea-fc-26/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/hitman-como-funciona-o-cross-progression-e-data-de-lancamento/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/leon-confirmado-em-novo-trailer-de-re9/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/arc-raiders-recebe-primeira-grande-atualizacao-com-novo-mapa-e-evento-global/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/tarkov-novidade-do-lancamento-na-tgs-2025/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/escape-from-tarkov-no-steam-e-requisitos-revelados/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/bo7-revelado-e-cod-next-em-setembro/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/pc/nova-atualizacao-de-gray-zone-warfare-traz-pvp-intenso-e-clima-dinamico/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/xbox/gta-6-adiado-goty-ganhou-concorrencia-de-peso/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/playstation/rockstar-adia-gta-vi-para-maio-de-2026/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/review-assassins-creed-shadows-entre-o-stealth-e-a-mesmice/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/verdansk-o-iconico-mapa-de-warzone-retorna-com-melhorias/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/herois-lendarios-da-segunda-guerra-mundial-dominarao-os-campos-de-batalha-em-enlisted/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/pegadinha-de-primeiro-de-abril-de-opera-gx-libera-espaco-de-seu-pc-de-maneira-inusitada/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/atomfall-atinge-mais-de-1-milhao-de-jogadores/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/infantaria-chega-ao-war-thunder-junto-com-veiculos-da-primeira-guerra-mundial/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/xbox/elden-ring-nightreign-novo-trailer/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/anime/dragon-ball-z-kakarot-dlc-daima-anunciada/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/trailer-e-demo-de-like-a-dragon-pirate/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/hearts-of-iron-iv-nova-dlc-lanca-em-marco/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/criador-de-ninja-gaiden-2-nao-sabia-sobre-novo-jogo-da-franquia/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/seu-pc-esta-pronto-requisitos-para-rodar-assassins-creed-shadows/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/like-a-dragon-pirate-novas-informacoes/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/smite-2-agora-e-gratuito-para-jogar/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/opera-gx-traz-cyberpunk-2077-direto-para-o-navegador/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/mai-shiranui-se-junta-a-luta-em-street-fighter-6/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/lenovo-vaza-halo-5-guardians-chegara-ao-steam/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/manor-lords-novidades-do-ultimo-update/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/adiado-novamente-ac-shadows-e-adiado-em-comunicado-oficial/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/final-fantasy-vii-rebirth-tudo-sobre-a-versao-pc/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/analise-taiko-no-tatsujin-the-drum-master/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/nvidia-esta-sorteando-placas-de-video-iconicas-ate-amanha/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/servidores-de-friday-the-13th-desligados/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/nova-raid-pve-de-delta-force-e-lancado/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/exclusivo-de-playstation-chegando-ao-xbox/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/detalhes-de-assetto-corsa-evo/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/criador-de-doa-se-frustra-xbox/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/analise-dead-rising/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    }
+  ],
+  "results": [
+    {
+      "url": "https://joysticknights.com.br/sobre/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/sobre/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/termos-e-condicoes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/termos-e-condicoes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/politica-de-privacidade/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/politica-de-privacidade/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/politica-de-cookies-br/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/politica-de-cookies-br/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/noticias/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/noticias/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/plataformas/pc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/plataformas/pc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/plataformas/xbox/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/plataformas/xbox/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/plataformas/playstation/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/plataformas/playstation/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/plataformas/nintendo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/plataformas/nintendo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/analises/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/analises/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/anime/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/anime/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/dicas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/dicas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/plataformas/mobile/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/plataformas/mobile/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/category/plataformas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/category/plataformas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/codnext/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/codnext/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/keymailer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/keymailer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pcgamepasspartner/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pcgamepasspartner/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/1-abril/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/1-abril/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/1100-cp/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/1100-cp/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/120fps/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/120fps/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/16-de-outubro-de-2025/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/16-de-outubro-de-2025/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/30thanniversaryedition/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/30thanniversaryedition/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/172-milhoes-de-partidas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/172-milhoes-de-partidas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/4k-60fps/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/4k-60fps/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/505-games/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/505-games/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/7-milhoes-de-copias/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/7-milhoes-de-copias/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/75-milhoes-de-jogadores/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/75-milhoes-de-jogadores/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/9-kings/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/9-kings/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ac-shadows/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ac-shadows/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ac-shadows-adiamento/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ac-shadows-adiamento/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/action-adventure/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/action-adventure/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/activision/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/activision/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/adiado/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/adiado/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/actiii/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/actiii/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/agent-47/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/agent-47/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/agente-colombiano-em-valorant/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/agente-colombiano-em-valorant/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/alex-street-fighter-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/alex-street-fighter-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/alvo-elusivo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/alvo-elusivo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/alvo-elusivo-hitman/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/alvo-elusivo-hitman/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/analise/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/analise/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/andrezitos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/andrezitos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/anime-de-free-fire/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/anime-de-free-fire/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/anime/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/anime/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/animes-de-2027/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/animes-de-2027/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/aniplex/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/aniplex/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/apple-silicon/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/apple-silicon/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/arc-raiders/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/arc-raiders/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/assassins-creed/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/assassins-creed/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/arma-reforger/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/arma-reforger/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/assassins-creed-shadows/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/assassins-creed-shadows/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/asseto-corsa-evo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/asseto-corsa-evo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/assetto-corsa/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/assetto-corsa/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/atoiii/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/atoiii/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/assetto-corsa-evo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/assetto-corsa-evo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/atualizacao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/atualizacao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/atualizacao-22-de-outubro/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/atualizacao-22-de-outubro/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/atomfall/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/atomfall/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/atualizacao-cult-of-the-lamb-2026/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/atualizacao-cult-of-the-lamb-2026/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/atualizacao-north-line/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/atualizacao-north-line/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/atualizacoes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/atualizacoes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/banshees-last-cry/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/banshees-last-cry/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battle-royale/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battle-royale/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battlefield-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battlefield-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battlefield-6-beta/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battlefield-6-beta/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battlefield-6-beta-gratis-como-jogar/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battlefield-6-beta-gratis-como-jogar/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battlefield-6-early-access/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battlefield-6-early-access/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battlefield-6-key/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battlefield-6-key/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battlefield-studios/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battlefield-studios/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battlepass/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battlepass/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/battlestate-games/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/battlestate-games/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/beat-souls/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/beat-souls/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/beta/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/beta/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/beta-gratis/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/beta-gratis/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/beta-aberto-battlefield-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/beta-aberto-battlefield-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/black-legion-dlc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/black-legion-dlc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/black-ops-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/black-ops-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/black-ops-6-blackcell/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/black-ops-6-blackcell/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/blackcell/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/blackcell/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/blackcell-temporada-03/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/blackcell-temporada-03/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/black-ops-7/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/black-ops-7/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/blackcell-temporada-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/blackcell-temporada-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/blackcell-vale-a-pena/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/blackcell-vale-a-pena/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/blackspace-engine/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/blackspace-engine/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/blackwell-fields/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/blackwell-fields/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/bleach/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/bleach/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/bo7/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/bo7/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/bo7-reveal/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/bo7-reveal/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/brawlhalla/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/brawlhalla/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/breaking-new-ground/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/breaking-new-ground/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/bungie/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/bungie/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/c-viper/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/c-viper/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/c-viper-street-fighter-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/c-viper-street-fighter-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/call-of-duty-bo7/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/call-of-duty-bo7/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/call-of-duty-modern-warfare-4/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/call-of-duty-modern-warfare-4/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/call-of-duty/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/call-of-duty/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/call-of-the-beast/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/call-of-the-beast/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/campea-de-lol/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/campea-de-lol/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/camuflagem-blackcell/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/camuflagem-blackcell/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/car-dealer-simulator/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/car-dealer-simulator/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/capcom/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/capcom/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/catalyst/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/catalyst/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/chaos-space-marines/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/chaos-space-marines/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ces-2025/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ces-2025/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cavalera-conspiracy/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cavalera-conspiracy/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/character-pass/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/character-pass/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/charts/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/charts/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cloud-gaming/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cloud-gaming/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/clair-obscur/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/clair-obscur/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cod/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cod/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cod-next/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cod-next/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/combates-com-dragoes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/combates-com-dragoes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/como-conseguir-key-do-beta-de-battlefield-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/como-conseguir-key-do-beta-de-battlefield-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/companion-finishing-move/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/companion-finishing-move/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/comprar-call-of-duty-modern-warfare-4/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/comprar-call-of-duty-modern-warfare-4/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/conquista/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/conquista/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/consoles/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/consoles/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/conteudos-futuros-tarkov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/conteudos-futuros-tarkov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/copais-vendidas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/copais-vendidas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cost-of-hope/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cost-of-hope/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/corrida/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/corrida/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/counter-strike-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/counter-strike-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/covert/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/covert/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cpc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cpc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/crimson-desert-xbox-series/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/crimson-desert-xbox-series/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/crimson-desert-ps5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/crimson-desert-ps5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/crimson-desert/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/crimson-desert/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cross-progression-hitman/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cross-progression-hitman/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/crossover/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/crossover/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/crunchyroll/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/crunchyroll/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cs-go/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cs-go/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cs-skins/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cs-skins/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cross-progression/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cross-progression/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cs2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cs2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cult-of-the-lamb/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cult-of-the-lamb/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dam-battlegrounds/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dam-battlegrounds/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/cyberpunk-2077/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/cyberpunk-2077/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dark-ties/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dark-ties/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/data-resident-evil-9/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/data-resident-evil-9/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dbd/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dbd/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dead-or-alive-xtreme-volleyball/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dead-or-alive-xtreme-volleyball/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dead-by-daylight/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dead-by-daylight/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dead-or-alive/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dead-or-alive/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/death-adder/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/death-adder/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dead-rising/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dead-rising/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/delta-force/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/delta-force/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/demo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/demo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/desconto30/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/desconto30/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/demo-yakuza/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/demo-yakuza/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/destiny-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/destiny-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/destiny-2-heresy-act-iii/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/destiny-2-heresy-act-iii/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/destiny2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/destiny2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/devil-may-cry/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/devil-may-cry/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/devil-may-cry-anime/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/devil-may-cry-anime/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/devolver-digital/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/devolver-digital/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dicas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dicas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/detalhes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/detalhes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dicas-de-tarkov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dicas-de-tarkov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dificuldade-nightmare/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dificuldade-nightmare/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/digital-deluxe-edition/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/digital-deluxe-edition/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dlc-hitman/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dlc-hitman/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dlc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dlc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dlc-warhammer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dlc-warhammer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dlss-4/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dlss-4/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dlss/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dlss/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dmc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dmc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/doa-xtreme-volleyball/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/doa-xtreme-volleyball/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dr-eggman/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dr-eggman/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dragon-ball-daima/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dragon-ball-daima/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dresden-9mm/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dresden-9mm/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/duty/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/duty/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dying-light-outpost/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dying-light-outpost/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/dying-light-the-beast/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/dying-light-the-beast/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/eafc26/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/eafc26/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/economia-de-skins/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/economia-de-skins/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ea/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ea/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/eft/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/eft/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/elon-musk/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/elon-musk/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/elden-ring/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/elden-ring/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/emulacao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/emulacao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/enlisted/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/enlisted/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/epicgames/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/epicgames/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/embark-studios/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/embark-studios/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/epicgamesstore/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/epicgamesstore/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/episodes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/episodes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/epic-games-store/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/epic-games-store/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/escape-from-tarkov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/escape-from-tarkov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/escape-from-tarkov-1-0/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/escape-from-tarkov-1-0/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/especificacoes-crimson-desert/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/especificacoes-crimson-desert/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/etheria-restart/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/etheria-restart/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/evento/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/evento/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/evento-comunitario/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/evento-comunitario/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/evento-de-zumbis-escape-from-tarkov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/evento-de-zumbis-escape-from-tarkov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/exoborne/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/exoborne/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/expedition-33/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/expedition-33/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/extracao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/extracao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/extraction-shooter/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/extraction-shooter/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/faca-barata/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/faca-barata/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/f1/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/f1/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/facas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/facas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/far-cry/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/far-cry/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/fatal-fury/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/fatal-fury/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/feats-e-cred/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/feats-e-cred/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/finais-multiplos-tarkov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/finais-multiplos-tarkov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/feral-interactive/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/feral-interactive/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/formula-1/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/formula-1/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/finalfantasy/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/finalfantasy/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/finalfantasyviirebirth/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/finalfantasyviirebirth/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/forza-horizon-5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/forza-horizon-5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/forza-horizon/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/forza-horizon/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/forza/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/forza/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/forza-horizon-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/forza-horizon-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/fps/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/fps/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/free-fire/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/free-fire/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/free-fire-daybreak/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/free-fire-daybreak/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/free-starter-pack/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/free-starter-pack/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/free-to-play/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/free-to-play/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/freedom/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/freedom/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gacha/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gacha/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/game-pass/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/game-pass/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gamepass/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gamepass/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gameplay/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gameplay/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/games/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/games/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gamingleaks/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gamingleaks/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gamingnews/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gamingnews/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/garena/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/garena/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/geforce-now/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/geforce-now/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ghost-of-tsushima/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ghost-of-tsushima/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/god-of-war/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/god-of-war/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gog/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gog/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/goro-majima/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/goro-majima/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/grand-theft-auto-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/grand-theft-auto-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/grand-theft-auto-vi-adiado/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/grand-theft-auto-vi-adiado/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/graveyard-of-empires/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/graveyard-of-empires/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gratis/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gratis/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gray-zone-warfare/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gray-zone-warfare/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gsc-game-world/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gsc-game-world/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gta-6-adiado/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gta-6-adiado/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gta-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gta-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gta-6-leaks/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gta-6-leaks/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gta-6-gameplay/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gta-6-gameplay/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gta-6-netflix/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gta-6-netflix/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gta-vi/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gta-vi/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gta-6-vazamentos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gta-6-vazamentos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gun-screen-cod/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gun-screen-cod/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/habilidades-de-mel/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/habilidades-de-mel/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/habilidades-do-agente-tejo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/habilidades-do-agente-tejo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/gustave/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/gustave/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/habilidade-do-novo-campeao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/habilidade-do-novo-campeao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/halo5guardians/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/halo5guardians/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/halo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/halo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/halo5pc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/halo5pc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hayato/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hayato/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hears-of-iron-iv/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hears-of-iron-iv/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/heresia/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/heresia/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/highguard/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/highguard/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hitman-25-anos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hitman-25-anos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hitman-desconto/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hitman-desconto/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hitman-absolution-mobile/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hitman-absolution-mobile/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hitman-iphone/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hitman-iphone/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hitman-vr/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hitman-vr/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hitman-world-of-assassination/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hitman-world-of-assassination/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hitman-no-mac/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hitman-no-mac/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hooded-horse/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hooded-horse/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/hot-pursuit-remastered/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/hot-pursuit-remastered/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ia/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ia/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/indie-games/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/indie-games/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/infantaria/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/infantaria/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/infantry/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/infantry/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/infinite/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/infinite/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/inteligencia-artificial/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/inteligencia-artificial/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/inicio-de-2026/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/inicio-de-2026/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ironeye/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ironeye/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jean-claude-van-damme/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jean-claude-van-damme/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/joe-musashi/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/joe-musashi/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogo-aguardado/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogo-aguardado/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/io-interactive/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/io-interactive/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogo-barato/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogo-barato/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogo-cooperativo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogo-cooperativo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogodeluta/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogodeluta/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogo-gratis/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogo-gratis/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-android/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-android/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-antigos-no-xbox/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-antigos-no-xbox/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-de-estrategia-em-turnos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-de-estrategia-em-turnos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-de-mundo-aberto/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-de-mundo-aberto/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-de-corrida/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-de-corrida/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-de-mundo-aberto-2026/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-de-mundo-aberto-2026/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-de-stealth/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-de-stealth/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-de-terror/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-de-terror/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-em-nuvem/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-em-nuvem/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-ios/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-ios/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-favoritos-dos-devs/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-favoritos-dos-devs/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-mobile/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-mobile/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-para-android/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-para-android/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-para-ios/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-para-ios/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-para-passar-o-tempo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-para-passar-o-tempo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-para-xbox-series-x/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-para-xbox-series-x/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-taticos-pc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-taticos-pc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-para-playstation/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-para-playstation/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/joystickknights/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/joystickknights/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/joysticknights/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/joysticknights/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/jogos-para-pc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/jogos-para-pc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/junji-ito/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/junji-ito/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/kadokawa/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/kadokawa/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/kakarot/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/kakarot/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/kamiya/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/kamiya/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/kazuma-kiryu/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/kazuma-kiryu/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/kelly/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/kelly/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/koei-tecmo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/koei-tecmo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/konami/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/konami/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/krafton/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/krafton/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamento/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamento/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamento-2025/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamento-2025/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamento-escape-from-tarkov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamento-escape-from-tarkov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamento-30-de-outubro-de-2025/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamento-30-de-outubro-de-2025/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamento-de-campea/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamento-de-campea/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamento-mobile/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamento-mobile/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamento-hitman-2026/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamento-hitman-2026/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamentopc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamentopc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamentos-playstation/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamentos-playstation/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamentos-2026/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamentos-2026/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamentos-marco-2026/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamentos-marco-2026/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamentos-ps5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamentos-ps5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamentos-steam/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamentos-steam/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamentos-xbox/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamentos-xbox/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lancamentos-xbox-series-x/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lancamentos-xbox-series-x/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lara-croft/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lara-croft/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/legacystyle/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/legacystyle/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/legend-levels/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/legend-levels/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lenovo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lenovo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lenovolegiongo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lenovolegiongo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/li-fen/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/li-fen/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lewis-hamilton/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lewis-hamilton/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/like-a-dragon/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/like-a-dragon/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/like-a-dragon-pirate-yakuza-in-hawaii/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/like-a-dragon-pirate-yakuza-in-hawaii/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/lizardcube/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/lizardcube/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/likeadragonpirateyakuza/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/likeadragonpirateyakuza/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/loot/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/loot/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mad-dog/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mad-dog/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/luvas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/luvas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mai-shiranui/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mai-shiranui/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/maior-lancamento-da-franquia/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/maior-lancamento-da-franquia/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/majima/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/majima/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/manorlords/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/manorlords/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/massive-monster/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/massive-monster/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mastercraft-weapon-blueprint/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mastercraft-weapon-blueprint/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mercado-de-skins/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mercado-de-skins/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/merrick-556/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/merrick-556/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metal-gear/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metal-gear/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metal-gear-master-collection-vol-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metal-gear-master-collection-vol-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metal-gear-peace-walker/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metal-gear-peace-walker/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mel-medarda/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mel-medarda/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metal-gear-solid/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metal-gear-solid/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metal-gear-solid-4/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metal-gear-solid-4/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metal-gear-solid-delta-leaks/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metal-gear-solid-delta-leaks/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metalgear/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metalgear/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metalgearsolid/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metalgearsolid/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/metas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/metas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mgs-gameplay/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mgs-gameplay/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mgsdelta-novas-informacoes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mgsdelta-novas-informacoes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/microsoft/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/microsoft/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mgsdelta/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mgsdelta/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/microsoft-edge/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/microsoft-edge/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/milla-jovovich/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/milla-jovovich/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/microsoftstore/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/microsoftstore/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/moco/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/moco/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mochila-server-slammer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mochila-server-slammer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/missaoexotica/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/missaoexotica/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/modo-4v4/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/modo-4v4/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mudancas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mudancas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/multiplayer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/multiplayer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/mw4/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/mw4/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/naruto/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/naruto/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/need-for-speed/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/need-for-speed/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/new-game-plus/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/new-game-plus/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/nightreign/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/nightreign/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/netflix/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/netflix/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/nikita-buyanov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/nikita-buyanov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ninja-gaiden/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ninja-gaiden/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/nintendo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/nintendo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/nintendo-switch-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/nintendo-switch-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/noticias/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/noticias/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/nova-atualizacao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/nova-atualizacao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/noticias-games/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/noticias-games/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/nova-campea-lol/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/nova-campea-lol/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/novasarmas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/novasarmas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/novidades-battlefield/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/novidades-battlefield/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/novo-patch-lol/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/novo-patch-lol/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/novo-personagem-lol/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/novo-personagem-lol/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/novo-trailer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/novo-trailer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/novos-jogos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/novos-jogos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/numero-de-jogadores/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/numero-de-jogadores/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/nvidia/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/nvidia/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/nvidia-geforce-now/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/nvidia-geforce-now/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/opera-gx/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/opera-gx/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/operador-blackcell/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/operador-blackcell/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/outriders/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/outriders/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/page-unlock-battle-pass/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/page-unlock-battle-pass/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/passe-de-batalha/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/passe-de-batalha/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/passe-de-batalha-black-ops-7/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/passe-de-batalha-black-ops-7/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/passe-de-batalha-warzone/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/passe-de-batalha-warzone/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/patch-25-s1-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/patch-25-s1-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/patch-notes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/patch-notes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/patient-zero-requiem-pack/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/patient-zero-requiem-pack/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pc-gaming/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pc-gaming/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pc-steam/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pc-steam/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pcgamepass/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pcgamepass/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pearl-abyss/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pearl-abyss/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/personagem-novo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/personagem-novo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pcgaming/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pcgaming/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pirata/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pirata/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/placa-de-video/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/placa-de-video/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/plataforma/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/plataforma/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/players/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/players/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/playstation/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/playstation/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/playstation-5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/playstation-5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/playtest/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/playtest/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/portal/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/portal/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pokemon/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pokemon/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pre-venda/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pre-venda/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pre-download-crimson-desert/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pre-download-crimson-desert/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/prevenda/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/prevenda/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/preco-blackcell-brasil/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/preco-blackcell-brasil/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/primerio-de-abril/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/primerio-de-abril/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/prevendafinalfantasyvii/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/prevendafinalfantasyvii/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/progressao-cruzada/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/progressao-cruzada/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/progressao-e-crafting/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/progressao-e-crafting/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/progressao-escape-from-tarkov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/progressao-escape-from-tarkov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/promocao-steam/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/promocao-steam/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ps5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ps5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pubg/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pubg/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pubg-mobile/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pubg-mobile/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pve/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pve/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ps-plus/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ps-plus/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pve-exploracao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pve-exploracao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pvp/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pvp/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pvp-arena/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pvp-arena/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/queda-de-precos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/queda-de-precos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/pvpve/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/pvpve/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/raider-deck/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/raider-deck/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/raid/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/raid/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ray-tracing-pc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ray-tracing-pc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/re9/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/re9/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/recorde-de-jogadores-simultaneos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/recorde-de-jogadores-simultaneos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/recordes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/recordes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/requisitos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/requisitos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/requisitos-crimson-desert-pc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/requisitos-crimson-desert-pc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/requisitos-minimos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/requisitos-minimos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rerequiem/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rerequiem/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/resident-evil/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/resident-evil/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/resident-evil-9-trailer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/resident-evil-9-trailer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/resident-evil-requiem/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/resident-evil-requiem/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/resident-evil-requiem-demo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/resident-evil-requiem-demo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/retakes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/retakes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/retrocompatibilidade/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/retrocompatibilidade/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/revenant/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/revenant/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/review/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/review/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/review-blackcell/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/review-blackcell/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rgg/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rgg/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/roadmap-11-semanas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/roadmap-11-semanas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/riot-games/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/riot-games/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/robobeat/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/robobeat/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rockstar-games/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rockstar-games/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rogue-ops/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rogue-ops/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rpg/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rpg/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rpg-de-acao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rpg-de-acao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rpg-de-acao-2026/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rpg-de-acao-2026/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rpg-moba/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rpg-moba/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rollbacknetcode/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rollbacknetcode/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/rpg-turn-based/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/rpg-turn-based/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/s-t-a-l-k-e-r-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/s-t-a-l-k-e-r-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/s-t-a-l-k-e-r-2-heart-of-chornobyl/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/s-t-a-l-k-e-r-2-heart-of-chornobyl/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/sandbox/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/sandbox/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/scarlett-e-ash-blackcell/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/scarlett-e-ash-blackcell/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/sea-of-thieves/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/sea-of-thieves/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/season/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/season/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/season-1/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/season-1/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/season-3/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/season-3/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/sega/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/sega/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/sega-villains-stage/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/sega-villains-stage/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/server-slam/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/server-slam/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/shinobi-art-of-vengeance-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/shinobi-art-of-vengeance-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/shinobi-art-of-vengeance/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/shinobi-art-of-vengeance/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/shooter/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/shooter/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/shooter-hardcore/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/shooter-hardcore/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/silent-hill/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/silent-hill/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/simulador/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/simulador/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/skif/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/skif/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/simulador-de-corrida/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/simulador-de-corrida/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/skins-de-cs-barato/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/skins-de-cs-barato/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/skyrim/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/skyrim/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/slitherine/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/slitherine/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/smite-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/smite-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/snakeeater/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/snakeeater/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/sniper-elite-resistance/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/sniper-elite-resistance/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/snk/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/snk/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/sorteio/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/sorteio/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/sobrevivencia-inverno/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/sobrevivencia-inverno/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/spider-man-2/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/spider-man-2/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/sony/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/sony/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/squareenix/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/squareenix/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/square-enix/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/square-enix/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/stalker/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/stalker/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/stattrak/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/stattrak/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/steam/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/steam/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/steam-free-to-play/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/steam-free-to-play/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/steam-market/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/steam-market/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/steamdb/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/steamdb/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/steam-sale/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/steam-sale/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/stella-montis/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/stella-montis/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/street-fighter-6-atualizacao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/street-fighter-6-atualizacao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/street-fighter-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/street-fighter-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/street-fighter-6-dlc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/street-fighter-6-dlc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/street-fighter-6-pc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/street-fighter-6-pc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/street-fighter-6-ps5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/street-fighter-6-ps5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/street-fighter-6-personagens/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/street-fighter-6-personagens/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/street-fighter-6-xbox-series-x/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/street-fighter-6-xbox-series-x/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/studio-candybox/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/studio-candybox/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/street-fighter-6-year-3/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/street-fighter-6-year-3/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/subnautica-2-multiplayer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/subnautica-2-multiplayer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/subnautica-below-zero/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/subnautica-below-zero/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/suporte-a-gamepad/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/suporte-a-gamepad/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/subnautica/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/subnautica/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/survival-game/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/survival-game/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/survival-horror/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/survival-horror/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/survival-shooter/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/survival-shooter/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/tarkov/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/tarkov/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/techland/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/techland/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/tarkov-preco/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/tarkov-preco/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/temporada-03-black-ops-7/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/temporada-03-black-ops-7/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/temporada-04/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/temporada-04/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/teste-aberto/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/teste-aberto/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/the-harbinger/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/the-harbinger/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/the-splitter/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/the-splitter/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/tiny-house-simulator/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/tiny-house-simulator/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/tokyo-game-show-2025/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/tokyo-game-show-2025/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/tomb-raider-mobile/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/tomb-raider-mobile/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/toty/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/toty/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/tox-nova/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/tox-nova/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/tomonobu-itagaki/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/tomonobu-itagaki/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/trailer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/trailer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/trade-up/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/trade-up/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/trailer-de-jogo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/trailer-de-jogo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/trailer-de-lancamento-crimson-desert/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/trailer-de-lancamento-crimson-desert/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/tribulacao-razor-9mm/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/tribulacao-razor-9mm/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/twitch/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/twitch/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/twitter/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/twitter/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ubisoft/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ubisoft/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/ubisoft-connect/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/ubisoft-connect/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/unknown-worlds/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/unknown-worlds/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/unreal-engine-5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/unreal-engine-5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/update-2-0/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/update-2-0/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/update/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/update/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/upgrade-gratuito/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/upgrade-gratuito/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/v-rising/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/v-rising/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/valkyrie-blackcell/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/valkyrie-blackcell/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/valorant/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/valorant/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/valquiria-jsoc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/valquiria-jsoc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/valve/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/valve/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/vazamento/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/vazamento/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/verdasnk/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/verdasnk/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/video-games/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/video-games/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/vfdirect/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/vfdirect/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/virtuafighter5rev0/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/virtuafighter5rev0/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/vrr/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/vrr/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/war-thunder/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/war-thunder/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/warhammer-40000-battlesector/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/warhammer-40000-battlesector/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/warzone-season-06/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/warzone-season-06/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/wipes-sazonais/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/wipes-sazonais/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/warzone/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/warzone/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/woolhaven-dlc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/woolhaven-dlc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/x/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/x/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/world-tour/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/world-tour/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/xbox-360/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/xbox-360/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/xbox-developer-direct-2025/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/xbox-developer-direct-2025/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/xbox-series-x/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/xbox-series-x/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/xbox-series-xs/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/xbox-series-xs/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/xbox-game-pass/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/xbox-game-pass/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/xboxevent/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/xboxevent/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/yakuza/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/yakuza/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/yakuza-kiwami-3/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/yakuza-kiwami-3/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/yoshitaka-mine/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/yoshitaka-mine/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/zangief-outfit-4/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/zangief-outfit-4/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/zelda-breath-of-the-wild/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/zelda-breath-of-the-wild/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/tag/xbox/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/tag/xbox/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/author/lucas-silva/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/author/lucas-silva/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/author/demonicgull/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/author/demonicgull/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/author/bruno-ribeiro/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/author/bruno-ribeiro/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/author/danki64/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/author/danki64/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/author/r4nd0m/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/author/r4nd0m/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/author/waffkekkj/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/author/waffkekkj/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/author/pedrobraga855gmail-com/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/author/pedrobraga855gmail-com/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/modern-warfare-4-call-of-duty-next-acontece-hoje-e-beta-de-acesso-antecipado-comeca-as-15h/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/modern-warfare-4-call-of-duty-next-acontece-hoje-e-beta-de-acesso-antecipado-comeca-as-15h/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/metal-gear-solid-master-collection-vol-2-chega-dia-27-veja-tudo-que-esta-incluido-na-colecao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/metal-gear-solid-master-collection-vol-2-chega-dia-27-veja-tudo-que-esta-incluido-na-colecao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/gta-6-suposto-vazamento-revela-mapa-com-cinco-condados-sistema-de-honra-gasolina-e-policia-mais-inteligente/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/gta-6-suposto-vazamento-revela-mapa-com-cinco-condados-sistema-de-honra-gasolina-e-policia-mais-inteligente/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/anime/anime-de-free-fire-ganha-titulo-oficial-e-estreia-em-2027/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/anime/anime-de-free-fire-ganha-titulo-oficial-e-estreia-em-2027/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/s-t-a-l-k-e-r-2-cost-of-hope-chega-em-20-de-agosto-junto-da-atualizacao-2-0/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/s-t-a-l-k-e-r-2-cost-of-hope-chega-em-20-de-agosto-junto-da-atualizacao-2-0/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/modern-warfare-4-revela-datas-do-beta-e-cod-next-pre-venda-no-switch-2-comeca-em-agosto/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/modern-warfare-4-revela-datas-do-beta-e-cod-next-pre-venda-no-switch-2-comeca-em-agosto/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/crimson-desert-recebe-trailer-de-lancamento-epico-focado-em-combates-e-mundo-aberto/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/crimson-desert-recebe-trailer-de-lancamento-epico-focado-em-combates-e-mundo-aberto/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/blackcell-da-temporada-03-de-black-ops-7-e-warzone-vale-a-pena-review-completa/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/blackcell-da-temporada-03-de-black-ops-7-e-warzone-vale-a-pena-review-completa/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/blackcell-da-temporada-04-de-black-ops-7-e-warzone-vale-a-pena/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/analises/blackcell-da-temporada-04-de-black-ops-7-e-warzone-vale-a-pena/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/resident-evil-requiem-lidera-lista-de-11-novos-jogos-no-nvidia-geforce-now/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/resident-evil-requiem-lidera-lista-de-11-novos-jogos-no-nvidia-geforce-now/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/crimson-desert-e-revelado-requisitos-de-pc-e-desempenho-nos-consoles/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/crimson-desert-e-revelado-requisitos-de-pc-e-desempenho-nos-consoles/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/milla-jovovich-e-o-novo-alvo-gratuito-em-hitman-woa/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/milla-jovovich-e-o-novo-alvo-gratuito-em-hitman-woa/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/subnautica-chega-otimizado-ao-nintendo-switch-2-na-proxima-semana/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/subnautica-chega-otimizado-ao-nintendo-switch-2-na-proxima-semana/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/nova-dlc-de-warhammer-40000-battlesector-traz-a-furia-da-black-legion/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/nova-dlc-de-warhammer-40000-battlesector-traz-a-furia-da-black-legion/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/tomb-raider-o-reboot-classico-de-lara-croft-chega-hoje-ao-ios-e-android/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/tomb-raider-o-reboot-classico-de-lara-croft-chega-hoje-ao-ios-e-android/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/demo-de-yakuza-kiwami-3-ja-disponivel/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/highguard-estreia-na-steam-com-97-mil-jogadores-mas-vive-risco-de-um-efeito-outriders/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/highguard-estreia-na-steam-com-97-mil-jogadores-mas-vive-risco-de-um-efeito-outriders/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/cult-of-the-lamb-recebe-expansao-woolhaven-confira-as-novidades-do-novo-dlc/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/cult-of-the-lamb-recebe-expansao-woolhaven-confira-as-novidades-do-novo-dlc/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/streamer-ultrapassa-a-marca-de-4-500-pacotes-abertos-sem-nenhuma-carta-toty/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/upgrade-premium-de-forza-horizon-6-no-brasil-custa-o-mesmo-que-o-jogo-base/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/galgun-o-exclusivo-que-abandonou-o-xbox/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/toty-12-jogador-e-mencoes-honrosas-chegam-ao-ea-fc-26/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/hitman-como-funciona-o-cross-progression-e-data-de-lancamento/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/leon-confirmado-em-novo-trailer-de-re9/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/arc-raiders-recebe-primeira-grande-atualizacao-com-novo-mapa-e-evento-global/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/cs2-libera-trade-up-para-facas-e-luvas-e-apaga-ate-us-2-bilhoes-do-mercado-de-skins-em-24-horas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/cs2-libera-trade-up-para-facas-e-luvas-e-apaga-ate-us-2-bilhoes-do-mercado-de-skins-em-24-horas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/battlefield-6-quebra-recordes-e-se-torna-o-maior-lancamento-da-franquia/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/battlefield-6-quebra-recordes-e-se-torna-o-maior-lancamento-da-franquia/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/blackcell-da-temporada-6-em-black-ops-6-e-warzone-vale-a-pena-review-completa/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/blackcell-da-temporada-6-em-black-ops-6-e-warzone-vale-a-pena-review-completa/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/majima-de-yakuza-chega-a-shinobi-art-of-vengeance/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/majima-de-yakuza-chega-a-shinobi-art-of-vengeance/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/dying-light-the-beast-roadmap-e-novidades/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/dying-light-the-beast-roadmap-e-novidades/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/arc-raiders-abre-servidor-parar-testes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/arc-raiders-abre-servidor-parar-testes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/hitman-completa-25-anos-com-edicao-especial-descontos-e-grandes-novidades-da-io-interactive/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/hitman-completa-25-anos-com-edicao-especial-descontos-e-grandes-novidades-da-io-interactive/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/tarkov-novidade-do-lancamento-na-tgs-2025/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/escape-from-tarkov-no-steam-e-requisitos-revelados/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/bo7-revelado-e-cod-next-em-setembro/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/c-viper-chega-com-tudo-em-street-fighter-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/c-viper-chega-com-tudo-em-street-fighter-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/shinobi-art-of-vengeance-uma-grata-surpresa/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/shinobi-art-of-vengeance-uma-grata-surpresa/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/metal-gear-solid-delta-novas-informacoes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/metal-gear-solid-delta-novas-informacoes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/como-conseguir-uma-key-do-beta-de-battlefield-6/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/como-conseguir-uma-key-do-beta-de-battlefield-6/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/quando-podemos-esperar-uma-demo-de-re9/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/quando-podemos-esperar-uma-demo-de-re9/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/9-kings-recebe-novo-rei-em-atualizacao-gigante/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/9-kings-recebe-novo-rei-em-atualizacao-gigante/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/pc/nova-atualizacao-de-gray-zone-warfare-traz-pvp-intenso-e-clima-dinamico/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/xbox/gta-6-adiado-goty-ganhou-concorrencia-de-peso/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/s-t-a-l-k-e-r-2-heart-of-chornobyl-chegara-ao-ps5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/s-t-a-l-k-e-r-2-heart-of-chornobyl-chegara-ao-ps5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/playstation/rockstar-adia-gta-vi-para-maio-de-2026/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/review-assassins-creed-shadows-entre-o-stealth-e-a-mesmice/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/verdansk-o-iconico-mapa-de-warzone-retorna-com-melhorias/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/herois-lendarios-da-segunda-guerra-mundial-dominarao-os-campos-de-batalha-em-enlisted/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/pegadinha-de-primeiro-de-abril-de-opera-gx-libera-espaco-de-seu-pc-de-maneira-inusitada/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/atomfall-atinge-mais-de-1-milhao-de-jogadores/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/infantaria-chega-ao-war-thunder-junto-com-veiculos-da-primeira-guerra-mundial/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/xbox/elden-ring-nightreign-novo-trailer/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/destiny-2-crossover-de-sea-of-thieves-e-brawlhalla/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/destiny-2-crossover-de-sea-of-thieves-e-brawlhalla/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/destiny-2-heresy-ato-iii-ja-esta-disponivel/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/destiny-2-heresy-ato-iii-ja-esta-disponivel/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/playstation/mindseye-do-ex-produtor-de-gta-chega-em-10-de-junho/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/plataformas/playstation/mindseye-do-ex-produtor-de-gta-chega-em-10-de-junho/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/conta-oficial-de-assassins-creed-responde-critica-de-elon-musk/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/conta-oficial-de-assassins-creed-responde-critica-de-elon-musk/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/f1-25-lewis-hamilton-e-a-estrela-da-revelacao-do-jogo/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/f1-25-lewis-hamilton-e-a-estrela-da-revelacao-do-jogo/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/konami-apresenta-silent-hill-f/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/konami-apresenta-silent-hill-f/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/anime/dragon-ball-z-kakarot-dlc-daima-anunciada/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/trailer-e-demo-de-like-a-dragon-pirate/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/plataformas/pc/clair-obscur-expedition-33-inicia-serie-de-trailers-focada-nos-personagens/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/plataformas/pc/clair-obscur-expedition-33-inicia-serie-de-trailers-focada-nos-personagens/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/hearts-of-iron-iv-nova-dlc-lanca-em-marco/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/escape-from-tarkov-finalmente-recebe-preco-regionalizado-apos-quase-9-anos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/escape-from-tarkov-finalmente-recebe-preco-regionalizado-apos-quase-9-anos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/virtua-fighter-r-e-v-o-agora-disponivel-na-steam/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/virtua-fighter-r-e-v-o-agora-disponivel-na-steam/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/robobeat-agora-disponivel-nos-consoles/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/robobeat-agora-disponivel-nos-consoles/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/criador-de-devil-may-cry-nao-assistira-o-anime/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/criador-de-devil-may-cry-nao-assistira-o-anime/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/ex-clusivo-forza-horizon-5-chegara-ao-playstation-5/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/ex-clusivo-forza-horizon-5-chegara-ao-playstation-5/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/conheca-os-jogos-favoritos-dos-devs-de-clair-obscur-expedition-33/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/conheca-os-jogos-favoritos-dos-devs-de-clair-obscur-expedition-33/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/spider-man-2-para-pc-novidades-e-requisitos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/spider-man-2-para-pc-novidades-e-requisitos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/criador-de-ninja-gaiden-2-nao-sabia-sobre-novo-jogo-da-franquia/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/seu-pc-esta-pronto-requisitos-para-rodar-assassins-creed-shadows/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/goty-em-potencial-conheca-clair-obscur-expedition-33/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/goty-em-potencial-conheca-clair-obscur-expedition-33/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/tiny-house-simulator-construa-decore-e-relaxe/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/analises/tiny-house-simulator-construa-decore-e-relaxe/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/ubisoft-e-as-conquistas-no-steam/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/ubisoft-e-as-conquistas-no-steam/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/um-dos-maiores-rpgs-com-o-menor-preco-ja-visto/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/um-dos-maiores-rpgs-com-o-menor-preco-ja-visto/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/sniper-elite-resistance-novo-trailer/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/sniper-elite-resistance-novo-trailer/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/asseto-corsa-evo-em-early-access-no-steam/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/asseto-corsa-evo-em-early-access-no-steam/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/exoborne-participe-do-teste-em-fevereiro/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/exoborne-participe-do-teste-em-fevereiro/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/like-a-dragon-pirate-novas-informacoes/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/smite-2-agora-e-gratuito-para-jogar/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/opera-gx-traz-cyberpunk-2077-direto-para-o-navegador/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/nintendo-switch-2-chega-em-2025/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/nintendo-switch-2-chega-em-2025/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/mai-shiranui-se-junta-a-luta-em-street-fighter-6/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/lenovo-vaza-halo-5-guardians-chegara-ao-steam/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/manor-lords-novidades-do-ultimo-update/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/o-maior-hitman-de-todos-os-tempos-agora-com-van-damme/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/o-maior-hitman-de-todos-os-tempos-agora-com-van-damme/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/v-rising-5-milhoes-de-copias-vendidas-e-nova-atualizacao/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/v-rising-5-milhoes-de-copias-vendidas-e-nova-atualizacao/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/destiny-2-ato-iii-de-revenant-e-lancado/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/destiny-2-ato-iii-de-revenant-e-lancado/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/etheria-restart-beta-fechado/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/etheria-restart-beta-fechado/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/car-dealer-simulator-gerencie-sua-propria-concessionaria-no-prologo-gratuito/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/car-dealer-simulator-gerencie-sua-propria-concessionaria-no-prologo-gratuito/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/league-of-legends-apresenta-mel-a-nova-campea/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/league-of-legends-apresenta-mel-a-nova-campea/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/adiado-novamente-ac-shadows-e-adiado-em-comunicado-oficial/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/free-fire-x-naruto-shippuden-veja-como-sera-o-crossover/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/free-fire-x-naruto-shippuden-veja-como-sera-o-crossover/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/final-fantasy-vii-rebirth-tudo-sobre-a-versao-pc/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/cpc-a-ia-de-krafton-e-nvidia-que-ira-moldar-o-futuro-dos-jogos/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/cpc-a-ia-de-krafton-e-nvidia-que-ira-moldar-o-futuro-dos-jogos/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/dead-by-daylight-recebe-novo-crossover-confira-os-detalhes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/dead-by-daylight-recebe-novo-crossover-confira-os-detalhes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/arma-reforger-quebra-recordes-em-todas-as-plataformas/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/arma-reforger-quebra-recordes-em-todas-as-plataformas/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/anime/ghost-of-tsushima-anime-confira-os-detalhes/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/anime/ghost-of-tsushima-anime-confira-os-detalhes/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/valorant-temporada-2025-ato-i-com-tejo-novo-personagem/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/valorant-temporada-2025-ato-i-com-tejo-novo-personagem/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/analise-halo-infinite/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/analises/analise-halo-infinite/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/analise-need-for-speed-hot-pursuit-remastered/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/analises/analise-need-for-speed-hot-pursuit-remastered/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/analise-beat-souls/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/analises/analise-beat-souls/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/analise-taiko-no-tatsujin-the-drum-master/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/nvidia-esta-sorteando-placas-de-video-iconicas-ate-amanha/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/servidores-de-friday-the-13th-desligados/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/nova-raid-pve-de-delta-force-e-lancado/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/exclusivo-de-playstation-chegando-ao-xbox/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/detalhes-de-assetto-corsa-evo/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/criador-de-doa-se-frustra-xbox/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/analises/analise-dead-rising/",
+      "status": 404,
+      "noindex": true,
+      "passed": false
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/18-telegram/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/18-telegram/",
+      "noindex": false,
+      "passed": true
+    },
+    {
+      "url": "https://joysticknights.com.br/noticias/bleach-brave-souls-evento/",
+      "status": 200,
+      "canonical": "https://joysticknights.com.br/noticias/bleach-brave-souls-evento/",
+      "noindex": false,
+      "passed": true
+    }
+  ]
+}

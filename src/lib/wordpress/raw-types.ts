@@ -53,6 +53,15 @@ export type RawPostMeta = {
   promogames_editorial_type?: string;
   promogames_platforms?: string[] | string;
   promogames_review_score?: number | string;
+  promogames_review_game?: string;
+  promogames_review_developer?: string;
+  promogames_review_publisher?: string;
+  promogames_review_release_date?: string;
+  promogames_review_tested_platform?: string;
+  promogames_review_disclosure?: string;
+  promogames_review_verdict?: string;
+  promogames_review_pros?: string;
+  promogames_review_cons?: string;
   promogames_featured?: boolean | string | number;
 };
 
@@ -73,6 +82,7 @@ export type RawPost = {
   categories: number[];
   tags: number[];
   meta?: RawPostMeta;
+  promogames_review_rating?: number | null;
   promogames_seo?: RawSeo;
   _embedded?: {
     author?: RawAuthor[];

@@ -139,8 +139,9 @@ export function mapPost(post: RawPost): Story {
   const content = post.content?.rendered ?? "";
   const primaryCategory =
     categories.find((category) => category.slug !== "noticias") ?? categories[0];
-  const rawScore = post.meta?.promogames_review_score;
-  const reviewScore = rawScore === undefined || rawScore === "" ? undefined : Number(rawScore);
+  const rawScore = post.promogames_review_rating !== undefined ? post.promogames_review_rating : Number(post.meta?.promogames_review_score) === 0 ? undefined : post.meta?.promogames_review_score;
+  const reviewScore = rawScore == null || rawScore === "" ? undefined : Number(rawScore);
+  const editorialType = post.meta?.promogames_editorial_type || (categories.some((term) => term.slug === "analises") ? "analise" : categories.some((term) => term.slug === "guias") ? "guia" : "noticia");
 
   return {
     id: post.id,
@@ -161,9 +162,20 @@ export function mapPost(post: RawPost): Story {
     tags,
     primaryCategory,
     readingMinutes: readingTime(content || post.excerpt.rendered),
-    editorialType: post.meta?.promogames_editorial_type,
-    platforms: toPlatforms(post.meta?.promogames_platforms),
-    reviewScore: Number.isFinite(reviewScore) ? reviewScore : undefined,
+    editorialType,
+    platforms: [...new Set([...toPlatforms(post.meta?.promogames_platforms), ...categories.filter((term) => ["playstation", "xbox", "nintendo", "pc", "mobile", "vr"].includes(term.slug)).map((term) => term.slug)])],
+    review: editorialType === "analise" ? {
+      game: plainText(post.meta?.promogames_review_game ?? ""),
+      developer: plainText(post.meta?.promogames_review_developer ?? ""),
+      publisher: plainText(post.meta?.promogames_review_publisher ?? ""),
+      releaseDate: plainText(post.meta?.promogames_review_release_date ?? ""),
+      testedPlatform: plainText(post.meta?.promogames_review_tested_platform ?? ""),
+      disclosure: plainText(post.meta?.promogames_review_disclosure ?? ""),
+      verdict: plainText(post.meta?.promogames_review_verdict ?? ""),
+      pros: (post.meta?.promogames_review_pros ?? "").split(/\r?\n/).map(plainText).filter(Boolean),
+      cons: (post.meta?.promogames_review_cons ?? "").split(/\r?\n/).map(plainText).filter(Boolean),
+    } : undefined,
+    reviewScore: Number.isFinite(reviewScore) && reviewScore! >= 0 && reviewScore! <= 10 ? reviewScore : undefined,
     featured: toBoolean(post.meta?.promogames_featured),
   };
 }

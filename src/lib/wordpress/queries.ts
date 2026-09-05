@@ -1,7 +1,7 @@
 import "server-only";
 
 import { cache } from "react";
-import { getWordPressRestUrl, wordPressRequest } from "./client";
+import { getWordPressRestUrl, wordPressRequest, WordPressApiError } from "./client";
 import { fallbackStories } from "./fallback";
 import { mapAuthor, mapComment, mapPage, mapPost, mapTerm } from "./mappers";
 import type { RawAuthor, RawCategory, RawComment, RawPage, RawPost, RawTag } from "./raw-types";
@@ -23,6 +23,7 @@ const LIST_FIELDS = [
   "categories",
   "tags",
   "meta",
+  "promogames_review_rating",
   "promogames_seo",
   "_links",
   "_embedded",
@@ -35,11 +36,21 @@ const COMMENT_FIELDS = "id,post,parent,author_name,date,content,status,type";
 const TERM_FIELDS = "id,name,slug,link,taxonomy,parent,count,description";
 const EMBED = "author,wp:featuredmedia,wp:term";
 
+const supportsEditorialFilters = cache(async () => {
+  try {
+    const response = await fetch(getWordPressRestUrl("promogames/v1/capabilities"), { signal: AbortSignal.timeout(10000), next: { revalidate: 300, tags: ["wordpress"] } });
+    return response.ok && (await response.json()).editorial_filters === true;
+  } catch { return false; }
+});
+
 export async function getStories(query: StoryQuery = {}): Promise<Paginated<Story>> {
   const page = Math.max(1, query.page ?? 1);
   const perPage = Math.min(24, Math.max(1, query.perPage ?? 12));
 
   try {
+    if ((query.platform || query.editorialType) && !await supportsEditorialFilters()) {
+      throw new WordPressApiError("O CMS ainda não disponibiliza filtros editoriais.", 503);
+    }
     const response = await wordPressRequest<RawPost[]>(
       "/posts",
       {
@@ -51,6 +62,12 @@ export async function getStories(query: StoryQuery = {}): Promise<Paginated<Stor
         author: query.authorId,
         exclude: query.exclude,
         sticky: query.sticky,
+        platform: query.platform,
+        editorial_type: query.editorialType,
+        before: query.before,
+        after: query.after,
+        order: query.order ?? "desc",
+        orderby: "date",
         _embed: EMBED,
         _fields: LIST_FIELDS,
       },
@@ -65,7 +82,11 @@ export async function getStories(query: StoryQuery = {}): Promise<Paginated<Stor
       totalPages: response.totalPages,
     };
   } catch (error) {
+    if (error instanceof WordPressApiError && error.code === "rest_post_invalid_page_number") {
+      return { items: [], page, perPage, total: 0, totalPages: 0 };
+    }
     console.error("[wordpress] Falha ao carregar matérias", error);
+    if (process.env.WORDPRESS_ALLOW_FALLBACK !== "true") throw error;
     const items = page === 1 && !query.search && !query.categoryId && !query.tagId && !query.authorId
       ? fallbackStories.slice(0, perPage)
       : [];
@@ -135,7 +156,7 @@ export const getStoryBySlug = cache(async (slug: string): Promise<Story | null> 
     return response.data[0] ? mapPost(response.data[0]) : null;
   } catch (error) {
     console.error(`[wordpress] Falha ao carregar matéria ${slug}`, error);
-    return fallbackStories.find((story) => story.slug === slug) ?? null;
+    throw error;
   }
 });
 
@@ -149,7 +170,7 @@ export const getPageBySlug = cache(async (slug: string): Promise<WordPressPage |
     return response.data[0] ? mapPage(response.data[0]) : null;
   } catch (error) {
     console.error(`[wordpress] Falha ao carregar página ${slug}`, error);
-    return null;
+    throw error;
   }
 });
 
@@ -225,7 +246,7 @@ export const getSitemapStories = cache(async (): Promise<SitemapStory[]> => {
     return stories;
   } catch (error) {
     console.error("[wordpress] Falha ao montar sitemap", error);
-    return stories.length ? stories : fallbackStories;
+    throw error;
   }
 });
 
@@ -250,7 +271,7 @@ export const getSitemapPages = cache(async (): Promise<SitemapPage[]> => {
     return pages;
   } catch (error) {
     console.error("[wordpress] Falha ao montar páginas do sitemap", error);
-    return pages;
+    throw error;
   }
 });
 
@@ -264,7 +285,7 @@ export const getCategories = cache(async (): Promise<WordPressTerm[]> => {
     return response.data.map(mapTerm).sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
   } catch (error) {
     console.error("[wordpress] Falha ao carregar categorias", error);
-    return [];
+    throw error;
   }
 });
 
@@ -283,7 +304,7 @@ export const getTags = cache(async (): Promise<WordPressTerm[]> => {
     return response.data.map(mapTerm).sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
   } catch (error) {
     console.error("[wordpress] Falha ao carregar tags", error);
-    return [];
+    throw error;
   }
 });
 
@@ -306,7 +327,7 @@ export const getSitemapTags = cache(async (): Promise<WordPressTerm[]> => {
     return tags;
   } catch (error) {
     console.error("[wordpress] Falha ao carregar tags do sitemap", error);
-    return tags;
+    throw error;
   }
 });
 
@@ -320,7 +341,7 @@ export const getTagBySlug = cache(async (slug: string): Promise<WordPressTerm | 
     return response.data[0] ? mapTerm(response.data[0]) : null;
   } catch (error) {
     console.error(`[wordpress] Falha ao carregar tag ${slug}`, error);
-    return null;
+    throw error;
   }
 });
 
@@ -334,7 +355,7 @@ export const getAuthors = cache(async (): Promise<WordPressAuthor[]> => {
     return response.data.map(mapAuthor);
   } catch (error) {
     console.error("[wordpress] Falha ao carregar autores", error);
-    return [];
+    throw error;
   }
 });
 

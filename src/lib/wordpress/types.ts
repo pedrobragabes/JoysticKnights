@@ -81,6 +81,17 @@ export type Story = {
   editorialType?: string;
   platforms: string[];
   reviewScore?: number;
+  review?: {
+    game: string;
+    developer: string;
+    publisher: string;
+    releaseDate: string;
+    testedPlatform: string;
+    disclosure: string;
+    verdict: string;
+    pros: string[];
+    cons: string[];
+  };
   featured: boolean;
 };
 
@@ -101,4 +112,9 @@ export type StoryQuery = {
   authorId?: number;
   exclude?: number[];
   sticky?: boolean;
+  platform?: string;
+  editorialType?: string;
+  before?: string;
+  after?: string;
+  order?: "asc" | "desc";
 };

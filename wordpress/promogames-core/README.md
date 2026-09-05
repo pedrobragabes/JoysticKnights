@@ -1,10 +1,10 @@
-# PromoGames Core 1.2
+# PromoGames Core 1.3
 
-Plugin editorial para WordPress headless. Apesar do nome histórico e do namespace `promogames/v1`, a versão 1.2 também é o adaptador usado pelo piloto JoystickNights. O frontend público fica no Next.js; WordPress permanece responsável por redação, revisão, usuários, mídia, comentários e metadados editoriais.
+Plugin editorial para WordPress headless. Apesar do nome histórico e do namespace `promogames/v1`, a versão 1.3 também é o adaptador usado pelo piloto JoystickNights. O frontend público fica no Next.js; WordPress permanece responsável por redação, revisão, usuários, mídia, comentários e metadados editoriais.
 
 O código exige WordPress 6.5 ou posterior, PHP 8.1 ou posterior, HTTPS e permalinks habilitados. Ele não apaga o tema legado e não substitui a interface do plugin de SEO, consentimento, analytics, anúncios, formulários ou cache do frontend.
 
-## O que a versão 1.2 entrega
+## O que a versão 1.3 entrega
 
 - seis metacampos editoriais de posts expostos no REST;
 - curadoria pública em `GET /wp-json/promogames/v1/home?per_page=4`;
@@ -83,7 +83,7 @@ Com `PROMOGAMES_FRONTEND_URL` definido, `get_permalink()` e os links **Ver post/
 - `/wp-admin/*`, `/wp-login.php`, AJAX, cron, REST e WP-CLI;
 - `/wp-content/*` e `/wp-includes/*`, necessários para mídia e recursos do painel;
 - preview autenticado de páginas, mantido temporariamente no tema legado;
-- `/robots.txt`, que responde com `Disallow: /`;
+- `/robots.txt`, que responde com rastreamento dos redirects permitido, sem sitemap próprio;
 - feeds e sitemaps do CMS, que respondem `410 Gone` para evitar conteúdo duplicado.
 
 Ao abrir somente a raiz do CMS enquanto autenticado, o plugin envia o usuário ao painel. Toda resposta dinâmica do WordPress inclui `X-Robots-Tag: noindex, nofollow, noarchive`.
@@ -122,7 +122,7 @@ https://frontend/api/draft/?id=<post-id>&secret=<segredo>
 
 O frontend valida o segredo, usa a Application Password no servidor para buscar `/wp-json/wp/v2/posts/<id>?context=edit` e ativa o Draft Mode. A Application Password nunca pode ser enviada ao navegador.
 
-Na versão 1.2, o Draft Mode externo cobre apenas posts. Páginas continuam usando preview nativo, restrito a usuário autenticado no CMS, até existir uma rota de preview de páginas no frontend. Assim, o link de preview de página não é enviado para uma tela inexistente no Next.js.
+Na versão 1.3, o Draft Mode externo cobre apenas posts. Páginas continuam usando preview nativo, restrito a usuário autenticado no CMS, até existir uma rota de preview de páginas no frontend. Assim, o link de preview de página não é enviado para uma tela inexistente no Next.js.
 
 Teste o preview clicando pelo painel; não monte manualmente uma URL com segredo em terminal, histórico do navegador compartilhado ou documentação. Se o WordPress retornar 401:
 
@@ -165,7 +165,7 @@ Antes do corte, verifique uma matéria com SEO customizado, outra sem customiza�
 
 ### Páginas
 
-Páginas são consultadas pelo endpoint nativo `/wp-json/wp/v2/pages` e entram na revalidação da versão 1.2. Elementor permanece ativo para edição e rollback de páginas legadas, mas o frontend externo não recebe automaticamente CSS, widgets ou scripts Elementor. Cada página necessária precisa de rota equivalente, renderização compatível ou redirect explícito.
+Páginas são consultadas pelo endpoint nativo `/wp-json/wp/v2/pages` e entram na revalidação da versão 1.3. Elementor permanece ativo para edição e rollback de páginas legadas, mas o frontend externo não recebe automaticamente CSS, widgets ou scripts Elementor. Cada página necessária precisa de rota equivalente, renderização compatível ou redirect explícito.
 
 ### Comentários
 
@@ -219,4 +219,13 @@ O runbook completo do piloto está em [`docs/joysticknights-headless.md`](../../
 
 Não reutilize credenciais ou segredos do JoystickNights. Gere backup fresco, um novo usuário técnico e três novos segredos, incluindo o par exclusivo de comentários. O perfil público passa a `promogames`, os hosts passam a `cms.promogamesbr.com` e ao staging escolhido, e `PROMOGAMES_SITE_NAME` volta a `PromoGames`.
 
-O adaptador SEO 1.2 normaliza The SEO Framework, SEOPress, Yoast SEO e Rank Math no mesmo campo `promogames_seo`. A replicação ainda exige QA com valores reais do plugin escolhido e tratamento separado dos campos ACF de autor; não presuma paridade apenas porque o plugin foi aprovado no JoystickNights.
+O adaptador SEO 1.3 normaliza The SEO Framework, SEOPress, Yoast SEO e Rank Math no mesmo campo `promogames_seo`. A replicação ainda exige QA com valores reais do plugin escolhido e tratamento separado dos campos ACF de autor; não presuma paridade apenas porque o plugin foi aprovado no JoystickNights.
+
+
+## Review e filtros (1.3)
+
+A ficha editorial inclui jogo, desenvolvedora, publisher, lançamento, plataforma analisada, transparência, veredito, prós e contras (um por linha). Campos vazios não geram fatos ou notas. `promogames_review_rating` distingue nota zero de ausência de nota.
+
+`GET /wp-json/promogames/v1/capabilities` anuncia suporte aos filtros `platform` e `editorial_type` de `/posts`; filtros são aplicados antes da paginação. Ao acessar o admin, lotes de 100 posts recebem apenas metadados ausentes de tipo/plataforma, derivados das categorias existentes. Notas, textos e metadados já preenchidos são preservados.
+
+No host `cms.joysticknights.com.br`, os destinos padrão preservam a migração para o frontend público. As constantes do `wp-config.php` têm prioridade; nenhum segredo é armazenado no código do plugin.

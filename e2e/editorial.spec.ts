@@ -33,6 +33,24 @@ test("home apresenta o perfil e conteúdo editorial atual", async ({ page }) => 
   expect(violations.violations.filter((item) => item.impact === "critical")).toEqual([]);
 });
 
+test("home continua o feed em URLs paginadas sem repetir os blocos editoriais", async ({ page }) => {
+  await page.goto("/");
+
+  const heroLinks = await page.getByTestId("featured-carousel").getByRole("link").evaluateAll((links) => links.map((link) => link.getAttribute("href")));
+  const feedSection = page.locator("section").filter({ has: page.getByRole("heading", { name: "Acabou de sair", exact: true }) });
+  const feedLinks = await feedSection.locator("article a").evaluateAll((links) => links.map((link) => link.getAttribute("href")));
+  expect(feedLinks.length).toBeGreaterThan(0);
+  expect(feedLinks.some((href) => heroLinks.includes(href))).toBe(true);
+
+  const pagination = page.getByRole("navigation", { name: "Paginação" });
+  await expect(pagination).toBeVisible();
+  await pagination.getByRole("link", { name: "Próxima" }).click();
+  await expect(page).toHaveURL(/\/page\/2\/$/);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/page\/2\/$/);
+  await expect(page.getByRole("heading", { name: "Acabou de sair — página 2" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "No controle agora" })).toHaveCount(0);
+});
+
 test("destaques navegam como carrossel por controles e indicadores", async ({ page }) => {
   await page.goto("/");
   const carousel = page.getByTestId("featured-carousel");
@@ -60,8 +78,35 @@ test("busca usa um termo confirmado pela API editorial", async ({ page }) => {
   await page.goto(`/buscar/?q=${encodeURIComponent(searchTerm)}`);
 
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Resultados para");
-  await expect(page.getByRole("searchbox")).toHaveValue(searchTerm);
+  await expect(page.getByLabel("Buscar no JoystickNights", { exact: true })).toHaveValue(searchTerm);
   await expect(page.locator("main article").first()).toBeVisible();
+});
+
+test("paginação fora do acervo responde 404 e busca mantém os filtros", async ({ page }) => {
+  const response = await page.goto("/page/99999/");
+  expect(response?.status()).toBe(404);
+  await page.goto("/buscar/?q=Modern&platform=pc");
+  await expect(page.getByLabel("Plataforma", { exact: true })).toHaveValue("pc");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+});
+
+test("arquivo tem canonical e links próprios na página 2", async ({ page }) => {
+  const fixture = getEditorialFixture();
+  const category = fixture.categories.find((item) => item.path.includes("noticias"));
+  test.skip(!category, "O perfil não tem categoria notícias.");
+  const response = await page.goto(`${category!.path}page/2/`);
+  expect(response?.status()).toBe(200);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/page\/2\/$/);
+  await expect(page.getByRole("navigation", { name: "Paginação" }).getByRole("link", { name: "Anterior" })).toHaveAttribute("href", category!.path);
+});
+
+test("matérias antigas presentes no CMS não viram 404", async ({ page }) => {
+  for (const path of ["/noticias/demo-de-yakuza-kiwami-3-ja-disponivel/", "/analises/review-assassins-creed-shadows-entre-o-stealth-e-a-mesmice/"]) {
+    const response = await page.goto(path);
+    expect(response?.status()).toBe(200);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", new RegExp(`${escapeRegExp(path)}$`));
+    if (path.startsWith("/analises/")) await expect(page.getByRole("region", { name: "Resumo da análise" })).toBeVisible();
+  }
 });
 
 test("navegação abre uma categoria existente no perfil", async ({ page, isMobile }) => {

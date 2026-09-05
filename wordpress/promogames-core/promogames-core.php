@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PromoGames Core
  * Description: Integração editorial headless: metacampos, SEO, curadoria, preview e revalidação.
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author: PromoGames
  * Requires at least: 6.5
  * Requires PHP: 8.1
@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-const PROMOGAMES_CORE_VERSION = '1.2.0';
+const PROMOGAMES_CORE_VERSION = '1.3.0';
 
 /**
  * Registra os metacampos que formam o contrato editorial do front headless.
@@ -26,6 +26,13 @@ function promogames_core_register_meta(): void
         'auth_callback' => static fn (): bool => current_user_can('edit_posts'),
     ];
 
+    foreach (promogames_core_review_fields() as $field => $label) {
+        register_post_meta('post', 'promogames_review_' . $field, $common + [
+            'type' => 'string',
+            'sanitize_callback' => 'sanitize_textarea_field',
+            'show_in_rest' => ['schema' => ['type' => 'string']],
+        ]);
+    }
     register_post_meta('post', 'promogames_deck', $common + [
         'type' => 'string',
         'sanitize_callback' => 'sanitize_textarea_field',
@@ -81,6 +88,21 @@ function promogames_core_sanitize_score(mixed $value): float
     return max(0, min(10, (float) $value));
 }
 
+function promogames_core_review_fields(): array
+{
+    return [
+        'game' => 'Jogo',
+        'developer' => 'Desenvolvedora',
+        'publisher' => 'Publisher',
+        'release_date' => 'Data de lançamento (AAAA-MM-DD)',
+        'tested_platform' => 'Plataforma analisada',
+        'disclosure' => 'Cópia fornecida por / transparência',
+        'verdict' => 'Veredito',
+        'pros' => 'Prós (um por linha)',
+        'cons' => 'Contras (um por linha)',
+    ];
+}
+
 function promogames_core_add_meta_box(): void
 {
     add_meta_box(
@@ -123,6 +145,12 @@ function promogames_core_render_meta_box(WP_Post $post): void
         <label style="display:block;margin:.35rem 0"><input type="checkbox" name="promogames_platforms[]" value="<?php echo esc_attr($value); ?>" <?php checked(in_array($value, $platforms, true)); ?>> <?php echo esc_html($label); ?></label>
     <?php endforeach; ?>
     <p><label for="promogames_review_score"><strong>Nota (0–10)</strong></label><input class="widefat" type="number" min="0" max="10" step="0.1" id="promogames_review_score" name="promogames_review_score" value="<?php echo esc_attr((string) $score); ?>"></p>
+    <details><summary>Ficha da análise</summary>
+    <?php foreach (promogames_core_review_fields() as $field => $label) : $key = 'promogames_review_' . $field; ?>
+        <p><label for="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></label>
+        <textarea class="widefat" rows="3" id="<?php echo esc_attr($key); ?>" name="<?php echo esc_attr($key); ?>"><?php echo esc_textarea((string) get_post_meta($post->ID, $key, true)); ?></textarea></p>
+    <?php endforeach; ?>
+    </details>
     <p><label><input type="checkbox" name="promogames_featured" value="1" <?php checked($featured); ?>> Destacar na home</label></p>
     <p><label for="promogames_featured_order"><strong>Ordem do destaque</strong></label><input class="small-text" type="number" min="0" max="99" id="promogames_featured_order" name="promogames_featured_order" value="<?php echo esc_attr((string) $order); ?>"></p>
     <?php
@@ -146,6 +174,12 @@ function promogames_core_save_meta(int $post_id): void
 
     $deck === '' ? delete_post_meta($post_id, 'promogames_deck') : update_post_meta($post_id, 'promogames_deck', $deck);
     update_post_meta($post_id, 'promogames_editorial_type', $type);
+    foreach (promogames_core_review_fields() as $field => $label) {
+        $key = 'promogames_review_' . $field;
+        if (isset($_POST[$key]) && is_string($_POST[$key])) {
+            update_post_meta($post_id, $key, sanitize_textarea_field(wp_unslash($_POST[$key])));
+        }
+    }
     update_post_meta($post_id, 'promogames_platforms', $platforms);
     $score === null ? delete_post_meta($post_id, 'promogames_review_score') : update_post_meta($post_id, 'promogames_review_score', $score);
     update_post_meta($post_id, 'promogames_featured', $featured);
@@ -155,6 +189,18 @@ add_action('save_post_post', 'promogames_core_save_meta');
 
 function promogames_core_register_rest_routes(): void
 {
+    register_rest_field('post', 'promogames_review_rating', [
+        'get_callback' => static function (array $post): ?float {
+            return metadata_exists('post', (int) $post['id'], 'promogames_review_score')
+                ? (float) get_post_meta((int) $post['id'], 'promogames_review_score', true) : null;
+        },
+        'schema' => ['type' => ['number', 'null'], 'context' => ['view', 'edit']],
+    ]);
+    register_rest_route('promogames/v1', '/capabilities', [
+        'methods' => WP_REST_Server::READABLE,
+        'permission_callback' => '__return_true',
+        'callback' => static fn (): array => ['version' => PROMOGAMES_CORE_VERSION, 'editorial_filters' => true],
+    ]);
     register_rest_route('promogames/v1', '/home', [
         'methods' => WP_REST_Server::READABLE,
         'permission_callback' => '__return_true',
@@ -391,10 +437,14 @@ function promogames_core_home_endpoint(WP_REST_Request $request): WP_REST_Respon
 /** @return array{frontend:string,preview_secret:string,revalidate_url:string,revalidate_secret:string,comments_secret:string} */
 function promogames_core_config(): array
 {
+    // Preserve the existing JoystickNights cutover defaults when upgrading 1.1.
+    // Constants remain authoritative for other installations and staging.
+    $default_frontend = wp_parse_url(home_url(), PHP_URL_HOST) === 'cms.joysticknights.com.br' ? 'https://joysticknights.com.br' : '';
+    $frontend = defined('PROMOGAMES_FRONTEND_URL') ? untrailingslashit(PROMOGAMES_FRONTEND_URL) : $default_frontend;
     return [
-        'frontend' => defined('PROMOGAMES_FRONTEND_URL') ? untrailingslashit(PROMOGAMES_FRONTEND_URL) : '',
+        'frontend' => $frontend,
         'preview_secret' => defined('PROMOGAMES_PREVIEW_SECRET') ? (string) PROMOGAMES_PREVIEW_SECRET : '',
-        'revalidate_url' => defined('PROMOGAMES_REVALIDATE_URL') ? (string) PROMOGAMES_REVALIDATE_URL : '',
+        'revalidate_url' => defined('PROMOGAMES_REVALIDATE_URL') ? (string) PROMOGAMES_REVALIDATE_URL : ($frontend ? $frontend . '/api/revalidate' : ''),
         'revalidate_secret' => defined('PROMOGAMES_REVALIDATE_SECRET') ? (string) PROMOGAMES_REVALIDATE_SECRET : '',
         'comments_secret' => defined('PROMOGAMES_COMMENTS_SECRET') ? (string) PROMOGAMES_COMMENTS_SECRET : '',
     ];
@@ -529,7 +579,8 @@ add_action('template_redirect', 'promogames_core_redirect_public_frontend', 0);
 function promogames_core_cms_robots(string $output, bool $public): string
 {
     unset($output, $public);
-    return "User-agent: *\nDisallow: /\n";
+    // Crawlers must reach public redirects/noindex to remove already indexed CMS URLs.
+    return "User-agent: *\nDisallow: /wp-admin/\nDisallow: /wp-login.php\nAllow: /wp-admin/admin-ajax.php\n";
 }
 add_filter('robots_txt', 'promogames_core_cms_robots', PHP_INT_MAX, 2);
 add_filter('wp_sitemaps_enabled', '__return_false');
@@ -873,3 +924,47 @@ function promogames_core_site_health_test(): array
         'test' => 'promogames_core_configuration',
     ];
 }
+
+add_filter('rest_post_collection_params', static function (array $params): array {
+    $params['platform'] = ['type' => 'string', 'enum' => ['playstation', 'xbox', 'nintendo', 'pc', 'mobile', 'vr']];
+    $params['editorial_type'] = ['type' => 'string', 'enum' => ['noticia', 'analise', 'guia', 'promocao']];
+    return $params;
+});
+add_filter('rest_post_query', static function (array $args, WP_REST_Request $request): array {
+    $clauses = [];
+    if ($request->get_param('platform')) {
+        $clauses[] = ['key' => 'promogames_platforms', 'value' => '"' . sanitize_key($request->get_param('platform')) . '"', 'compare' => 'LIKE'];
+    }
+    if ($request->get_param('editorial_type')) {
+        $clauses[] = ['key' => 'promogames_editorial_type', 'value' => sanitize_key($request->get_param('editorial_type')), 'compare' => '='];
+    }
+    if ($clauses) {
+        $args['meta_query'] = ['relation' => 'AND', $args['meta_query'] ?? [], ...$clauses];
+    }
+    return $args;
+}, 10, 2);
+
+// Backfill only missing metadata from existing taxonomy; never infer scores or review copy.
+add_action('admin_init', static function (): void {
+    if (!current_user_can('manage_options') || get_option('promogames_editorial_backfill') === '1.3') return;
+    $page = max(1, (int) get_option('promogames_editorial_backfill_page', 1));
+    $posts = get_posts(['post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 100, 'paged' => $page, 'orderby' => 'ID', 'order' => 'ASC']);
+    foreach ($posts as $post) {
+        $terms = wp_get_post_categories($post->ID, ['fields' => 'slugs']);
+        if (is_wp_error($terms)) return;
+        if (!get_post_meta($post->ID, 'promogames_editorial_type', true)) {
+            $type = in_array('analises', $terms, true) ? 'analise' : (in_array('guias', $terms, true) ? 'guia' : 'noticia');
+            update_post_meta($post->ID, 'promogames_editorial_type', $type);
+        }
+        if (!get_post_meta($post->ID, 'promogames_platforms', true)) {
+            $platforms = array_values(array_intersect(['playstation', 'xbox', 'nintendo', 'pc', 'mobile', 'vr'], $terms));
+            if ($platforms) update_post_meta($post->ID, 'promogames_platforms', $platforms);
+        }
+    }
+    if (count($posts) < 100) {
+        update_option('promogames_editorial_backfill', '1.3', false);
+        delete_option('promogames_editorial_backfill_page');
+    } else {
+        update_option('promogames_editorial_backfill_page', $page + 1, false);
+    }
+});

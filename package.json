@@ -18,6 +18,8 @@
     "test:e2e": "playwright test",
     "check": "npm run lint && npm run typecheck && npm run test && npm run build",
     "check:all": "npm run check && npm run test:e2e",
+    "audit:cms": "node scripts/audit-cms.mjs",
+    "audit:seo": "node scripts/audit-seo.mjs",
     "audit:wordpress": "node scripts/audit-wordpress.mjs",
     "verify:production": "node scripts/verify-production.mjs"
   },

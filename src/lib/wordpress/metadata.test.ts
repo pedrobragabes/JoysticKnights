@@ -175,9 +175,9 @@ describe("metadados WordPress", () => {
     };
 
     const cases = [
-      [getCategoryMetadata(category, 2), "Notícias — Página 2", "/category/noticias/?page=2", "website"],
-      [getTagMetadata(tag, 2), "RPG — Página 2", "/tag/rpg/?page=2", "website"],
-      [getAuthorMetadata(author, 2), "Ana — Página 2", "/author/ana/?page=2", "profile"],
+      [getCategoryMetadata(category, 2), "Notícias — Página 2", "/category/noticias/page/2/", "website"],
+      [getTagMetadata(tag, 2), "RPG — Página 2", "/tag/rpg/page/2/", "website"],
+      [getAuthorMetadata(author, 2), "Ana — Página 2", "/author/ana/page/2/", "profile"],
     ] as const;
 
     for (const [metadata, title, canonical, type] of cases) {

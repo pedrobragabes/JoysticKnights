@@ -1,32 +1,49 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Pagination } from "@/components/editorial/archive";
 import { HeroDeck } from "@/components/editorial/hero-deck";
 import { Radar } from "@/components/editorial/radar";
 import { SectionHeader } from "@/components/editorial/section-header";
 import { StoryCard, StoryListItem } from "@/components/editorial/story-card";
+import { Icon } from "@/components/icons";
 import { AdSlot } from "@/components/platform/ad-slot";
+import { parsePage } from "@/lib/pagination";
 import { getCategoryHref, siteConfig } from "@/lib/site-config";
-import { getCategories, getHomepageStories } from "@/lib/wordpress/queries";
+import { getCategories, getHomepageStories, getStories } from "@/lib/wordpress/queries";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-};
+const FEATURED_STORY_COUNT = 16;
+const FEED_PAGE_SIZE = 12;
 
-export default async function Home() {
-  const [{ items: stories }, categories] = await Promise.all([
-    getHomepageStories(24),
+export async function generateMetadata({ searchParams }: PageProps<"/">): Promise<Metadata> {
+  const page = parsePage((await searchParams).page);
+  return {
+    title: page > 1 ? `Últimas notícias — Página ${page}` : undefined,
+    alternates: { canonical: page > 1 ? `/page/${page}/` : "/" },
+  };
+}
+
+export default async function Home({ searchParams }: PageProps<"/">) {
+  const page = parsePage((await searchParams).page);
+  const [{ items: featuredStories }, categories] = await Promise.all([
+    getHomepageStories(FEATURED_STORY_COUNT),
     getCategories(),
   ]);
+  const feed = await getStories({
+    page,
+    perPage: FEED_PAGE_SIZE,
+  });
+  if (page > 1 && (feed.totalPages === 0 || page > feed.totalPages)) notFound();
 
-  const heroStories = stories.slice(0, 8);
-  const highlights = stories.slice(8, 16);
-  const latest = stories.slice(16);
+  const heroStories = featuredStories.slice(0, 8);
+  const highlights = featuredStories.slice(8, 16);
   const channels = siteConfig.featuredChannelSlugs
     .map((slug) => categories.find((category) => category.slug === slug))
     .filter((category) => category !== undefined);
 
   return (
     <div className="pb-20">
-      <Radar stories={stories.slice(0, 5)} />
+      {page === 1 ? <>
+      <Radar stories={featuredStories.slice(0, 5)} />
 
       <section className="px-4 pt-6 sm:px-6 lg:px-10 lg:pt-9">
         <div className="mx-auto max-w-[1460px]">
@@ -90,7 +107,8 @@ export default async function Home() {
                   }}
                 />
                 <div className="relative flex h-full flex-col justify-between">
-                  <span className="font-display text-3xl font-extrabold tracking-tight">
+                  <span className="flex items-center gap-3 font-display text-3xl font-extrabold tracking-tight">
+                    <Icon name={siteConfig.navigationCategories.find((item) => item.slug === channel.slug)?.icon ?? "news"} className="size-9" />
                     {channel.name}
                   </span>
                   <span className="mt-12 text-sm font-bold text-white/70">
@@ -102,21 +120,21 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </> : null}
 
-      {latest.length > 0 ? (
-        <section className="px-4 pt-16 sm:px-6 lg:px-10">
+      <section className={`px-4 sm:px-6 lg:px-10 ${page === 1 ? "pt-16" : "pt-12 lg:pt-16"}`}>
           <div className="mx-auto max-w-[1460px]">
-            <SectionHeader eyebrow="Feed" title="Acabou de sair" />
-            <div className="divide-y divide-line border-y border-line">
-              {latest.map((story) => (
+            <SectionHeader eyebrow="Feed cronológico" title={page > 1 ? `Acabou de sair — página ${page}` : "Acabou de sair"} />
+            {feed.items.length ? <div className="divide-y divide-line border-y border-line">
+              {feed.items.map((story) => (
                 <StoryListItem key={story.id} story={story} />
               ))}
-            </div>
+            </div> : <div className="rounded-card border border-dashed border-line bg-surface px-6 py-16 text-center"><p className="font-display text-2xl font-extrabold">Nenhuma notícia disponível no momento.</p></div>}
+            <Pagination basePath="/" page={feed.page} totalPages={feed.totalPages} />
           </div>
         </section>
-      ) : null}
 
-      {process.env.NEXT_PUBLIC_NEWSLETTER_ACTION ? <section id="newsletter" className="px-4 pt-16 sm:px-6 lg:px-10">
+      {page === 1 && process.env.NEXT_PUBLIC_NEWSLETTER_ACTION ? <section id="newsletter" className="px-4 pt-16 sm:px-6 lg:px-10">
         <div className="mx-auto grid max-w-[1460px] overflow-hidden rounded-card bg-brand text-white lg:grid-cols-[1.1fr_0.9fr]">
           <div className="p-7 sm:p-10 lg:p-14">
             <p className="eyebrow text-white/70">Checkpoint semanal</p>

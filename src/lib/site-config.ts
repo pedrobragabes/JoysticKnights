@@ -71,7 +71,7 @@ const profiles: Record<SiteProfile, SiteConfig> = {
     brandLines: ["Joystick", "Nights"],
     brandMark: "J",
     defaultSiteUrl: "https://joysticknights.com.br",
-    defaultWordPressApiUrl: "https://joysticknights.com.br/wp-json/wp/v2",
+    defaultWordPressApiUrl: "https://cms.joysticknights.com.br/wp-json/wp/v2",
     description: "Notícias, análises e cultura gamer para quem joga no PlayStation, Xbox, Nintendo e PC.",
     shortDescription: "Notícias, análises e cultura gamer para quem joga até tarde.",
     newsroomLabel: "Redação JoystickNights",

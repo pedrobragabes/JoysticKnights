@@ -6,7 +6,7 @@ const DEFAULT_SOCIAL_IMAGE = "/og.png";
 
 function getPaginatedHref(href: string, page: number) {
   if (page <= 1) return href;
-  return `${href}${href.includes("?") ? "&" : "?"}page=${page}`;
+  return `${href.replace(/\/$/, "")}/page/${page}/`;
 }
 
 function normalizePathname(pathname: string) {
