@@ -2,13 +2,14 @@ import { createHash } from "node:crypto";
 import { createSlidingWindowRateLimiter, isSameOriginRequest } from "@/lib/wordpress/comment-submission";
 import { validateContactSubmission } from "@/lib/wordpress/contact-submission";
 import { getWordPressRestUrl } from "@/lib/wordpress/client";
+import { getSiteUrl } from "@/lib/site-config";
 
 export const runtime = "nodejs";
 const limiter = createSlidingWindowRateLimiter(3, 600_000);
 const json = (body: object, status: number) => Response.json(body, { status, headers: { "Cache-Control": "no-store" } });
 
 export async function POST(request: Request) {
-  if (!isSameOriginRequest(request)) return json({ error: "Origem não autorizada." }, 403);
+  if (!isSameOriginRequest(request, getSiteUrl())) return json({ error: "Origem não autorizada." }, 403);
   if (!request.headers.get("content-type")?.startsWith("application/json")) return json({ error: "Formato inválido." }, 415);
   const secret = process.env.WORDPRESS_COMMENTS_SECRET;
   if (!secret) return json({ error: "Formulário temporariamente indisponível." }, 503);

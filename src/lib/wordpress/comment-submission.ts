@@ -28,13 +28,13 @@ export function getUtf8ByteLength(value: string) {
   return new TextEncoder().encode(value).byteLength;
 }
 
-export function isSameOriginRequest(request: Pick<Request, "headers" | "url">) {
+export function isSameOriginRequest(request: Pick<Request, "headers" | "url">, publicUrl = request.url) {
   const origin = request.headers.get("origin");
   const fetchSite = request.headers.get("sec-fetch-site");
   if (!origin || (fetchSite && fetchSite !== "same-origin")) return false;
 
   try {
-    return new URL(origin).origin === new URL(request.url).origin;
+    return new URL(origin).origin === new URL(publicUrl).origin;
   } catch {
     return false;
   }

@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { getSiteUrl } from "@/lib/site-config";
 import { revalidateTag } from "next/cache";
 import {
   COMMENT_LIMITS,
@@ -49,7 +50,7 @@ async function readLimitedBody(request: Request) {
 }
 
 export async function POST(request: Request) {
-  if (!isSameOriginRequest(request)) {
+  if (!isSameOriginRequest(request, getSiteUrl())) {
     return json({ error: "Origem da solicitação não autorizada." }, 403);
   }
 

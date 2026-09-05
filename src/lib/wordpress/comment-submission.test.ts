@@ -41,6 +41,14 @@ describe("validateCommentSubmission", () => {
 });
 
 describe("proteções de transporte", () => {
+  it("validates the configured public origin behind a reverse proxy", () => {
+    const request = { url: "http://127.0.0.1:3000/api/contact/", headers: new Headers({ origin: "https://joysticknights.com.br", "sec-fetch-site": "same-origin" }) };
+    expect(isSameOriginRequest(request, "https://joysticknights.com.br")).toBe(true);
+    expect(isSameOriginRequest(request, "https://other.example")).toBe(false);
+    request.headers.set("origin", "https://attacker.example");
+    request.headers.set("x-forwarded-host", "attacker.example");
+    expect(isSameOriginRequest(request, "https://joysticknights.com.br")).toBe(false);
+  });
   it("aceita apenas a mesma origem", () => {
     const sameOrigin = { url: "https://site.test/api/comments/", headers: new Headers({ origin: "https://site.test", "sec-fetch-site": "same-origin" }) };
     const crossOrigin = { url: "https://site.test/api/comments/", headers: new Headers({ origin: "https://evil.test", "sec-fetch-site": "cross-site" }) };
