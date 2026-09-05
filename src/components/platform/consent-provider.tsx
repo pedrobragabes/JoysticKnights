@@ -121,11 +121,14 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const savePreferences = useCallback((nextPreferences: ConsentPreferences) => {
+    const unloadAds = !nextPreferences.marketing && Boolean(document.getElementById("google-adsense"));
     const stored = createStoredConsent(nextPreferences);
     persistConsent(stored);
     setPreferences(stored);
     setDraft(nextPreferences);
     setPanel(null);
+    // Removing a Script component does not stop an already-running ad runtime.
+    if (unloadAds) window.location.reload();
   }, []);
 
   const acceptAll = useCallback(() => {
