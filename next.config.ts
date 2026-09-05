@@ -30,6 +30,7 @@ const contentSecurityPolicy = [
   "style-src 'self' 'unsafe-inline'",
   `img-src 'self' data: blob: ${mediaOrigins} https://secure.gravatar.com https://www.google-analytics.com https://*.googleusercontent.com https://*.googlesyndication.com https://*.doubleclick.net`,
   "font-src 'self' data:",
+  `media-src 'self' blob: ${mediaOrigins}`,
   `connect-src 'self'${isDevelopment ? " ws: wss:" : ""} ${siteOrigin} ${wordpressOrigin} https://www.google-analytics.com https://region1.google-analytics.com https://*.googlesyndication.com https://*.doubleclick.net https://fundingchoicesmessages.google.com`,
   "frame-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://open.spotify.com https://w.soundcloud.com https://store.steampowered.com https://*.googlesyndication.com https://*.doubleclick.net https://fundingchoicesmessages.google.com",
   "object-src 'none'",
