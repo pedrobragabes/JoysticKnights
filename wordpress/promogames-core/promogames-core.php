@@ -533,6 +533,8 @@ function promogames_core_redirect_public_frontend(): void
         || wp_doing_cron()
         || (defined('REST_REQUEST') && REST_REQUEST)
         || (defined('WP_CLI') && WP_CLI)
+        // WordPress sets this only after validating its temporary scrape nonce.
+        || (defined('WP_SANDBOX_SCRAPING') && WP_SANDBOX_SCRAPING)
     ) {
         return;
     }

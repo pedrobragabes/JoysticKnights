@@ -86,7 +86,7 @@ test("paginação fora do acervo responde 404 e busca mantém os filtros", async
   const response = await page.goto("/page/99999/");
   expect(response?.status()).toBe(404);
   await page.goto("/buscar/?q=Modern&platform=pc");
-  await expect(page.getByLabel("Plataforma", { exact: true })).toHaveValue("pc");
+  await expect(page.getByRole("combobox", { name: "Plataforma", exact: true })).toHaveValue("pc");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
 });
 
