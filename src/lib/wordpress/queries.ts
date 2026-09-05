@@ -38,7 +38,9 @@ const EMBED = "author,wp:featuredmedia,wp:term";
 
 const supportsEditorialFilters = cache(async () => {
   try {
-    const response = await fetch(getWordPressRestUrl("promogames/v1/capabilities"), { signal: AbortSignal.timeout(10000), next: { revalidate: 300, tags: ["wordpress"] } });
+    const url = getWordPressRestUrl("promogames/v1/capabilities");
+    url.searchParams.set("contract", "1.3");
+    const response = await fetch(url, { signal: AbortSignal.timeout(10000), next: { revalidate: 300, tags: ["wordpress"] } });
     return response.ok && (await response.json()).editorial_filters === true;
   } catch { return false; }
 });

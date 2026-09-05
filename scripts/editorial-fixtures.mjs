@@ -62,12 +62,21 @@ function getFrontendCategoryPath(profile, category) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url, {
-    headers: { Accept: "application/json" },
-    signal: AbortSignal.timeout(20_000),
-  });
-  if (!response.ok) throw new Error(`WordPress respondeu ${response.status} para ${url.pathname}`);
-  return response.json();
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    let response;
+    try {
+      response = await fetch(url, { headers: { Accept: "application/json" }, signal: AbortSignal.timeout(20_000) });
+    } catch (error) {
+      if (attempt === 2) throw error;
+    }
+    if (response?.ok) return response.json();
+    if (response && (![429, 500, 502, 503, 504].includes(response.status) || attempt === 2)) {
+      throw new Error(`WordPress respondeu ${response.status} para ${url.pathname}`);
+    }
+    await response?.body?.cancel();
+    await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
+  }
+  throw new Error("A origem editorial não respondeu.");
 }
 
 function chooseInstitutionalPage(pages) {

@@ -518,9 +518,19 @@ function promogames_core_serve_gone(string $message): void
     status_header(410);
     nocache_headers();
     header('Content-Type: text/plain; charset=' . get_option('blog_charset'));
+    header('X-Robots-Tag: noindex, nofollow, noarchive', true);
     echo $message;
     exit;
 }
+
+// SEO plugins can render sitemap.xml before template_redirect priority zero.
+add_action('parse_request', static function (): void {
+    if (is_admin() || wp_doing_ajax() || wp_doing_cron()) return;
+    $path = (string) wp_parse_url((string) ($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH);
+    if (promogames_core_is_cms_sitemap_path($path)) {
+        promogames_core_serve_gone('O sitemap público é mantido pelo frontend.');
+    }
+}, 0);
 
 /**
  * O WordPress é apenas CMS: mantém wp-admin, REST e mídia, mas nunca expõe o tema legado.
