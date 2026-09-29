@@ -141,7 +141,7 @@ export function mapPost(post: RawPost): Story {
     categories.find((category) => category.slug !== "noticias") ?? categories[0];
   const rawScore = post.promogames_review_rating !== undefined ? post.promogames_review_rating : Number(post.meta?.promogames_review_score) === 0 ? undefined : post.meta?.promogames_review_score;
   const reviewScore = rawScore == null || rawScore === "" ? undefined : Number(rawScore);
-  const editorialType = post.meta?.promogames_editorial_type || (categories.some((term) => term.slug === "analises") ? "analise" : categories.some((term) => term.slug === "guias") ? "guia" : "noticia");
+  const editorialType = post.meta?.promogames_editorial_type || (categories.some((term) => ["analise", "analises"].includes(term.slug)) ? "analise" : categories.some((term) => term.slug === "guias") ? "guia" : categories.some((term) => term.slug === "promocao") ? "promocao" : "noticia");
 
   return {
     id: post.id,

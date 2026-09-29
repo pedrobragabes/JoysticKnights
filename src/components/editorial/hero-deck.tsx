@@ -14,7 +14,16 @@ function Arrow({ direction }: { direction: "previous" | "next" }) {
   );
 }
 
-export function HeroDeck({ stories }: { stories: Story[] }) {
+type HeroStory = Pick<Story, "id" | "href" | "title" | "publishedAt" | "image"> & { categoryName?: string };
+
+function heroImageSizes(image: HeroStory["image"]) {
+  // Covering a tall card can require more pixels than the card's visible width.
+  const ratio = image && image.width > 0 && image.height > 0 ? image.width / image.height : 16 / 9;
+  const coverWidth = Math.ceil(430 * ratio);
+  return `(max-width: 639px) max(84vw, ${coverWidth}px), (max-width: 1023px) max(48vw, ${coverWidth}px), (max-width: 1279px) max(calc(50vw - 171px), ${coverWidth}px), (max-width: 1789px) max(calc(33.333vw - 118px), ${coverWidth}px), max(479px, ${coverWidth}px)`;
+}
+
+export function HeroDeck({ stories, showCategoryBadge = true }: { stories: HeroStory[]; showCategoryBadge?: boolean }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -78,14 +87,14 @@ export function HeroDeck({ stories }: { stories: Story[] }) {
             <StoryImage
               image={story.image}
               alt={story.title}
-              priority={index < 2}
-              sizes="(max-width: 640px) 84vw, (max-width: 1280px) 48vw, 33vw"
+              priority={index === 0}
+              sizes={heroImageSizes(story.image)}
               className="absolute inset-0 h-full transition duration-500 group-hover:scale-[1.035]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
               <div className="mb-3 flex items-center gap-2 text-[0.68rem] font-extrabold uppercase tracking-[0.09em]">
-                <span className="rounded-full bg-accent px-2.5 py-1">{story.primaryCategory?.name ?? "Destaque"}</span>
+                {showCategoryBadge ? <span className="rounded-full bg-accent px-2.5 py-1">{story.categoryName ?? "Destaque"}</span> : null}
                 <span className="text-white/70">{formatDate(story.publishedAt)}</span>
               </div>
               <h2 className="font-display line-clamp-4 text-[1.45rem] font-extrabold leading-[1.04] tracking-[-0.045em] sm:text-[1.6rem]">

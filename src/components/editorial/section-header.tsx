@@ -6,15 +6,15 @@ export function SectionHeader({
   href,
   linkLabel,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   href?: string;
   linkLabel?: string;
 }) {
   return (
-    <div className="mb-6 flex items-end justify-between gap-5 border-b border-line pb-4">
+    <div className="mb-6 flex flex-wrap items-end justify-between gap-5 border-b border-line pb-4">
       <div>
-        <p className="eyebrow">{eyebrow}</p>
+        {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h2 className="font-display text-3xl font-extrabold tracking-[-0.045em] sm:text-4xl">{title}</h2>
       </div>
       {href && linkLabel ? (

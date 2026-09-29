@@ -43,3 +43,9 @@ Cadastre as variáveis de `.env.example` no hPanel. Não envie `.env.local`, ban
 - `arquivoswordpress/`: backup local ignorado pelo Git.
 
 Comece pelo [runbook do JoystickNights](docs/joysticknights-headless.md) e pelo [tutorial Hostinger](docs/TUTORIAL-HOSTINGER-DO-ZERO.md).
+
+## Melhorias compartilhadas com a revisão do PromoGames
+
+A capa editorial, o carrossel, os ícones das plataformas, a navegação e o Contato receberam as melhorias de setembro de 2026. A identidade, o CMS e os caminhos do JoystickNights foram preservados. A landing page comercial, os grupos e as lojas do PromoGames não foram incluídos.
+
+Veja o [registro da atualização e validação](docs/JOYSTICKNIGHTS-ATUALIZACAO-2026-09-29.md). As fontes dos ícones estão em [PLATFORM-ASSETS.md](docs/PLATFORM-ASSETS.md).

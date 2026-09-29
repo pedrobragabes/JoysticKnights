@@ -23,7 +23,8 @@ export function StoryImage({
           src={image.url}
           alt={image.alt || alt}
           sizes={sizes}
-          priority={priority}
+          loading={priority ? "eager" : "lazy"}
+          fetchPriority={priority ? "high" : undefined}
           className="object-cover"
         />
       ) : (

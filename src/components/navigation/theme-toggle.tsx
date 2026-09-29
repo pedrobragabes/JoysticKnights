@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Icon } from "@/components/icons";
+import { siteConfig } from "@/lib/site-config";
 
 type Theme = "dark" | "light";
 
-const storageKey = "joysticknights-theme";
+const storageKey = `${siteConfig.profile}-theme`;
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("dark");
