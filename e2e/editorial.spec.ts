@@ -37,7 +37,7 @@ test("home continua o feed em URLs paginadas sem repetir os blocos editoriais", 
   await page.goto("/");
 
   const heroLinks = await page.getByTestId("featured-carousel").getByRole("link").evaluateAll((links) => links.map((link) => link.getAttribute("href")));
-  const feedSection = page.locator("section").filter({ has: page.getByRole("heading", { name: "Acabou de sair", exact: true }) });
+  const feedSection = page.locator("section").filter({ has: page.getByRole("heading", { name: "Últimas publicações", exact: true }) });
   const feedLinks = await feedSection.locator("article a").evaluateAll((links) => links.map((link) => link.getAttribute("href")));
   expect(feedLinks.length).toBeGreaterThan(0);
   expect(feedLinks.some((href) => heroLinks.includes(href))).toBe(true);
@@ -47,8 +47,8 @@ test("home continua o feed em URLs paginadas sem repetir os blocos editoriais", 
   await pagination.getByRole("link", { name: "Próxima" }).click();
   await expect(page).toHaveURL(/\/page\/2\/$/);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/page\/2\/$/);
-  await expect(page.getByRole("heading", { name: "Acabou de sair — página 2" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "No controle agora" })).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "Últimas publicações — página 2" })).toBeVisible();
+  await expect(page.getByTestId("featured-carousel")).toHaveCount(0);
 });
 
 test("destaques navegam como carrossel por controles e indicadores", async ({ page }) => {

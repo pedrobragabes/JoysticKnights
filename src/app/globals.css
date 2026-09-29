@@ -117,6 +117,13 @@ img {
   text-transform: uppercase;
 }
 
+/* Keep purple surfaces, with a lighter brand color for readable dark-mode text. */
+:root[data-profile="joysticknights"][data-theme="dark"] .text-brand,
+:root[data-profile="joysticknights"][data-theme="dark"] .hover\:text-brand:hover,
+:root[data-profile="joysticknights"][data-theme="dark"] .eyebrow {
+  color: var(--lilac);
+}
+
 .skip-link {
   position: fixed;
   z-index: 100;

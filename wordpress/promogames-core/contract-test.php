@@ -14,6 +14,11 @@ check(count(promogames_core_review_fields()) === 9, 'Review fields incomplete');
 check(promogames_core_sanitize_score(-1) === 0.0, 'Negative score');
 check(promogames_core_sanitize_score(11) === 10.0, 'Score above ten');
 check(promogames_core_sanitize_platforms(['pc', 'pc', 'unknown']) === ['pc'], 'Platform validation');
+check(promogames_core_editorial_type_from_terms(['analises']) === 'analise', 'JoystickNights review taxonomy');
+check(promogames_core_editorial_type_from_terms(['analise']) === 'analise', 'Singular review taxonomy');
+check(promogames_core_editorial_type_from_terms(['promocao']) === 'promocao', 'Promotion taxonomy');
+check(promogames_core_editorial_type_from_terms(['guias']) === 'guia', 'Guide taxonomy');
+check(promogames_core_editorial_type_from_terms(['noticias']) === 'noticia', 'News fallback');
 foreach (['/wp-admin/', '/wp-json/wp/v2/posts', '/wp-content/uploads/image.jpg', '/wp-login.php'] as $path) {
     check(promogames_core_is_preserved_cms_path($path), 'Required CMS path blocked: ' . $path);
 }

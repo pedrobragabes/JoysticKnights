@@ -11,6 +11,14 @@ type RevalidationPayload = {
 const bodyLimit = 16 * 1024;
 const allowedTagPattern = /^(wordpress|stories|pages|categories|authors|comments|home|(?:story|page):[a-z0-9-]+|comments:\d+)$/;
 
+function isRevalidationPayload(value: unknown): value is RevalidationPayload {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const payload = value as Record<string, unknown>;
+  return (payload.slug === undefined || typeof payload.slug === "string")
+    && (payload.tags === undefined || (Array.isArray(payload.tags) && payload.tags.every((tag) => typeof tag === "string")))
+    && (payload.paths === undefined || (Array.isArray(payload.paths) && payload.paths.every((path) => typeof path === "string")));
+}
+
 async function readLimitedBody(request: Request) {
   if (!request.body) return "";
 
@@ -54,7 +62,11 @@ export async function POST(request: Request) {
 
   let payload: RevalidationPayload;
   try {
-    payload = JSON.parse(body) as RevalidationPayload;
+    const parsed: unknown = JSON.parse(body);
+    if (!isRevalidationPayload(parsed)) {
+      return Response.json({ error: "Dados de revalidação inválidos." }, { status: 400 });
+    }
+    payload = parsed;
   } catch {
     return Response.json({ error: "JSON inválido." }, { status: 400 });
   }

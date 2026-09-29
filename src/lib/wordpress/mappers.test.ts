@@ -23,6 +23,13 @@ function rawPost(link: string): RawPost {
 }
 
 describe("mapeamento de permalinks WordPress", () => {
+  it.each([['analise', 'analise'], ['analises', 'analise'], ['promocao', 'promocao'], ['guias', 'guia']])("reconhece a categoria %s sem depender do plugin", (slug, editorialType) => {
+    const post = rawPost("https://promogamesbr.com/uma-grande-materia/");
+    post._embedded = { "wp:term": [[{ id: 64, name: slug, slug, taxonomy: "category" }]] };
+    expect(mapPost(post).editorialType).toBe(editorialType);
+    post.meta = { promogames_editorial_type: "noticia" };
+    expect(mapPost(post).editorialType).toBe("noticia");
+  });
   it("maps structured reviews without inventing missing facts and rejects invalid ratings", () => {
     const post = rawPost("https://cms.joysticknights.com.br/analises/game/");
     post.meta = { promogames_editorial_type: "analise", promogames_review_game: "Game &amp; DLC", promogames_review_pros: "Arte\r\n\nSom", promogames_review_cons: "Performance", promogames_review_score: 8.8 };

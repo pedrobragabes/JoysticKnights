@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PromoGames Core
  * Description: Integração editorial headless: metacampos, SEO, curadoria, preview e revalidação.
- * Version: 1.4.0
+ * Version: 1.4.1
  * Author: PromoGames
  * Requires at least: 6.5
  * Requires PHP: 8.1
@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-const PROMOGAMES_CORE_VERSION = '1.4.0';
+const PROMOGAMES_CORE_VERSION = '1.4.1';
 
 /**
  * Registra os metacampos que formam o contrato editorial do front headless.
@@ -1008,6 +1008,14 @@ add_filter('rest_post_query', static function (array $args, WP_REST_Request $req
     return $args;
 }, 10, 2);
 
+function promogames_core_editorial_type_from_terms(array $terms): string
+{
+    if (array_intersect(['analise', 'analises'], $terms)) return 'analise';
+    if (in_array('guias', $terms, true)) return 'guia';
+    if (in_array('promocao', $terms, true)) return 'promocao';
+    return 'noticia';
+}
+
 // Backfill only missing metadata from existing taxonomy; never infer scores or review copy.
 add_action('admin_init', static function (): void {
     if (!current_user_can('manage_options') || get_option('promogames_editorial_backfill') === '1.3') return;
@@ -1017,7 +1025,7 @@ add_action('admin_init', static function (): void {
         $terms = wp_get_post_categories($post->ID, ['fields' => 'slugs']);
         if (is_wp_error($terms)) return;
         if (!get_post_meta($post->ID, 'promogames_editorial_type', true)) {
-            $type = in_array('analises', $terms, true) ? 'analise' : (in_array('guias', $terms, true) ? 'guia' : 'noticia');
+            $type = promogames_core_editorial_type_from_terms($terms);
             update_post_meta($post->ID, 'promogames_editorial_type', $type);
         }
         if (!get_post_meta($post->ID, 'promogames_platforms', true)) {

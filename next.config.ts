@@ -5,6 +5,9 @@ const siteProfile = process.env.NEXT_PUBLIC_SITE_PROFILE === "promogames" ? "pro
 const defaultSiteUrl = siteProfile === "joysticknights" ? "https://joysticknights.com.br" : "https://promogamesbr.com";
 const defaultWordPressApiUrl = siteProfile === "joysticknights" ? "https://cms.joysticknights.com.br/wp-json/wp/v2" : `${defaultSiteUrl}/wp-json/wp/v2`;
 const siteOrigin = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? defaultSiteUrl).origin;
+// Local HTTP previews have no TLS endpoint, including when tested in WebKit.
+const isLocalHttpPreview = new URL(siteOrigin).protocol === "http:"
+  && ["localhost", "127.0.0.1", "[::1]"].includes(new URL(siteOrigin).hostname);
 const wordpressOrigin = new URL(process.env.WORDPRESS_API_URL ?? defaultWordPressApiUrl).origin;
 const newsletterOrigin = (() => {
   try {
@@ -37,7 +40,7 @@ const contentSecurityPolicy = [
   "base-uri 'self'",
   `form-action 'self'${newsletterOrigin ? ` ${newsletterOrigin}` : ""}`,
   "frame-ancestors 'self'",
-  ...(isDevelopment ? [] : ["upgrade-insecure-requests"]),
+  ...(isDevelopment || isLocalHttpPreview ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
 const nextConfig: NextConfig = {
@@ -101,7 +104,7 @@ const nextConfig: NextConfig = {
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
-          ...(isDevelopment ? [] : [{ key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" }]),
+          ...(isDevelopment || isLocalHttpPreview ? [] : [{ key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" }]),
         ],
       },
       {

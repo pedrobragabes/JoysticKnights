@@ -1,3 +1,5 @@
+import { PlatformIcon } from "@/components/platform-icon";
+
 export type IconName =
   | "home"
   | "playstation"
@@ -16,6 +18,9 @@ export type IconName =
   | "moon";
 
 export function Icon({ name, className = "size-5" }: { name: IconName; className?: string }) {
+  if (name === "playstation" || name === "xbox" || name === "nintendo" || name === "pc") {
+    return <PlatformIcon name={name} className={className} />;
+  }
   const common = {
     fill: "none",
     stroke: "currentColor",

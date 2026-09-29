@@ -1,4 +1,6 @@
-# PromoGames Core 1.3
+# PromoGames Core 1.4.1
+
+Esta revisão para o JoystickNights corrige a classificação inicial de análises (`analise` e `analises`), guias e promoções. Preserva metadados editoriais já preenchidos e os contratos de contato, comentários e revalidação. A administração dos grupos do PromoGames não está incluída neste pacote. A atualização do frontend não instala automaticamente o plugin no CMS.
 
 Plugin editorial para WordPress headless. Apesar do nome histórico e do namespace `promogames/v1`, a versão 1.3 também é o adaptador usado pelo piloto JoystickNights. O frontend público fica no Next.js; WordPress permanece responsável por redação, revisão, usuários, mídia, comentários e metadados editoriais.
 

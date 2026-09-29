@@ -27,6 +27,7 @@ export default defineConfig({
     url: baseURL,
     env: {
       DRAFT_MODE_SECRET: "e2e-draft-secret",
+      WORDPRESS_COMMENTS_SECRET: "e2e-contact-secret",
       REVALIDATE_SECRET: "e2e-revalidate-secret",
       NEXT_PUBLIC_SITE_PROFILE: "joysticknights",
       NEXT_PUBLIC_SITE_URL: baseURL,
