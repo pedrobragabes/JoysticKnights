@@ -32,6 +32,8 @@ O `package.json` está na raiz para que este repositório possa ser conectado di
 - build: `npm run build`;
 - inicialização: `npm run start`.
 
+O build de produção usa `next build --webpack`. O Turbopack da versão 16.3.6 passou no ambiente local e no GitHub, mas falhou duas vezes ao iniciar o processo de transformação de CSS no runtime de build da Hostinger. Webpack é a alternativa suportada pelo Next.js; o comando configurado no hPanel continua sendo `npm run build`.
+
 Cadastre as variáveis de `.env.example` no hPanel. Não envie `.env.local`, banco, uploads ou backups ao GitHub.
 
 ## Estrutura
