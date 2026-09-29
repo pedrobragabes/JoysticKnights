@@ -18,13 +18,13 @@ export function ArchiveHeader({
   avatarUrl?: string;
 }) {
   return (
-    <header className="border-b border-line bg-surface px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-      <div className="mx-auto flex max-w-[1220px] items-end justify-between gap-8">
-        <div className="max-w-3xl">
+    <header className="border-b border-line bg-surface px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
+      <div className="mx-auto flex max-w-[1460px] items-end justify-between gap-6">
+        <div className="min-w-0 max-w-3xl">
           <p className="eyebrow">{eyebrow}</p>
           <div className="flex items-center gap-4">
             {avatarUrl ? <Image src={avatarUrl} width={72} height={72} alt="" className="size-14 rounded-full sm:size-[72px]" /> : null}
-            <h1 className="font-display text-balance text-[clamp(2.6rem,7vw,6rem)] font-extrabold leading-[0.93] tracking-[-0.065em]">{title}</h1>
+            <h1 className="font-display break-words text-balance text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-[1.05] tracking-[-0.05em]">{title}</h1>
           </div>
           <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">{description}</p>
         </div>
@@ -41,10 +41,10 @@ export function ArchiveHeader({
 
 export function StoryArchive({ result, emptyMessage, query, basePath, compact = false }: { result: Paginated<Story>; emptyMessage: string; query?: Record<string, string>; basePath?: string; compact?: boolean }) {
   return (
-    <section className="px-4 py-10 sm:px-6 lg:px-10 lg:py-14">
-      <div className="mx-auto max-w-[1220px]">
+    <section aria-label="Matérias" className="px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
+      <div className="mx-auto max-w-[1460px]">
         {result.items.length ? (
-          <div className={compact ? "divide-y divide-line" : "grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3"}>
+          <div className={compact ? "divide-y divide-line" : "grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"}>
             {result.items.map((story, index) => compact ? <StoryListItem key={story.id} story={story} /> : <StoryCard key={story.id} story={story} priority={index === 0} />)}
           </div>
         ) : (
