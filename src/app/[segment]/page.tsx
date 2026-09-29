@@ -71,9 +71,9 @@ export default async function SlugPage({ params, searchParams }: PageProps<"/[se
 
     return (
       <>
-        <ArchiveHeader eyebrow="Universo" title={content.category.name} description={content.category.description || `Notícias, análises e novidades de ${content.category.name} selecionadas pela redação ${siteConfig.name}.`} count={result.total} />
-        {page === 1 ? <CategoryHighlights categoryId={content.category.id} /> : null}
+        <ArchiveHeader eyebrow="Categoria" title={content.category.name} description={content.category.description || `Confira as últimas publicações de ${content.category.name} no ${siteConfig.name}.`} count={result.total} />
         <StoryArchive basePath={content.category.href} result={result} emptyMessage={`Ainda não há matérias em ${content.category.name}.`} />
+        {page === 1 ? <CategoryHighlights categoryId={content.category.id} /> : null}
       </>
     );
   }

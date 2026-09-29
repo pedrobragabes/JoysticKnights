@@ -71,7 +71,10 @@ export async function wordPressRequest<T>(
           Accept: "application/json",
           ...init?.headers,
         },
-        ...(attempt === 1 ? cacheOptions : { cache: "no-store" }),
+        // Keep the render's cache policy across retries: switching to no-store
+        // after a transient failure makes prerendered articles fail at runtime.
+        // Next only caches 200 responses, and each attempt has its own signal.
+        ...cacheOptions,
       });
     } catch {
       if (attempt === MAX_ATTEMPTS) throw new WordPressApiError("Não foi possível conectar ao WordPress.", 503, url.pathname);

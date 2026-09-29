@@ -51,9 +51,9 @@ export default async function LegacyCategoryPage({ params, searchParams }: PageP
 
   return (
     <>
-      <ArchiveHeader eyebrow="Universo" title={category.name} description={category.description || `Notícias, análises e novidades de ${category.name} selecionadas pela redação ${siteConfig.name}.`} count={result.total} />
+      <ArchiveHeader eyebrow="Categoria" title={category.name} description={category.description || `Confira as últimas publicações de ${category.name} no ${siteConfig.name}.`} count={result.total} />
+      <StoryArchive basePath={category.href} result={result} emptyMessage={`Ainda não há matérias em ${category.name}.`} />
       {page === 1 ? <CategoryHighlights categoryId={category.id} /> : null}
-        <StoryArchive basePath={category.href} result={result} emptyMessage={`Ainda não há matérias em ${category.name}.`} />
     </>
   );
 }
