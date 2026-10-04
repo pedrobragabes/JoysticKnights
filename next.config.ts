@@ -51,8 +51,8 @@ const nextConfig: NextConfig = {
     // The shared WordPress host has a tight resource ceiling. Keep static
     // generation from creating a burst of parallel REST requests during CI.
     staticGenerationRetryCount: 2,
-    staticGenerationMaxConcurrency: 2,
-    staticGenerationMinPagesPerWorker: 100,
+    staticGenerationMaxConcurrency: 1,
+    staticGenerationMinPagesPerWorker: 1000,
   },
   images: {
     remotePatterns: [

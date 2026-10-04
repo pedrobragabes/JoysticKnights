@@ -16,6 +16,9 @@ jobs:
   web:
     name: Next.js
     runs-on: ubuntu-latest
+    env:
+      WORDPRESS_API_URL: http://127.0.0.1:3199/wp-json/wp/v2
+      NEXT_PUBLIC_SITE_URL: http://localhost:3100
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -26,6 +29,15 @@ jobs:
       - run: npm ci
       - run: npm audit --omit=dev --audit-level=moderate
       - run: npx playwright install --with-deps chromium
+      - name: Start synthetic read-only CMS
+        run: |
+          node scripts/wordpress-ci-fixture.mjs > /tmp/wordpress-fixture.log 2>&1 &
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:3199/health; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/wordpress-fixture.log
+          exit 1
       - run: npm run check
       - run: npm run test:e2e
 
