@@ -52,8 +52,8 @@ createServer((request, response) => {
     if (query.has("author")) items = items.filter((item) => item.author === Number(query.get("author")));
     if (query.has("platform")) items = items.filter((item) => item.meta.promogames_platforms.includes(query.get("platform")));
     if (query.has("editorial_type")) items = items.filter((item) => item.meta.promogames_editorial_type === query.get("editorial_type"));
-    if (query.has("before")) items = items.filter((item) => item.date < query.get("before"));
-    if (query.has("after")) items = items.filter((item) => item.date > query.get("after"));
+    if (query.has("before")) items = items.filter((item) => Date.parse(`${item.date}Z`) < Date.parse(query.get("before")));
+    if (query.has("after")) items = items.filter((item) => Date.parse(`${item.date}Z`) > Date.parse(query.get("after")));
     if (query.get("order") === "asc") items = [...items].reverse();
   }
   if (query.get("hide_empty") === "true") items = items.filter((item) => item.count > 0);

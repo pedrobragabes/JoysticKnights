@@ -82,7 +82,7 @@ test("carrossel alcança o último destaque e completa a volta", async ({ page }
 
 test("Voltar após uma âncora restaura a matéria e seu conteúdo", async ({ page }) => {
   const fixture = getEditorialFixture();
-  await page.goto(fixture.story.path);
+  await page.goto(fixture.story.path, { waitUntil: "networkidle" });
   const article = page.locator("article[data-story-href]");
   const originalTitle = await page.locator("main h1").innerText();
   const originalBody = await page.locator(".article-body").innerText();
@@ -93,13 +93,14 @@ test("Voltar após uma âncora restaura a matéria e seu conteúdo", async ({ pa
   const target = page.getByRole("navigation", { name: "Matérias anterior e próxima" }).getByRole("link").first();
   const href = await target.getAttribute("href");
   expect(href).toBeTruthy();
+  expect(href).not.toBe(fixture.story.path);
   await target.click();
   await expect(article).toHaveAttribute("data-story-href", href!);
   await page.goBack();
   await expect(page).toHaveURL(new RegExp(`${escapeRegExp(fixture.story.path)}#conteudo$`));
   await expect(article).toHaveAttribute("data-story-href", fixture.story.path);
   await expect(page.locator("main h1")).toHaveText(originalTitle);
-  await expect(page.locator(".article-body")).toHaveText(originalBody);
+  await expect(page.locator(".article-body")).toHaveText(originalBody, { useInnerText: true });
 });
 
 test("tema começa escuro, alterna para claro e preserva a escolha", async ({ page }) => {
