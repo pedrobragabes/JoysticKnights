@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
 vi.mock("@/lib/site-config", () => ({ getSiteUrl: () => "https://beta.example.test", siteConfig: { defaultWordPressApiUrl: "https://cms.example.test/wp-json/wp/v2" } }));
-const body = { authorName: "Pessoa Teste", authorEmail: "teste@example.com", subject: "Correção", content: "Mensagem válida.", privacy: true, idempotencyKey: randomUUID() };
+const body = { authorName: "Pessoa Teste", authorEmail: "teste@example.com", subject: "Correção", content: "Mensagem válida.", privacy: true, idempotencyKey: String(randomUUID()) };
 function request(origin = "https://beta.example.test", payload = body) { return new Request("https://beta.example.test/api/contact/", { method: "POST", headers: { origin, "content-type": "application/json", "x-forwarded-for": "192.0.2.123" }, body: JSON.stringify(payload) }); }
 beforeEach(() => { vi.stubEnv("WORDPRESS_API_URL", "https://cms.example.test/wp-json/wp/v2"); });
 afterEach(() => { vi.unstubAllEnvs(); vi.unstubAllGlobals(); vi.resetModules(); });
