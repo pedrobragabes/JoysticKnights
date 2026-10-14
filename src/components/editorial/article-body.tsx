@@ -1,11 +1,12 @@
 import type { ArticleHeading } from "@/lib/content/sanitize";
+import Link from "next/link";
 import { ArticleGallery } from "./article-gallery";
 
 export function ArticleBody({ html }: { html: string }) {
   return <ArticleGallery html={html} />;
 }
 
-export function ArticleToc({ headings }: { headings: ArticleHeading[] }) {
+export function ArticleToc({ headings, href }: { headings: ArticleHeading[]; href: string }) {
   if (headings.length < 2) return null;
 
   return (
@@ -14,9 +15,9 @@ export function ArticleToc({ headings }: { headings: ArticleHeading[] }) {
       <ol className="mt-3 space-y-2 text-sm leading-5">
         {headings.map((heading) => (
           <li key={heading.id} className={heading.level === 3 ? "pl-3" : ""}>
-            <a href={`#${heading.id}`} className="font-bold text-muted transition hover:text-brand">
+            <Link href={`${href}#${heading.id}`} prefetch={false} className="font-bold text-muted transition hover:text-brand">
               {heading.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ol>

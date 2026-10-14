@@ -8,5 +8,5 @@ export function validateContactSubmission(payload: unknown) {
   if (input.privacy !== true) return { status: "invalid", error: "Confirme a leitura da política de privacidade." } as const;
   const subject = typeof input.subject === "string" ? input.subject.trim() : "";
   if (subject.length < 3 || subject.length > 120 || /[\r\n\x00-\x1f]/.test(subject)) return { status: "invalid", error: "Informe um assunto entre 3 e 120 caracteres." } as const;
-  return { status: "valid", value: { ...result.value, subject } } as const;
+  return { status: "valid", value: { authorName: result.value.authorName, authorEmail: result.value.authorEmail, content: result.value.content, subject, privacy: true } } as const;
 }

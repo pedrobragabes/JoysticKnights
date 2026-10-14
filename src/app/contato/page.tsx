@@ -25,7 +25,7 @@ export default function ContactPage() {
           <p className="mt-4 text-sm leading-6 text-muted">Use o formulário ou escreva para o nosso e-mail.</p>
         </div>
       </div>
-      <ContactForm delivery={process.env.WORDPRESS_COMMENTS_SECRET ? "api" : "email"} email={siteConfig.contactEmail} />
+      <ContactForm delivery={(process.env.WORDPRESS_CONTACT_SECRET || process.env.WORDPRESS_COMMENTS_SECRET) ? "api" : "email"} email={siteConfig.contactEmail} />
     </div>
   </section>;
 }

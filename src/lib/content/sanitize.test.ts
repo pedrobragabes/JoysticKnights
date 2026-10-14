@@ -1,7 +1,18 @@
 import { describe, expect, it } from "vitest";
 import { prepareArticleContent, sanitizeCommentHtml } from "./sanitize";
+import { plainText } from "../wordpress/text";
 
 describe("prepareArticleContent", () => {
+  it("removes imported citation components without losing copy or real source links", () => {
+    const copy = '<p>Primeiro &lt;Cite refs={[&#8220;turn505086search10&#8243;,&#8221;turn505086search12&#8221;]}/&gt; depois.</p><p>Segundo &lt;Cite refs={["turn1search0"]}/></p><p>Terceiro <Cite refs={["turn2search0"]}/> fim.</p><p>Fonte: <a href="https://example.com/fonte">Fonte real</a></p>';
+    const result = prepareArticleContent(copy);
+    expect(result.html).not.toMatch(/Cite refs|turn\d+search/);
+    expect(result.html).toContain("depois.");
+    expect(result.html).toContain("fim.");
+    expect(result.html).toContain('href="https://example.com/fonte"');
+    expect(plainText(copy)).not.toMatch(/Cite refs|turn\d+search/);
+    expect(plainText('<p>Texto citeturn1search0 publicado.</p>')).toBe("Texto publicado.");
+  });
   it("recovers the numeric Spectra rating without publishing legacy schema", () => {
     const { html } = prepareArticleContent('<script type="application/ld+json">{"@type":"Review","reviewRating":{"ratingValue":3.5,"bestRating":5}}</script>');
     expect(html).toContain("Nota: 3.5 / 5");
@@ -51,22 +62,27 @@ describe("prepareArticleContent", () => {
     expect(result.html).toContain('loading="lazy"');
   });
 
-  it("remove do corpo a imagem que já aparece como destaque", () => {
+  it("preserva a imagem editorial no corpo mesmo quando também é a capa", () => {
     const result = prepareArticleContent(
       '<figure><img src="https://joysticknights.com.br/wp-content/uploads/2026/07/capa-1024x576.webp" alt="Capa"><figcaption>Imagem de divulgação</figcaption></figure><p>Começo da matéria.</p>',
-      { featuredImageUrl: "https://cms.joysticknights.com.br/wp-content/uploads/2026/07/capa.webp" },
     );
 
-    expect(result.html).not.toContain("<img");
+    expect(result.html).toContain("<img");
+    expect(result.html).toContain("Imagem de divulgação");
     expect(result.html).toContain("Começo da matéria.");
   });
 
-  it("mantém somente uma ocorrência de imagens repetidas no conteúdo", () => {
+  it("preserva imagens repetidas com legendas ou tamanhos diferentes", () => {
     const result = prepareArticleContent(
       '<figure><img src="https://joysticknights.com.br/wp-content/uploads/cena.jpg" alt="Cena"></figure><figure><img src="https://joysticknights.com.br/wp-content/uploads/cena-800x450.jpg" alt="Cena repetida"></figure>',
     );
 
-    expect(result.html.match(/<img/g)).toHaveLength(1);
+    expect(result.html.match(/<img/g)).toHaveLength(2);
+  });
+  it("preserva âncoras legadas e evita colisões com IDs de outros blocos", () => {
+    const result = prepareArticleContent('<h2>Introdução</h2><h2 id="introducao">Seção antiga</h2><div id="chefe">Bloco</div><h3>Chefe</h3><h2 id="introducao">Repetição</h2>');
+    expect(result.headings.map((heading) => heading.id)).toEqual(["introducao-2", "introducao", "chefe-2", "repeticao"]);
+    expect(result.html).toContain('<h2 id="introducao">Seção antiga</h2>');
   });
 });
 

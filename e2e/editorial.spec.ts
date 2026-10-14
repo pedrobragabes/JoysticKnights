@@ -61,6 +61,47 @@ test("destaques navegam como carrossel por controles e indicadores", async ({ pa
   await expect(carousel.getByRole("link").nth(1)).toBeVisible();
 });
 
+test("carrossel alcança o último destaque e completa a volta", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  const carousel = page.getByTestId("featured-carousel");
+  const dots = carousel.getByRole("button", { name: /^Ir para destaque / });
+  const count = await dots.count();
+  expect(count).toBeGreaterThan(3);
+  const viewport = carousel.locator("[data-carousel-index]").first().locator("..");
+  for (let index = 1; index < count; index++) {
+    const before = await viewport.evaluate((element) => element.scrollLeft);
+    await dots.nth(index).click();
+    await expect.poll(() => viewport.evaluate((element) => element.scrollLeft)).toBeGreaterThan(before + 10);
+    await expect.poll(() => carousel.locator(`[data-carousel-index="${index}"]`).evaluate((element) => Math.abs(element.getBoundingClientRect().left - element.parentElement!.getBoundingClientRect().left))).toBeLessThan(28);
+  }
+  await carousel.getByRole("button", { name: "Próximo destaque", exact: true }).click();
+  await expect(dots.first()).toHaveAttribute("aria-current", "true");
+  await expect.poll(() => carousel.locator('[data-carousel-index="0"]').evaluate((element) => Math.abs(element.getBoundingClientRect().left - element.parentElement!.getBoundingClientRect().left))).toBeLessThan(28);
+});
+
+test("Voltar após uma âncora restaura a matéria e seu conteúdo", async ({ page }) => {
+  const fixture = getEditorialFixture();
+  await page.goto(fixture.story.path);
+  const article = page.locator("article[data-story-href]");
+  const originalTitle = await page.locator("main h1").innerText();
+  const originalBody = await page.locator(".article-body").innerText();
+  const skip = page.getByRole("link", { name: "Pular para o conteúdo" });
+  await skip.focus();
+  await skip.press("Enter");
+  await expect(page).toHaveURL(new RegExp(`${escapeRegExp(fixture.story.path)}#conteudo$`));
+  const target = page.getByRole("navigation", { name: "Matérias anterior e próxima" }).getByRole("link").first();
+  const href = await target.getAttribute("href");
+  expect(href).toBeTruthy();
+  await target.click();
+  await expect(article).toHaveAttribute("data-story-href", href!);
+  await page.goBack();
+  await expect(page).toHaveURL(new RegExp(`${escapeRegExp(fixture.story.path)}#conteudo$`));
+  await expect(article).toHaveAttribute("data-story-href", fixture.story.path);
+  await expect(page.locator("main h1")).toHaveText(originalTitle);
+  await expect(page.locator(".article-body")).toHaveText(originalBody);
+});
+
 test("tema começa escuro, alterna para claro e preserva a escolha", async ({ page }) => {
   await page.goto("/");
 

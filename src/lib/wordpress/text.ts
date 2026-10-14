@@ -20,9 +20,17 @@ export function decodeHtmlEntities(value: string) {
     );
 }
 
+// Imported editorial copy can contain escaped AI citation components. These
+// are tooling markers, not source links; preserve ordinary citations and HTML.
+export function stripEditorialMarkers(value: string) {
+  return value
+    .replace(/(?:<|&lt;|&#0*60;|&#x0*3c;)\s*Cite\b\s+refs\s*=\s*\{\s*\[[\s\S]*?\]\s*\}\s*\/\s*(?:>|&gt;|&#0*62;|&#x0*3e;)/gi, "")
+    .replace(/\uE200cite\uE202[^\uE201]*\uE201/g, "");
+}
+
 export function plainText(value: string) {
   return decodeHtmlEntities(
-    value
+    stripEditorialMarkers(value)
       .replace(/<script[\s\S]*?<\/script>/gi, " ")
       .replace(/<style[\s\S]*?<\/style>/gi, " ")
       .replace(/<[^>]+>/g, " "),

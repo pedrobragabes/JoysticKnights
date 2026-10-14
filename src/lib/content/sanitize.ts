@@ -1,6 +1,6 @@
 import sanitizeHtml from "sanitize-html";
 import { getSiteUrl, siteConfig } from "../site-config";
-import { plainText, slugifyHeading } from "../wordpress/text";
+import { decodeHtmlEntities, plainText, slugifyHeading, stripEditorialMarkers } from "../wordpress/text";
 
 export type ArticleHeading = {
   id: string;
@@ -8,24 +8,8 @@ export type ArticleHeading = {
   level: 2 | 3;
 };
 
-type PrepareArticleOptions = {
-  featuredImageUrl?: string;
-};
-
-function imageKey(value: string | undefined) {
-  if (!value || value.startsWith("data:image/")) return "";
-  try {
-    const url = new URL(value, "https://wordpress.invalid");
-    return decodeURIComponent(url.pathname)
-      .replace(/-\d+x\d+(?=\.[a-z0-9]+$)/i, "")
-      .replace(/-scaled(?=\.[a-z0-9]+$)/i, "")
-      .toLowerCase();
-  } catch {
-    return value.split(/[?#]/, 1)[0].toLowerCase();
-  }
-}
-
-function sanitize(html: string, options: PrepareArticleOptions = {}) {
+function sanitize(html: string) {
+  html = stripEditorialMarkers(html);
   // Spectra paints rating stars with SVG. Preserve the saved numeric score
   // without trusting its legacy structured data or executing plugin scripts.
   html = html.replace(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi, (_match, json: string) => {
@@ -41,9 +25,6 @@ function sanitize(html: string, options: PrepareArticleOptions = {}) {
     return "";
   });
   const internalHosts = new Set<string>();
-  const seenImages = new Set<string>();
-  const featuredImageKey = imageKey(options.featuredImageUrl);
-  if (featuredImageKey) seenImages.add(featuredImageKey);
   for (const value of [getSiteUrl(), siteConfig.defaultSiteUrl, process.env.WORDPRESS_API_URL ?? siteConfig.defaultWordPressApiUrl]) {
     try {
       internalHosts.add(new URL(value).hostname.replace(/^www\./, ""));
@@ -109,12 +90,6 @@ function sanitize(html: string, options: PrepareArticleOptions = {}) {
         if (lazySrc && hasPlaceholder) safeAttributes.src = lazySrc;
         if (lazySrcset && !attribs.srcset) safeAttributes.srcset = lazySrcset;
 
-        const key = imageKey(safeAttributes.src);
-        if (key && seenImages.has(key)) {
-          return { tagName: "span", attribs: { "data-duplicate-image": "true" } };
-        }
-        if (key) seenImages.add(key);
-
         safeAttributes.loading = attribs.loading ?? "lazy";
         safeAttributes.decoding = "async";
         return { tagName, attribs: safeAttributes };
@@ -131,24 +106,36 @@ function sanitize(html: string, options: PrepareArticleOptions = {}) {
         return { tagName, attribs: { ...attribs, src, title: attribs.title || "Conteúdo incorporado", loading: "lazy" } };
       },
     },
-  }).replace(/<span data-duplicate-image="true"><\/span>/g, "");
+  });
 }
 
-export function prepareArticleContent(html: string, options: PrepareArticleOptions = {}) {
-  const usedIds = new Map<string, number>();
+export function prepareArticleContent(html: string) {
+  const sanitized = sanitize(html);
+  // Reserve existing anchors before generating any IDs, including IDs outside
+  // headings. Keep the first occurrence of a valid saved heading anchor.
+  const existingIds = new Map<string, number>();
+  const validId = (id: string) => id.length > 0 && !/[\s\u0000-\u001f]/.test(id);
+  for (const match of sanitized.matchAll(/<[a-z][^>]*\sid="([^"]*)"[^>]*>/gi)) {
+    const id = decodeHtmlEntities(match[1]);
+    if (validId(id) && !existingIds.has(id)) existingIds.set(id, match.index);
+  }
+  const usedIds = new Set(existingIds.keys());
   const headings: ArticleHeading[] = [];
-  const safeHtml = sanitize(html, options).replace(
+  const safeHtml = sanitized.replace(
     /<h([23])([^>]*)>([\s\S]*?)<\/h\1>/gi,
-    (match, rawLevel: string, rawAttributes: string, innerHtml: string) => {
+    (match, rawLevel: string, rawAttributes: string, innerHtml: string, offset: number) => {
       const label = plainText(innerHtml);
       if (!label) return match;
 
+      const savedId = decodeHtmlEntities(rawAttributes.match(/\sid="([^"]*)"/i)?.[1] ?? "");
+      const preserveId = validId(savedId) && existingIds.get(savedId) === offset;
       const baseId = slugifyHeading(label);
-      const occurrence = usedIds.get(baseId) ?? 0;
-      usedIds.set(baseId, occurrence + 1);
-      const id = occurrence ? `${baseId}-${occurrence + 1}` : baseId;
+      let id = preserveId ? savedId : baseId;
+      for (let suffix = 2; !preserveId && usedIds.has(id); suffix += 1) id = `${baseId}-${suffix}`;
+      usedIds.add(id);
       const level = Number(rawLevel) as 2 | 3;
       headings.push({ id, label, level });
+      if (preserveId) return match;
 
       const attributes = rawAttributes.replace(/\s+id=("[^"]*"|'[^']*')/gi, "");
       return `<h${level}${attributes} id="${id}">${innerHtml}</h${level}>`;

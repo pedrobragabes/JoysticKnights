@@ -10,8 +10,9 @@ const json = (body: object, status: number) => Response.json(body, { status, hea
 
 export async function POST(request: Request) {
   if (!isSameOriginRequest(request, getSiteUrl())) return json({ error: "Origem não autorizada." }, 403);
-  if (!request.headers.get("content-type")?.startsWith("application/json")) return json({ error: "Formato inválido." }, 415);
-  const secret = process.env.WORDPRESS_COMMENTS_SECRET;
+  if (request.headers.get("content-type")?.split(";", 1)[0]?.trim().toLowerCase() !== "application/json") return json({ error: "Formato inválido." }, 415);
+  const dedicatedSecret = process.env.WORDPRESS_CONTACT_SECRET;
+  const secret = dedicatedSecret || process.env.WORDPRESS_COMMENTS_SECRET;
   if (!secret) return json({ error: "Formulário temporariamente indisponível." }, 503);
   const address = request.headers.get("x-forwarded-for")?.split(",")[0] || request.headers.get("x-real-ip") || "unknown";
   const fingerprint = createHash("sha256").update(address).digest("hex");
@@ -33,13 +34,17 @@ export async function POST(request: Request) {
   const result = validateContactSubmission(payload);
   if (result.status === "honeypot") return json({ status: "received" }, 201);
   if (result.status === "invalid") return json({ error: result.error }, 400);
+  const idempotencyKey = (payload as Record<string, unknown>).idempotencyKey;
+  if (dedicatedSecret && (typeof idempotencyKey !== "string" || !/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(idempotencyKey))) return json({ error: "Atualize a página e tente novamente." }, 400);
   try {
-    const response = await fetch(getWordPressRestUrl("promogames/v1/contact"), {
+    const response = await fetch(getWordPressRestUrl(dedicatedSecret ? "promogames-contact/v1/messages" : "promogames/v1/contact", process.env.WORDPRESS_CONTACT_API_URL || undefined), {
       method: "POST", cache: "no-store", signal: AbortSignal.timeout(15_000),
-      headers: { "Content-Type": "application/json", "X-PromoGames-Comments-Secret": secret },
-      body: JSON.stringify({ ...result.value, fingerprint }),
+      headers: { "Content-Type": "application/json", [dedicatedSecret ? "X-PromoGames-Contact-Secret" : "X-PromoGames-Comments-Secret"]: secret },
+      body: JSON.stringify({ ...result.value, fingerprint, idempotencyKey }),
     });
-    if (!response.ok) return json({ error: response.status === 429 ? "Aguarde alguns minutos antes de tentar novamente." : "Não foi possível registrar sua mensagem agora." }, response.status === 429 ? 429 : 502);
+    if (!response.ok) return json({ error: response.status === 429 ? "Aguarde alguns minutos antes de tentar novamente." : response.status === 409 ? "Mensagem em processamento. Aguarde e tente novamente." : "Não foi possível registrar sua mensagem agora." }, response.status === 429 ? 429 : response.status === 409 ? 409 : 502);
+    const receipt = await response.json().catch(() => null);
+    if (response.status !== 201 || receipt?.status !== "received") return json({ error: "Não foi possível confirmar o recebimento. Tente novamente." }, 502);
     return json({ status: "received" }, 201);
   } catch { return json({ error: "Falha de conexão. Tente novamente em instantes." }, 502); }
 }
