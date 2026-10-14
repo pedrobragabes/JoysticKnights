@@ -14,7 +14,7 @@ import { ReviewSummary } from "./review-summary";
 import { ReadingProgress } from "./reading-progress";
 
 export async function StoryArticle({ story, preview = false }: { story: Story; preview?: boolean }) {
-  const article = prepareArticleContent(story.content, { featuredImageUrl: story.image?.url });
+  const article = prepareArticleContent(story.content);
   const [related, comments, previous, next] = await Promise.all([
     getStories({ categoryId: story.primaryCategory?.id, exclude: [story.id], perPage: 3 }),
     preview ? Promise.resolve([]) : getCommentsByPostId(story.id),
@@ -71,7 +71,7 @@ export async function StoryArticle({ story, preview = false }: { story: Story; p
   };
 
   return (
-    <article className="pb-20">
+    <article key={story.id} data-story-id={story.id} data-story-href={story.href} className="story-entry pb-20">
       <ReadingProgress />
       {!preview ? <StructuredData data={jsonLd} /> : null}
       <header className="border-b border-line bg-surface px-4 py-10 sm:px-6 sm:py-14 lg:px-10 lg:py-16">
@@ -118,7 +118,7 @@ export async function StoryArticle({ story, preview = false }: { story: Story; p
                 </div>
                 {story.author.description ? <p className="mt-4 text-sm leading-6 text-muted">{story.author.description}</p> : null}
               </aside>
-              <ArticleToc headings={article.headings} />
+              <ArticleToc headings={article.headings} href={story.href} />
             </div>
           </div>
 

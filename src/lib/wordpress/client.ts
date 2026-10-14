@@ -1,4 +1,5 @@
 import "server-only";
+import { unstable_rethrow } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
 
 export class WordPressApiError extends Error {
@@ -27,8 +28,8 @@ export function getWordPressApiUrl() {
   return (process.env.WORDPRESS_API_URL ?? siteConfig.defaultWordPressApiUrl).replace(/\/$/, "");
 }
 
-export function getWordPressRestUrl(path: string) {
-  const url = new URL(getWordPressApiUrl());
+export function getWordPressRestUrl(path: string, apiUrl = getWordPressApiUrl()) {
+  const url = new URL(apiUrl);
   const normalizedPath = path.replace(/^\/+|\/+$/g, "");
   if (!/\/wp\/v2\/?$/.test(url.pathname)) {
     throw new WordPressApiError("WORDPRESS_API_URL precisa terminar em /wp-json/wp/v2.");
@@ -57,8 +58,12 @@ export async function wordPressRequest<T>(
   init?: RequestInit,
 ): Promise<WordPressResponse<T>> {
   const url = createUrl(path, query);
-  const cacheOptions = init?.cache === "no-store"
-    ? {}
+  // PromoGames has no authenticated publish webhook configured yet. Read
+  // editorial content at request time so publish/edit/delete are visible on
+  // the next visit, rather than serving a stale ISR response first.
+  const liveEditorial = siteConfig.profile === "promogames" && /^\/(?:posts|pages)(?:\/|$)/.test(path);
+  const cacheOptions = init?.cache === "no-store" || liveEditorial
+    ? { cache: "no-store" as const }
     : { next: { revalidate: 300, tags } };
   let response: Response | undefined;
 
@@ -71,12 +76,11 @@ export async function wordPressRequest<T>(
           Accept: "application/json",
           ...init?.headers,
         },
-        // Keep the render's cache policy across retries: switching to no-store
-        // after a transient failure makes prerendered articles fail at runtime.
-        // Next only caches 200 responses, and each attempt has its own signal.
+        // Preserve the selected policy, including live editorial reads, on retries.
         ...cacheOptions,
       });
-    } catch {
+    } catch (error) {
+      unstable_rethrow(error);
       if (attempt === MAX_ATTEMPTS) throw new WordPressApiError("Não foi possível conectar ao WordPress.", 503, url.pathname);
       await new Promise((resolve) => setTimeout(resolve, attempt * 200));
       continue;

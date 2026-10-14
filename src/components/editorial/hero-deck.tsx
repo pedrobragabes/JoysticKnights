@@ -27,6 +27,9 @@ export function HeroDeck({ stories, showCategoryBadge = true }: { stories: HeroS
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  // Three cards can be visible on desktop. Fill the last two windows with
+  // the first cards so every original card can reach the leading position.
+  const slides = stories.length > 1 ? [...stories, ...stories.slice(0, 2)] : stories;
 
   const scrollToIndex = useCallback((requestedIndex: number) => {
     const track = trackRef.current;
@@ -54,7 +57,7 @@ export function HeroDeck({ stories, showCategoryBadge = true }: { stories: HeroS
       const distance = Math.abs(slide.offsetLeft - track.offsetLeft - track.scrollLeft);
       return distance < best.distance ? { index, distance } : best;
     }, { index: 0, distance: Number.POSITIVE_INFINITY });
-    setActiveIndex(nearest.index);
+    setActiveIndex(nearest.index % stories.length);
   }
 
   if (!stories.length) return null;
@@ -77,11 +80,14 @@ export function HeroDeck({ stories, showCategoryBadge = true }: { stories: HeroS
         onScroll={updateActiveSlide}
         className="scrollbar-none -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-3 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0"
       >
-        {stories.map((story, index) => (
+        {slides.map((story, index) => (
           <Link
-            key={story.id}
+            key={`${story.id}-${index}`}
             href={story.href}
-            aria-label={`${index + 1} de ${stories.length}: ${story.title}`}
+            aria-label={`${index % stories.length + 1} de ${stories.length}: ${story.title}`}
+            aria-hidden={index >= stories.length ? true : undefined}
+            tabIndex={index >= stories.length ? -1 : undefined}
+            data-carousel-index={index}
             className="story-link group relative min-h-[430px] basis-[84%] flex-none snap-start overflow-hidden rounded-card bg-[#151219] text-white sm:basis-[48%] lg:basis-[calc((100%-0.75rem)/2)] xl:basis-[calc((100%-1.5rem)/3)]"
           >
             <StoryImage

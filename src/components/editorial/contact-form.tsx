@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { createContactMailto } from "@/lib/contact-mailto";
 
 export function ContactForm({ delivery = "api", email = "", privacyHref = "/politica-de-privacidade/" }: { delivery?: "api" | "email"; email?: string; privacyHref?: string | null }) {
   const [busy, setBusy] = useState(false);
   const [feedback, setFeedback] = useState("");
   const [draft, setDraft] = useState("");
+  const requestId = useRef("");
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (busy) return;
@@ -19,16 +20,17 @@ export function ContactForm({ delivery = "api", email = "", privacyHref = "/poli
       return;
     }
     setBusy(true); setFeedback("");
+    requestId.current ||= crypto.randomUUID();
     try {
-      const response = await fetch("/api/contact/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...Object.fromEntries(data), privacy: data.get("privacy") === "on" }) });
+      const response = await fetch("/api/contact/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...Object.fromEntries(data), privacy: data.get("privacy") === "on", idempotencyKey: requestId.current }) });
       const result = await response.json();
       if (!response.ok) { setFeedback(result.error || "Não foi possível enviar."); return; }
-      form.reset(); setFeedback("Mensagem recebida pela equipe. Obrigado pelo contato!");
+      form.reset(); requestId.current = ""; setFeedback("Mensagem recebida pela equipe. Obrigado pelo contato!");
     } catch { setFeedback("Falha de conexão. Tente novamente."); }
     finally { setBusy(false); }
   }
   const inputClass = "mt-2 w-full rounded-xl border border-line bg-canvas p-3 font-normal focus:outline-brand";
-  return <form onSubmit={submit} onChange={() => { if (draft) { setDraft(""); setFeedback(""); } }} aria-busy={busy} className="rounded-card border border-line bg-surface p-6 sm:p-8">
+  return <form onSubmit={submit} onChange={() => { requestId.current = ""; if (draft) { setDraft(""); setFeedback(""); } }} aria-busy={busy} className="rounded-card border border-line bg-surface p-6 sm:p-8">
     {delivery === "email" ? <p className="mb-6 text-sm leading-6 text-muted">Preencha a mensagem e abra no seu aplicativo de e-mail para concluir o envio.</p> : null}
     <fieldset disabled={busy} className="grid gap-5">
       <label className="font-bold">Nome<input name="authorName" autoComplete="name" required minLength={2} maxLength={80} className={inputClass} /></label>

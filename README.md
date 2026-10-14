@@ -51,3 +51,5 @@ Comece pelo [runbook do JoystickNights](docs/joysticknights-headless.md) e pelo 
 A capa editorial, o carrossel, os ícones das plataformas, a navegação e o Contato receberam as melhorias de setembro de 2026. A identidade, o CMS e os caminhos do JoystickNights foram preservados. A landing page comercial, os grupos e as lojas do PromoGames não foram incluídos.
 
 Veja o [registro da atualização e validação](docs/JOYSTICKNIGHTS-ATUALIZACAO-2026-09-29.md). As fontes dos ícones estão em [PLATFORM-ASSETS.md](docs/PLATFORM-ASSETS.md).
+
+As correções editoriais de outubro e a atualização para Next.js 16.4.0 estão no [registro de 14/10/2026](docs/JOYSTICKNIGHTS-ATUALIZACAO-2026-10-14.md).

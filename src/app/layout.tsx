@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { Bricolage_Grotesque, Manrope } from "next/font/google";
+import { NativeHashNavigation } from "@/components/navigation/native-hash-navigation";
 import { SiteShell } from "@/components/navigation/site-shell";
 import { Analytics } from "@/components/platform/analytics";
 import { AdSenseAutoAds } from "@/components/platform/ad-slot";
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         <ConsentProvider>
+          <NativeHashNavigation />
           <a className="skip-link" href="#conteudo">
             Pular para o conteúdo
           </a>

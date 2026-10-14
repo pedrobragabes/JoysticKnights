@@ -21,7 +21,7 @@ export function InstitutionalPage({ page }: { page: WordPressPage }) {
         <div className="mx-auto grid max-w-[980px] gap-10 lg:grid-cols-[minmax(0,760px)_minmax(160px,1fr)]">
           <ArticleBody html={content.html} />
           <aside className="h-fit lg:sticky lg:top-6">
-            <ArticleToc headings={content.headings} />
+            <ArticleToc headings={content.headings} href={page.href} />
           </aside>
         </div>
       </div>
