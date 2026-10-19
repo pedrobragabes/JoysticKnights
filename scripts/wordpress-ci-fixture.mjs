@@ -10,7 +10,7 @@ const categories = [
   { id: 5, name: "PC", slug: "pc", parent: 3 },
 ].map((term) => ({ ...term, taxonomy: "category", description: "Acervo sintético de teste.", link: `${source}/category/${term.parent ? "plataformas/" : ""}${term.slug}/` }));
 const author = { id: 1, name: "Redação de teste", slug: "redacao-teste", link: `${source}/autor/redacao-teste/`, description: "Autor sintético exclusivo dos testes automatizados." };
-const content = "<p>Esta publicação sintética verifica o frontend editorial sem depender de dados ou disponibilidade do CMS de produção. Nenhuma informação deste acervo representa uma notícia publicada.</p><h2>Conteúdo de teste</h2><p>Paginação, busca, arquivos, acessibilidade e metadados são exercitados com este conteúdo controlado.</p><img src='/joysticknights-logo.webp' alt='Marca JoystickNights de teste' width='480' height='160'><img src='/joysticknights-icon.png' alt='Ícone JoystickNights de teste' width='256' height='256'>";
+const content = "<p>Esta publicação sintética verifica o frontend editorial sem depender de dados ou disponibilidade do CMS de produção. Nenhuma informação deste acervo representa uma notícia publicada.</p><h2>Conteúdo de teste</h2><p>Paginação, busca, arquivos, acessibilidade e metadados são exercitados com este conteúdo controlado.</p><img src='/joysticknights-logo.webp' alt='Marca JoysticKnights de teste' width='480' height='160'><img src='/joysticknights-icon.png' alt='Ícone JoysticKnights de teste' width='256' height='256'>";
 const posts = Array.from({ length: 56 }, (_, index) => {
   const review = index % 2 === 1;
   const slug = index === 0 ? "demo-de-yakuza-kiwami-3-ja-disponivel" : index === 1 ? "review-assassins-creed-shadows-entre-o-stealth-e-a-mesmice" : `publicacao-sintetica-${index + 1}`;
@@ -38,7 +38,7 @@ createServer((request, response) => {
   if (url.pathname === "/wp-json/promogames/v1/capabilities") return send(200, { editorial_filters: true });
   if (url.pathname === "/wp-json/promogames/v1/home") return send(200, { items: posts.slice(0, 4).map(({ id }) => ({ id })) });
   const collection = url.pathname.replace(/^\/wp-json\/wp\/v2\//, "").replace(/\/$/, "");
-  let items = ({ posts, categories, tags: [], users: [author], pages, comments: [] })[collection];
+  let items = ({ posts, categories, tags: [], users: [author], pages, comments: [], media: [{ id: 1, source_url: `${source}/wp-content/uploads/fixture.webp` }] })[collection];
   if (!items) return send(404, { code: "rest_no_route" });
   const query = url.searchParams;
   const ids = (key) => query.get(key)?.split(",").map(Number);

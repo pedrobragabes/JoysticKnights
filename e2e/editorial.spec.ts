@@ -40,7 +40,7 @@ test("home continua o feed em URLs paginadas sem repetir os blocos editoriais", 
   const feedSection = page.locator("section").filter({ has: page.getByRole("heading", { name: "Últimas publicações", exact: true }) });
   const feedLinks = await feedSection.locator("article a").evaluateAll((links) => links.map((link) => link.getAttribute("href")));
   expect(feedLinks.length).toBeGreaterThan(0);
-  expect(feedLinks.some((href) => heroLinks.includes(href))).toBe(true);
+  expect(feedLinks.some((href) => heroLinks.includes(href))).toBe(false);
 
   const pagination = page.getByRole("navigation", { name: "Paginação" });
   await expect(pagination).toBeVisible();
@@ -49,6 +49,8 @@ test("home continua o feed em URLs paginadas sem repetir os blocos editoriais", 
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/page\/2\/$/);
   await expect(page.getByRole("heading", { name: "Últimas publicações — página 2" })).toBeVisible();
   await expect(page.getByTestId("featured-carousel")).toHaveCount(0);
+  const secondPageLinks = await page.locator("main article a").evaluateAll((links) => links.map((link) => link.getAttribute("href")));
+  expect(secondPageLinks.some((href) => feedLinks.includes(href) || heroLinks.includes(href))).toBe(false);
 });
 
 test("destaques navegam como carrossel por controles e indicadores", async ({ page }) => {
@@ -120,7 +122,7 @@ test("busca usa um termo confirmado pela API editorial", async ({ page }) => {
   await page.goto(`/buscar/?q=${encodeURIComponent(searchTerm)}`);
 
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Resultados para");
-  await expect(page.getByLabel("Buscar no JoystickNights", { exact: true })).toHaveValue(searchTerm);
+  await expect(page.getByLabel("Buscar no JoysticKnights", { exact: true })).toHaveValue(searchTerm);
   await expect(page.locator("main article").first()).toBeVisible();
 });
 

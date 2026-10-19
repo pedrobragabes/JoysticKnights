@@ -1,21 +1,22 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/site-config";
-import { getAuthors, getCategories, getSitemapPages, getSitemapStories, getSitemapTags } from "@/lib/wordpress/queries";
+import { getCompleteSitemapAuthors, getCompleteSitemapPages, getCompleteSitemapStories, getCompleteSitemapTerms } from "@/lib/wordpress/sitemap";
 
 const utilityPageSlugs = new Set(["inicio", "postagens", "pesquisar"]);
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
   const [stories, pages, categories, tags, authors] = await Promise.all([
-    getSitemapStories(),
-    getSitemapPages(),
-    getCategories(),
-    getSitemapTags(),
-    getAuthors(),
+    getCompleteSitemapStories(),
+    getCompleteSitemapPages(),
+    getCompleteSitemapTerms("categories"),
+    getCompleteSitemapTerms("tags"),
+    getCompleteSitemapAuthors(),
   ]);
 
   return [
     { url: siteUrl, lastModified: new Date(), changeFrequency: "hourly", priority: 1 },
+    { url: `${siteUrl}/mobile/`, changeFrequency: "daily", priority: 0.7 },
     { url: `${siteUrl}/contato/`, changeFrequency: "monthly", priority: 0.5 },
     ...pages
       .filter((page) => !utilityPageSlugs.has(page.slug))

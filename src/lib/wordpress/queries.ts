@@ -208,32 +208,6 @@ export const getCommentsByPostId = cache(async (postId: number): Promise<WordPre
   }
 });
 
-function getPreviewAuthorization() {
-  const username = process.env.WORDPRESS_USERNAME;
-  const password = process.env.WORDPRESS_APPLICATION_PASSWORD;
-  if (!username || !password) return null;
-  return `Basic ${Buffer.from(`${username}:${password}`).toString("base64")}`;
-}
-
-export async function getPreviewStoryById(id: number): Promise<Story | null> {
-  const authorization = getPreviewAuthorization();
-  if (!authorization || !Number.isInteger(id) || id < 1) return null;
-
-  try {
-    const response = await wordPressRequest<RawPost>(
-      `/posts/${id}`,
-      { context: "edit", _embed: EMBED, _fields: DETAIL_FIELDS },
-      [],
-      { cache: "no-store", headers: { Authorization: authorization } },
-    );
-    return mapPost(response.data);
-  } catch (error) {
-    unstable_rethrow(error);
-    console.error(`[wordpress] Falha ao carregar preview ${id}`, error);
-    return null;
-  }
-}
-
 type SitemapStory = Pick<Story, "id" | "slug" | "href" | "modifiedAt" | "image">;
 
 export const getSitemapStories = cache(async (): Promise<SitemapStory[]> => {

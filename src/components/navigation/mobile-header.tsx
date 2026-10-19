@@ -8,7 +8,7 @@ import { Brand } from "./brand";
 import { NavigationLinks } from "./navigation-links";
 import { ThemeToggle } from "./theme-toggle";
 
-export function MobileHeader() {
+export function MobileHeader({ logo, description = siteConfig.shortDescription }: { logo?: { src: string; alt: string; width: number; height: number }; description?: string }) {
   const [open, setOpen] = useState(false);
   const [ready, setReady] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -36,7 +36,7 @@ export function MobileHeader() {
   return (
     <>
       <header className="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-line bg-canvas/95 px-4 backdrop-blur lg:hidden">
-        <Brand />
+        <Brand logo={logo} />
         <div className="flex items-center gap-1">
           <ThemeToggle />
           <Link aria-label="Buscar" href="/buscar/" className="grid size-11 place-items-center rounded-full hover:bg-surface">
@@ -68,7 +68,7 @@ export function MobileHeader() {
               <NavigationLinks mobile onNavigate={() => setOpen(false)} />
             </div>
             <p className="mt-auto shrink-0 border-t border-line pt-6 text-sm leading-6 text-muted">
-              {siteConfig.shortDescription}
+              {description}
             </p>
           </nav>
         </div>

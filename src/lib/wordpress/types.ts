@@ -81,6 +81,7 @@ export type Story = {
   editorialType?: string;
   platforms: string[];
   reviewScore?: number;
+  reviewDisplay?: "auto" | "show" | "hide";
   review?: {
     game: string;
     developer: string;

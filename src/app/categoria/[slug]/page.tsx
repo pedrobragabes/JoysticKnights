@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { CategoryHighlights } from "@/components/editorial/category-highlights";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ArchiveHeader, StoryArchive } from "@/components/editorial/archive";
 import { parsePage } from "@/lib/pagination";
@@ -32,7 +31,6 @@ export default async function CategoryPage({ params, searchParams }: PageProps<"
     <>
       <ArchiveHeader eyebrow="Categoria" title={category.name} description={category.description || `Confira as últimas publicações de ${category.name} no ${siteConfig.name}.`} count={result.total} />
       <StoryArchive basePath={category.href} result={result} emptyMessage={`Ainda não há matérias em ${category.name}.`} />
-      {page === 1 ? <CategoryHighlights categoryId={category.id} /> : null}
     </>
   );
 }

@@ -1,3 +1,9 @@
+# JoysticKnights Core 1.5.0-jk.1
+
+Atualização editorial seletiva: prévia privada/autosave, atalhos administrativos, home e marca configuráveis, notas opcionais, Mobile e redirects internos. Mantém namespace e dados históricos. Consulte [ativação e rollback](../../docs/JOYSTICKNIGHTS-ATUALIZACAO-2026-10-19.md).
+
+## Contrato anterior preservado
+
 # PromoGames Core 1.4.1
 
 Esta revisão para o JoystickNights corrige a classificação inicial de análises (`analise` e `analises`), guias e promoções. Preserva metadados editoriais já preenchidos e os contratos de contato, comentários e revalidação. A administração dos grupos do PromoGames não está incluída neste pacote. A atualização do frontend não instala automaticamente o plugin no CMS.

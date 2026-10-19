@@ -1,6 +1,6 @@
-# JoystickNights Headless
+# JoysticKnights Headless
 
-Projeto independente do JoystickNights. O frontend público usa Next.js, React, TypeScript e Tailwind; o WordPress continua como CMS editorial em `cms.joysticknights.com.br`.
+Projeto independente do JoysticKnights. O frontend público usa Next.js, React, TypeScript e Tailwind; o WordPress continua como CMS editorial em `cms.joysticknights.com.br`.
 
 ## Desenvolvimento
 
@@ -39,17 +39,19 @@ Cadastre as variáveis de `.env.example` no hPanel. Não envie `.env.local`, ban
 ## Estrutura
 
 - `src/`: frontend e rotas de servidor;
-- `public/`: identidade e arquivos públicos do JoystickNights;
+- `public/`: identidade e arquivos públicos do JoysticKnights;
 - `wordpress/promogames-core/`: plugin de integração do CMS;
 - `docs/`: cutover, QA e rollback;
 - `arquivoswordpress/`: backup local ignorado pelo Git.
 
-Comece pelo [runbook do JoystickNights](docs/joysticknights-headless.md) e pelo [tutorial Hostinger](docs/TUTORIAL-HOSTINGER-DO-ZERO.md).
+Comece pelo [runbook do JoysticKnights](docs/joysticknights-headless.md) e pelo [tutorial Hostinger](docs/TUTORIAL-HOSTINGER-DO-ZERO.md).
 
 ## Melhorias compartilhadas com a revisão do PromoGames
 
-A capa editorial, o carrossel, os ícones das plataformas, a navegação e o Contato receberam as melhorias de setembro de 2026. A identidade, o CMS e os caminhos do JoystickNights foram preservados. A landing page comercial, os grupos e as lojas do PromoGames não foram incluídos.
+A capa editorial, o carrossel, os ícones das plataformas, a navegação e o Contato receberam as melhorias de setembro de 2026. A identidade, o CMS e os caminhos do JoysticKnights foram preservados. A landing page comercial, os grupos e as lojas do PromoGames não foram incluídos.
 
 Veja o [registro da atualização e validação](docs/JOYSTICKNIGHTS-ATUALIZACAO-2026-09-29.md). As fontes dos ícones estão em [PLATFORM-ASSETS.md](docs/PLATFORM-ASSETS.md).
 
 As correções editoriais de outubro e a atualização para Next.js 16.4.0 estão no [registro de 14/10/2026](docs/JOYSTICKNIGHTS-ATUALIZACAO-2026-10-14.md).
+
+As funções administrativas/editoriais portadas em 19/10 estão no [registro de atualização](docs/JOYSTICKNIGHTS-ATUALIZACAO-2026-10-19.md), com flags de ativação e limites de validação.

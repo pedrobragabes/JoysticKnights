@@ -6,6 +6,7 @@ export type IconName =
   | "xbox"
   | "nintendo"
   | "pc"
+  | "mobile"
   | "news"
   | "anime"
   | "review"
@@ -30,6 +31,7 @@ export function Icon({ name, className = "size-5" }: { name: IconName; className
   };
 
   const paths: Record<IconName, React.ReactNode> = {
+    mobile: <><rect {...common} x="6" y="2" width="12" height="20" rx="2" /><path {...common} d="M10 18h4" /></>,
     home: <><path {...common} d="m3 10 9-7 9 7" /><path {...common} d="M5 9v11h14V9M9 20v-6h6v6" /></>,
     playstation: <><path {...common} d="M7 18V5c4-1 7 1 7 4 0 2-1 3-3 3V8" /><path {...common} d="M4 16c3-1 5-1 7 0M12 15c4-2 7-2 9-1-2 3-5 4-8 4" /></>,
     xbox: <><circle {...common} cx="12" cy="12" r="9" /><path {...common} d="m7 7 5 5 5-5M6 18l6-6 6 6" /></>,

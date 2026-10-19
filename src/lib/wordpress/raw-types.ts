@@ -53,6 +53,7 @@ export type RawPostMeta = {
   promogames_editorial_type?: string;
   promogames_platforms?: string[] | string;
   promogames_review_score?: number | string;
+  promogames_review_display?: "auto" | "show" | "hide";
   promogames_review_game?: string;
   promogames_review_developer?: string;
   promogames_review_publisher?: string;

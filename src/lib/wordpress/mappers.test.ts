@@ -175,3 +175,13 @@ describe("mapPage", () => {
     });
   });
 });
+
+// Hidden ratings must disappear from both cards and the structured-data input.
+it("removes a hidden rating while preserving an explicit zero", () => {
+  const post = rawPost("https://joysticknights.com.br/noticias/teste/");
+  post.promogames_review_rating = 0;
+  post.meta = { promogames_editorial_type: "analise", promogames_review_display: "hide" };
+  expect(mapPost(post)).toMatchObject({ reviewDisplay: "hide", reviewScore: undefined });
+  post.meta.promogames_review_display = "show";
+  expect(mapPost(post)).toMatchObject({ reviewDisplay: "show", reviewScore: 0 });
+});
