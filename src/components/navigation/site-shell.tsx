@@ -1,18 +1,20 @@
 import Link from "next/link";
 import { Icon } from "@/components/icons";
 import { ConsentSettingsButton } from "@/components/platform/consent-settings-button";
+import { getPublicSiteSettings } from "@/lib/wordpress/site-settings";
 import { siteConfig } from "@/lib/site-config";
 import { Brand } from "./brand";
 import { MobileHeader } from "./mobile-header";
 import { NavigationLinks } from "./navigation-links";
 import { ThemeToggle } from "./theme-toggle";
 
-export function SiteShell({ children }: { children: React.ReactNode }) {
+export async function SiteShell({ children }: { children: React.ReactNode }) {
+  const settings = await getPublicSiteSettings();
   return (
     <div className="min-h-screen lg:grid lg:grid-cols-[250px_minmax(0,1fr)]">
       <aside className="fixed inset-y-0 left-0 z-30 hidden w-[250px] flex-col overflow-y-auto border-r border-line bg-surface px-5 py-7 lg:flex">
         <div className="flex items-center justify-between gap-3">
-          <Brand />
+          <Brand logo={settings.logo} />
           <ThemeToggle />
         </div>
         <nav aria-label="Navegação principal" className="mt-7">
@@ -39,13 +41,13 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
       <div className="min-w-0 lg:col-start-2">
-        <MobileHeader />
+        <MobileHeader logo={settings.logo} description={settings.footerDescription} />
         {children}
         <footer className="border-t border-line bg-surface px-4 py-10 sm:px-6 lg:px-10">
           <div className="mx-auto grid max-w-[1460px] gap-8 sm:grid-cols-2 xl:grid-cols-[1fr_auto_auto]">
             <div>
-              <Brand />
-              <p className="mt-4 max-w-md text-sm leading-6 text-muted">{siteConfig.shortDescription}</p>
+              <Brand logo={settings.logo} />
+              <p className="mt-4 max-w-md text-sm leading-6 text-muted">{settings.footerDescription}</p>
             </div>
             <div>
               <p className="text-xs font-black uppercase tracking-[0.12em] text-ink">Institucional</p>
@@ -60,10 +62,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </div>
             <div>
               <p className="text-xs font-black uppercase tracking-[0.12em] text-ink">Contato</p>
-              <a href={`mailto:${siteConfig.contactEmail}`} className="mt-3 inline-flex break-all text-sm font-bold text-brand hover:underline">{siteConfig.contactEmail}</a>
+              <a href={`mailto:${settings.contactEmail}`} className="mt-3 inline-flex break-all text-sm font-bold text-brand hover:underline">{settings.contactEmail}</a>
               <div className="mt-4 flex gap-3 text-sm font-bold text-muted">
-                {siteConfig.social.x ? <a href={siteConfig.social.x} target="_blank" rel="noreferrer" className="hover:text-brand">X</a> : null}
-                {siteConfig.social.instagram ? <a href={siteConfig.social.instagram} target="_blank" rel="noreferrer" className="hover:text-brand">Instagram</a> : null}
+                {settings.x ? <a href={settings.x} target="_blank" rel="noreferrer" className="hover:text-brand">X</a> : null}
+                {settings.instagram ? <a href={settings.instagram} target="_blank" rel="noreferrer" className="hover:text-brand">Instagram</a> : null}
               </div>
             </div>
           </div>

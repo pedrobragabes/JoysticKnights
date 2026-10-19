@@ -27,3 +27,16 @@ check(promogames_core_is_cms_sitemap_path('/post-sitemap.xml'), 'SEO sitemap not
 check(promogames_core_frontend_url('/noticias/example/?page=2') === 'https://joysticknights.com.br/noticias/example/?page=2', 'Frontend URL mapping');
 check(promogames_core_config()['revalidate_url'] === 'https://joysticknights.com.br/api/revalidate', 'Cutover URL not preserved');
 echo "WordPress contract checks passed.\n";
+
+function get_option(string $key, mixed $default = false): mixed { return $default; }
+function trailingslashit(string $value): string { return rtrim($value, '/') . '/'; }
+function sanitize_text_field(string $value): string { return strip_tags($value); }
+function add_settings_error(...$args): void {}
+check(promogames_core_redirect_path('https://evil.test/') === null, 'External redirect accepted');
+check(promogames_core_redirect_path('/api/contact/') === null, 'Protected redirect accepted');
+check(promogames_core_redirect_path('/%2e%2e/private/') === null, 'Traversal redirect accepted');
+check(promogames_core_sanitize_redirects("/old/ -> /middle/\n/middle/ -> /new/")['/old/'] === '/new/', 'Redirect chain not flattened');
+check(promogames_core_sanitize_redirects("/old/ -> /new/\n/new/ -> /old/") === [], 'Redirect cycle accepted');
+$home = joysticknights_sanitize_home(['title' => '<b>Notícias JK</b>', 'showRadar' => '1', 'firstSection' => 'platforms']);
+check($home['title'] === 'Notícias JK' && $home['showRadar'] && !$home['showHighlights'] && $home['sections'][0] === 'platforms', 'Editorial home settings invalid');
+echo "Shared feature contract checks passed.\n";

@@ -22,7 +22,7 @@ export default async function SearchPage({ searchParams }: PageProps<"/buscar">)
   const query = await searchParams;
   const search = typeof query.q === "string" ? query.q.trim().slice(0, 100) : "";
   const page = parsePage(query.page);
-  const platforms = { playstation: "PlayStation", xbox: "Xbox", nintendo: "Nintendo", pc: "PC" };
+  const platforms = { playstation: "PlayStation", xbox: "Xbox", nintendo: "Nintendo", pc: "PC", mobile: "Mobile" };
   const platform = typeof query.platform === "string" && Object.hasOwn(platforms, query.platform) ? query.platform : "";
   const categories = await getCategories().catch(() => []);
   const category = categories.find((item) => String(item.id) === query.category);

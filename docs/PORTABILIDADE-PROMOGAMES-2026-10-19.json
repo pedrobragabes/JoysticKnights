@@ -1,0 +1,2323 @@
+{
+  "date": "2026-10-19",
+  "source": "../PromoGames (HEAD + alterações locais e arquivos novos)",
+  "files": [
+    {
+      "source": ".github/workflows/ci.yml",
+      "target": ".github/workflows/ci.yml",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "8bdf36e1393f5d3f79a21b618e5f63c754261349188020f9f51393d63b66cd6d"
+    },
+    {
+      "source": ".gitignore",
+      "target": ".gitignore",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "e6d7aeb92b759186a6b40829766d224b16cd1689847791e11a7813c3a8a3e0d1"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "088c51970bac4900360c60fa4a7b091fdd119d6ca5dedeeb22ac36b22f352382"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/PLANO-DE-EXECUCAO.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "c04188c8c843ff237d069daaddce826c935223850529836574446e48811b6ff7"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/REVISAO-TECNICA.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "8919e9d4bb1ad69898070949c0247153e425bbfba9252e0c046985c3fd6a8f4d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/amostra-20-artigos.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "62e534eb10feea80622ae3ce9c0d70bcb8a1a9e30f4ddc4b3189487e76ba5f92"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/coletar-evidencias.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7cb7229d54ac5be2f6e83827e9f78b76970b0be9fe9261acdb6ba4d98569fbd1"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/evidencias.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a2d3104444c1b8bb6bf9af5d6278639fd44429afc47d96dc9f4e4afff6e5db50"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/npm-audit-main.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e5d261bb5be0d699306ebb73d98f96dcd60191672482381bfb34feea37f757ba"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/npm-audit-promogames.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "58df637ec40b50dcf7a0cdf870fb929e67adda630066b349747d3094cf3414e6"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/npm-audit-wip.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e5d261bb5be0d699306ebb73d98f96dcd60191672482381bfb34feea37f757ba"
+    },
+    {
+      "source": "docs/auditoria-2026-10-13/reproducoes.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "4883aa4ac6a045087d16ee094930c2f431c04fb481739fc7eb250f6caa94a51c"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/ATUALIZACAO-V8.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7ffec6a608b26f28efd01d82a4cc9ee9e8b66b35c2752c107306b1e32ca4174c"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/AUDITORIA-AMPLIADA.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e7a5827ea12ec1f0a527db9c78bc7c63399140bee600995b038e3b7dfe663b8d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/CONTRATO-DE-COMPATIBILIDADE.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7e1d9a5bff2b6e6fd311c82e63aecaff4e1647f8a42b4ee87c71b0ecf1e602b0"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/MELHORIAS-HOME-CONTATO.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "93b7d9247eac738bbb57683397e5198d719191816c1e7f0d1492c8d0f954608c"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/MIGRACAO-STATUS.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "f4df87a16667fec45484ffc4f5ffbdee3189f60be090517ee5f0db81abdd1de4"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/TRANSICAO-EM-ANDAMENTO.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "ff0f60b9e8d1862d68d31ecdbeccd20887779547d1bfa23f15050187790be974"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/VISUAL-V5.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "85627692d7c5a3bd053f6630cb98f825544e11d589f3c5cdb5b835b184ba2d46"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/agendamento-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e2e50a52932be8cfd70c1a896a1bf680a02e448f8d1eb8e197e8156f7bc73bf9"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/analytics-publico.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "5f1d89e97dfc691628cc076931739e5da6dbe1850f542192839c65eb451d8247"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/auditar-backup.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "b7026767d25034a95d82008ff5d02f4e86506ba7352f3f5ebabf5b61a656da60"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/auditar-seo-legado.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "fc65ebe515ad6898d1f22d8cba75b687d8afc8e9e9c23e2f1c3ead4ebafb95c8"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/auditar-superficie.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "75a7d8c86a426f9e08b8b1ce47097e209e0228d2cf06869264ab5d5ef1f97f27"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/auditoria-lancamento.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "3e9da0939c72942f75dedc000356c5919dee32e28eacda6efddca8646019d81d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/auditoria-lancamento.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "80e92c02254462931ec3396bf7bec4bd2477318107fbc129a2d77cef5eec3faf"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/backup-e-paridade.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "ab1722cc0f12c15e79ae51e7db43db2e705092d4aad36f4b4d6fe676e5ce653d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-contato-v3.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "b45dd06b65c7175402f7696e0270c3e4348a20f73b56e09dd19bf69ce022f38c"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-gift-cards-v3.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e0a14323628e9252c59b19d346d404ca098a9b54632c9ef90e6d80fa33bf7fa8"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-home-desktop-v5.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "4a896ddb5263c88d14dfd86c2c2147dddebab0792fd6c623af73d35b947550f9"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-home-mobile-v3.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "0a540b21bb3210dcd944b50a0d673df0739d0b5850a0000112a46a68004da1e0"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-home-mobile-v5.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "970b19cb9af6fed26c5e4924a20e76d032037e11daeca13df08de9ac74e01fa2"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-home-small-v5.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "9b7ae2e63f8ca119472512a61287732e489d8b3c1433c4af00acf99ad2a9df59"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-home-tablet-v5.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "83934e3932d9e2671da861014c98510592ae1aca82b66255f594952ad1191f18"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-home-v3.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "ec1de8e71a47324b4ad6b0ab93f35f4079e4079da7cd9598c9a793258e6cb308"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-home.jpg",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "4b55d5d275d94e84e123b42fe8e898f0da9ad4b918cbac782181f89384b3ab69"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-noticias.jpg",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "f09305661e46123db1b1c37c540e2c34e0406a1df48f8a6f396352e0d9b35744"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-peak-historico-v3.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "82f8e9d1ac9c2596a71b32857a6ca406f1278ad5cae79fce64d7ed3f3594c695"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/beta-validacao-remota.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "56e65a9a870b0d0257bee7121b7cf8f125d17a6cc51f8e254597249fd80692ab"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/candidata-snapshot.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "bd3f257bad24777e39ff058b584083e2f6a0c702fb26cd0fc2ac2d1be79c1877"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/check-tabelas.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "274a03108796ed5f44263a37a541103aa21406dac14157bab8e2976dec6fdbe9"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/conclusao-corte.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "9d5aec58c6ef2921b55c31ae011fa62d83eab6ff843093e80c436336947e55b8"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/conclusao-corte.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "c92dd973c12d07cf4f7bf780e31c6444a2b7fc3be10b809a57406c05deabf1af"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/confirmacao-corte-hostinger.jpg",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "8d8399ab1bd9ad46311824db467818f3829c11fa62ae18719970e5911cb1efc7"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/contato-atual.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "52facec10962af6f92de369ce30fbd07493ff855662d9cdc3733e37147fa6cbd"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/contato-teste-cms.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "d4873d0eaed6c38b6dce1710ac702cbb74d08e9114c9e3368b817ab8f94a8272"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/contato-teste-recebido.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "0b2aea9e2e690f865d8551ae125ee04c22700d5a83891b6ee5689203f94f82ac"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/core-integridade.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "ccb3fea935d336181fdb8e4e8ec73f62e5ce19cad1bbacc30b6de3a8da085345"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/correcoes-v7-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a23d17d87be4605e36b666f57b539c4dd37040afbfd7501881fbfb61ba709eb6"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/dns-antes-do-corte.txt",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "0908cb0cb62a63e4a7a79d26a56f489a907a5748226bf82880f1c57316e9a5f5"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/edicao-imediata-v7.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a0400b1d7b08a7db60094f6eac0f6f4cfd2e23418e840f6968dfdc1e69a5a1f7"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/ensaio-agendamento.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "ce1dbe7408b9ae3d984f0d9d0ecd49677b3c9b5280cc0e6be0bb9904dd199df6"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/ensaio-postagem.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a34cd48fdeb09b671961edc99517983d4d01deea6cb0aecd40fa18ecafbd3833"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/home-corrigida-v7.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "947cc4bed572a6784156dfcdc37239167b7ee3746a5fd03fa48c6f905a5d5792"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/home-v3-validacao-remota.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a3d805be2efbffada36b100b334971c3b8a9b16264100fbe0e9c9f04a0ccee96"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/integridade-arquivo.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "d07ee18cac33c57340cf5dc05aaac22607a12ef38bcc1607726ad52867f73147"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-artigo-mobile.report.html",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "22eb719ef15c28c1ad09f312767de89576abba78a1ec1e58c2127220e83f85ea"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-artigo-mobile.report.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "27be7896a338a92787f8c9986ec280665abc84634bfb3f5e847cca698746cb7d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-home-desktop.report.html",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "c6c3b2f6d62e3dc428e224536ce749d1c5d4164c87eb0ebc0b07374c23b4221a"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-home-desktop.report.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "169dedfb5489621579bbf7e245109d76ccdf3871d59ecfa047bafdd10a408a88"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-home-mobile.report.html",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "d59309b2367ab0436ce587d8cd1d8e42bd3e948f6a51f5f84d53f65b1708c85d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-home-mobile.report.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "b7ebc1c36eb16bc32a5340ad98f8986332bcf899f5f2b0802d1d0c41bffedc4f"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-noticias-mobile.report.html",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e24edbb8f67d5c97633dd397ef777ec679bc4d5b0e8d2c2a9b654d25568091a8"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-noticias-mobile.report.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "1c37cf27b9ff760a6864ef7e19ccc97c6844b11d0c7b8e85cc6ce6ed43ccfc92"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/lighthouse-suite.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "167ffd792a4ffa241401a3086fc75972343b1ace045b60066d59f6c8903f37af"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/limpeza-instancia.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "2ed465c8de622c0a95795bd85eff8465ee8bbb342f2bf6ca4093f4c7844cf030"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/marcadores-editoriais-auditoria.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "d5664063358ded11886711068a782de3c5bf2049b456b8ab6b5c5f4d80c08844"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/mobile-categoria-corrigida-no-ar.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a751b1a55b95f58e4fde22166cb70039a785ac10a9635ee4d8fd5e1a88c219b3"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/noticias-atualizadas-v7.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "eae6341724f73f4e5bca0f85e1bdbbb2ec2911e7c2f1f75427648d472feaf399"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/npm-audit-candidata-consolidada.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a815f830bc3c6b716b2ef6225b29adbfe3806c6e5256b606279ef31e7a09b2ad"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/npm-audit-candidata.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e5d261bb5be0d699306ebb73d98f96dcd60191672482381bfb34feea37f757ba"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/plugins-e-config-seguros.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "76422be4eb325371999965cfbbdca296e2daad4bc3ed8bc331c1c0812c35cf0f"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/plugins-integridade.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "65ce276c47e7226d064fc1c4d6a4694ba62f92530ad2a7fe28f624bc06a0376b"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/plugins-versoes-oficiais.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "45dd04fcdb0324491d48c51842f2c36505a1754cfb1f842f8ddb9acd92c484e1"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/post-8143-antes-limpeza.html",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "45ccbb91479b4bff1ef367be49db2c23438a82783a9f843aee9d31a52ae305ac"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/post-8165-antes-limpeza.html",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "633ef57323ba567b8c319786393339af16ea9c92e130adee844250184c26d7b9"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-edicao-imediata-corpo-desktop.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "3ac89276f158d54c14f242531882461f1c54d5b8a89186b867ba180c984ed261"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-edicao-imediata-corpo-mobile.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "5cf0a30af9a24b8f329d626d1ea5bed929bb48b463456b178ef2422793073eb5"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-edicao-imediata-desktop.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "5cbe6097e6f54fdc76b33e05958a1060bebec9235eaf3c910181d63c92a32662"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-edicao-imediata-mobile.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a85e99b912fb24641bd38e1fe5ff541dc0799e14458a43106ffec1f3c9d1246d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-edicao-imediata-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "88567b907f0598c322dac9c1c6a5af1e6115dabb11bb3cfc45d988f535985338"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-publicada-corpo-desktop.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "3ac89276f158d54c14f242531882461f1c54d5b8a89186b867ba180c984ed261"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-publicada-corpo-mobile.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "5cf0a30af9a24b8f329d626d1ea5bed929bb48b463456b178ef2422793073eb5"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-publicada-desktop.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "5cbe6097e6f54fdc76b33e05958a1060bebec9235eaf3c910181d63c92a32662"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-publicada-mobile.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "a85e99b912fb24641bd38e1fe5ff541dc0799e14458a43106ffec1f3c9d1246d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-publicada-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "d63c1f353fdc3f5a361e99e170d7cb2c4396880869d0117421dd0b5d5992239d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-confirmada-corpo-desktop.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "3ac89276f158d54c14f242531882461f1c54d5b8a89186b867ba180c984ed261"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-confirmada-corpo-mobile.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "f18db6334041de17558656eab86ecbf7553cc52b5300b1267ac8d09516eb9754"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-confirmada-desktop.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "17b5036b56656f45350316a0bee8cd336c3e652f04f787f72ed5d4a2224ee994"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-confirmada-mobile.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "163ad7318ea4fe9ce9bfb5513e01cb34a56ca96cb44cdab28aba6919215847a2"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-confirmada-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "d23d885b4bd5da457daf7d28e91bbcc777a6617fc031e8f7e9d8f6f10454049d"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-temporal-corpo-desktop.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "3ac89276f158d54c14f242531882461f1c54d5b8a89186b867ba180c984ed261"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-temporal-corpo-mobile.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "f18db6334041de17558656eab86ecbf7553cc52b5300b1267ac8d09516eb9754"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-temporal-desktop.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "5cbe6097e6f54fdc76b33e05958a1060bebec9235eaf3c910181d63c92a32662"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-temporal-mobile.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "163ad7318ea4fe9ce9bfb5513e01cb34a56ca96cb44cdab28aba6919215847a2"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/postagem-revalidacao-temporal-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7918439bf86f78b7d6fac4a1f5fcc2020a36de34b4139031070b5473c5e40334"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/posts-apos-corte.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e564563449f142241238014808a1b8b56fa323ed6fb2d60a350c20dbe1afe2d7"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/preparar-candidata.py",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "d733b2f023443900991ef1527aabeba4af9eb97982ce13d89ce3cd38e2169324"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/promogames-producao-no-ar.jpg",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "fa717b5b8d9099dfc31a585bcba0f988e0c4494b2a1d140e08b7c265967ad560"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/prontidao-corte.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "40ee21b17e266cb85bed8c1b6248a6ea3bbde35cd7a890ce2db250fe1fa4a849"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/prontidao-corte.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "4550638398c5b2835caafd6c615b8fb7e4151674855e1fa60901d341e2b538c6"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/reproducao-antispam.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7ccedb5c12c731487fd980c493b7515aa7f73282ce7fea1a47a7f818050123cd"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/restauracao-isolada.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "fc46af7ed1c70e28772bbfbbdeb72a71e894860ab86ac2580c9d3402e3da5959"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/restauracao-teste-v7.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7b1fb810adb0dd7fbbd308251e14a40c31bca0d7a2a1c379997172b1668e6752"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/resumo-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "85802e63242dca10dd9ee5f63453e71ab253a5699bd35ab53ff28540febbfc18"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/reviews-escala-legada.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "df295c88b07e254c3fc1124fb78a4b50fbf2026be3862cf5872738b05cd50d27"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/seo-legado-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "bd23f3e57ea0986bacf7a62474c831a824e1b43ff8f11c4fc2177475264b7129"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/superficie-publica.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "88e798048633585f9f7ebe6ab0e2d86ed8e074f535c3fd3acd8ffb4cb8f0452f"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/v8-home-admin-no-ar.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "fe549a47b3e1582624eca2e2673d046d00cc8c0349bc6b656a71f05b0bf41739"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/v8-painel-metricas-no-ar.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "b42111215afcf1f631bead34e587e658e55c6eac5b72f6dfb8172b67bcf7f7f6"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/v8-preview-privada-no-ar.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "c22c63d99174b792306e47eca2c8f46438c62b33a6adc8ddce13747c18697693"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/verificar-arquivo.py",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "56a3e89252f00e74b77dc770708333c87dd87ef97ca90365811b6640ffc091bd"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/verificar-beta.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "79a01a4b83a5f98f6204113cab49a834c7ad10620214f71bffe5aa98a50749ef"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/verificar-visual-v5.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "0bae8d6cf01dfacaa603c9e6a94ad35ca893e48a0e1f29caeb8513a75139060b"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/visual-v5-validacao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "e2e8d6aa7988c3e0357cc877d1b0930c931c2901da02550290a3b02b16e43147"
+    },
+    {
+      "source": "docs/auditoria-2026-10-14/wordpress-checksums-oficiais.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "4fa4310c540135f879d0ce7bf29c6ede0af3957dfddcf36ca69f870031c86cef"
+    },
+    {
+      "source": "docs/candidata-admin/INVESTIGACAO-GOAL.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "1009b2c47656128dcff8847195a0c6948ae1afe32f8732dc2e536b45b510ef02"
+    },
+    {
+      "source": "docs/candidata-admin/PACOTES.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "c95aba4c759de1eda184f005c6b47683974be9b0aba4b693f4a20e1979f43df8"
+    },
+    {
+      "source": "docs/candidata-admin/REVISAR.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "1d4025cd124100aa18ad1f6cc5e0f306ed486e567ddf2245041e60434acad3e2"
+    },
+    {
+      "source": "docs/candidata-admin/STATUS.md",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "4ad4094410ee660f3f6586c395adfc39f30d1fe1f63e8a4acb182e2786bf466c"
+    },
+    {
+      "source": "docs/candidata-admin/admin-toolbar-local.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "b908c707a93e86c7aac7ec579f58d5fd08c794426211b1476d8c687c94dd123c"
+    },
+    {
+      "source": "docs/candidata-admin/auditar-publico-goal.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "9d6e4419dd33747b90733cf79fcfa8ef9b86a59100c7cbb399086e1618b5d5ba"
+    },
+    {
+      "source": "docs/candidata-admin/auditoria-publica-goal.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7219a473789f41c47126ddb468858990782f34485e2a5cef578cc4288ded16a1"
+    },
+    {
+      "source": "docs/candidata-admin/fixtures/admin-fixture.php",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "b8fbc8775af4085350cf638f5c16f9e11c573892a8c0bbdf5de5adc4710ae7f7"
+    },
+    {
+      "source": "docs/candidata-admin/fixtures/cms.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "f379d30d6c41fc4b2839869f61030fdcd784faa88b55efff24e0e6d2bd29e02f"
+    },
+    {
+      "source": "docs/candidata-admin/install-wordpress-local.php",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "4601fb12d1753636f9a223a59161e02dd710f2ffdc294928b48327414aff8d9d"
+    },
+    {
+      "source": "docs/candidata-admin/inventario-publico-goal.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "046ef6d2ef235b5ff1e8f57452c8d69f01620275d695c31d5e4d4c6d795b602b"
+    },
+    {
+      "source": "docs/candidata-admin/metrics-failure-local-checks.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "fe2bab4f6189dc578dd70847ccc8d6bc211fec8e410d8c3b537b207061e2feed"
+    },
+    {
+      "source": "docs/candidata-admin/painel-home.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7d27d9a46d2a4835b76853171bca950ad708e58f5e07906a24cd3a20db46e388"
+    },
+    {
+      "source": "docs/candidata-admin/painel-visao-geral.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "98a7190216821a3e633c25973d279f4a3bf996b2001866b11a9597272897ac0e"
+    },
+    {
+      "source": "docs/candidata-admin/prepare-wordpress-local.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "435bfd0046a59e5ba7a68e167ce8086f3f7eb8d457cca40662c47f75aea8798f"
+    },
+    {
+      "source": "docs/candidata-admin/preview.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "705c2c9473197cd745d5ef2d9f144a9a4966e576a5e2f095919eba236299098d"
+    },
+    {
+      "source": "docs/candidata-admin/public-readonly.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "6a3544ff050edd76a4d559ff2586e1f965378e3da6e90415b99956e0f8f6f837"
+    },
+    {
+      "source": "docs/candidata-admin/refactor-home.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "ff5d07753168eb8d74bfb0cebf45af2e7f48ee37690c127ac35b3f6a823337e4"
+    },
+    {
+      "source": "docs/candidata-admin/seed-wordpress-ui-local.php",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "29bfc01519b2b8a93e110d600448d557af175c742fb94ec2aa4cc82854e8baf1"
+    },
+    {
+      "source": "docs/candidata-admin/sitemap-candidata-goal-repeticao.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "6148c0b5de3f46121a9c488e508fcd3d0b3713244e3ef28b8cd887faa7f08bd0"
+    },
+    {
+      "source": "docs/candidata-admin/sitemap-candidata-goal.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "6f80dbdee62687da738591d1de311ef658a2c1089db109884afd31fde2487841"
+    },
+    {
+      "source": "docs/candidata-admin/test-metrics-failure-local.php",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "b281ea5c082dbabbc4dc754c005473a6f6216e05d3c3f99b43b1269b28f68965"
+    },
+    {
+      "source": "docs/candidata-admin/test-mobile-category-local.php",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "7845d8957dd77548dd4a73f0f23b024ea39f9e84efc77525e7057be57366f7dd"
+    },
+    {
+      "source": "docs/candidata-admin/test-wordpress-local.php",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "f1be7ff201664e5480de6298bd4614f907fdb9bdb6dc6a167fb4e1ef7d5f326f"
+    },
+    {
+      "source": "docs/candidata-admin/wordpress-local-checks.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "8fea772a3be627a489eae7a33e28c1e7fdf8380c784d792b9e1ca538c35bc77b"
+    },
+    {
+      "source": "docs/candidata-admin/wordpress-next-local.mjs",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "47927ea697a65133b8be2ca8341b01a096e07e6d1e10c0031183ca531159c6f5"
+    },
+    {
+      "source": "docs/candidata-admin/wordpress-ui-local.json",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "b3568ad426fa42d3301cd6411393a1bdc9d6dc66d41b8c6d4d25c7af49d67c90"
+    },
+    {
+      "source": "docs/candidata-admin/wp-next-preview-real.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "4b7ae239b9917e6150c7fedb323d82bc31bb8cab73824a892fc1e5e13195f9c8"
+    },
+    {
+      "source": "docs/candidata-admin/wp-real-home-salva.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "aba1a26aae5e5dd35ffdbc352b51bd73fd25e6db7dcb0517a7aa359beeef0b78"
+    },
+    {
+      "source": "docs/candidata-admin/wp-settings-before-add.png",
+      "target": null,
+      "classification": "Evidência/documentação do PromoGames; consultar sem transplantar dados",
+      "sameBytes": false,
+      "sourceSha256": "cab02213a6dca6fc2867fd05240795d8ca4c2e0ec29487c9421b65e05a18633f"
+    },
+    {
+      "source": "web/.env.example",
+      "target": ".env.example",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "2990f5800c5f65661b6ebecfbd1a97e3f55b225ac09df8b805006b05aab6e283"
+    },
+    {
+      "source": "web/AGENTS.md",
+      "target": "AGENTS.md",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "d273860cb120cdc0c127d565b196d6846274ad3933d5848932659c2a0b193898"
+    },
+    {
+      "source": "web/e2e/candidate-admin.spec.ts",
+      "target": null,
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "c20ae16896d346e8ee07ab14fae4bf81bb82913b371f4dc841ea4189f9c30c92"
+    },
+    {
+      "source": "web/e2e/contact.spec.ts",
+      "target": "e2e/contact.spec.ts",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "8d331405430c060b4920e29e5ae47d4e8b1ebe8b2f6b675eae6f09575ee36552"
+    },
+    {
+      "source": "web/e2e/editorial.spec.ts",
+      "target": "e2e/editorial.spec.ts",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "38d8059ca49279d8cb45b1398530fcfbf61c10f7c9590826338e4afb2252b8b5"
+    },
+    {
+      "source": "web/e2e/promogames.spec.ts",
+      "target": null,
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "b627283eb66675bc86cf906be969cb4afb96377ac6aa39d8c77e7de77e01b786"
+    },
+    {
+      "source": "web/e2e/wordpress-local.spec.ts",
+      "target": null,
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "5073ff2fe9e214b2babdf0d30c4ecbcf12f72cdcc54960755104a603f7c175a8"
+    },
+    {
+      "source": "web/eslint.config.mjs",
+      "target": "eslint.config.mjs",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "2bb93521a3667bbf1556c47724a5ce40828e653755a815529b049ebfb7864c14"
+    },
+    {
+      "source": "web/next.config.ts",
+      "target": "next.config.ts",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "aa1ffd162f30f64556ba0fad9f1f89ea96fe6390db8020aba0351f3b8337f5f1"
+    },
+    {
+      "source": "web/package-lock.json",
+      "target": "package-lock.json",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "cdc3669bfe517a30d501b90067f9afa622ba2112347adc71ff1d1a11325e0a2d"
+    },
+    {
+      "source": "web/package.json",
+      "target": "package.json",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "021d42db651030e76f7a6f108cdfc1261d411aec232fd0edfaf6ecaed72632bf"
+    },
+    {
+      "source": "web/playwright.candidate.config.ts",
+      "target": null,
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "7150512fb3c434826cdbdccd8c9e95c7394293e68e012c0a7b9e08e64ce78076"
+    },
+    {
+      "source": "web/playwright.config.ts",
+      "target": "playwright.config.ts",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "71498d90c51c23dec635d7b6dc7ddbf13c252b8c17dd73a1cd0b4affe809b8a6"
+    },
+    {
+      "source": "web/playwright.promogames.config.ts",
+      "target": null,
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "be6c6a88c3b11caa757ad5f6c3cdeded706cc0ced9a7056463a25624be1901f8"
+    },
+    {
+      "source": "web/playwright.wordpress-local.config.ts",
+      "target": null,
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "c706b0ca18f1fe1a92b38d83511e93d321982eefafe44eab226fafaedeca2c28"
+    },
+    {
+      "source": "web/public/promogames-hero.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "d53c7b6034710508c8ab0a5b74f66dbda66f02e7e55e8b6a42d129f346c481c0"
+    },
+    {
+      "source": "web/public/promogames-icon.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "8f41666df7bc37b5bdcb3259d3506e7ee2d2974d840d3b598bc6c7cef276a7ed"
+    },
+    {
+      "source": "web/public/promogames-logo.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "a321728fb8f087276f911cdf405b474f8ada393fd458293ad5ef5dee42d74f27"
+    },
+    {
+      "source": "web/public/promogames-og.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "a7bd1c206e7e7672ff4b916a82c3ad3c94d2c90b668f82566e73dba4973c55e9"
+    },
+    {
+      "source": "web/public/promogames/brands/nintendoswitch.svg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "3acd3fb0b576ed59bf319047ba487e4866ebeb9275509f6dd47568d4dcdf2586"
+    },
+    {
+      "source": "web/public/promogames/brands/playstation.svg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "b68b4d7b63443759b9c4d77a5501c5758eeae06a6d594d278d5eb6cb4d3dbbe4"
+    },
+    {
+      "source": "web/public/promogames/brands/steam.svg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "5eef8f31106b81956ed908490bcf8c73abe476aa58bb9041acdf70b0d42ebcae"
+    },
+    {
+      "source": "web/public/promogames/brands/telegram.svg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "147fd8f8923e7e5f463fe98c0eb9913bead6b2ae59935728cda141002ec8a7c9"
+    },
+    {
+      "source": "web/public/promogames/brands/whatsapp.svg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "8fb209a53a61618c3483594b3e070481a35575d6aaecbe00a6fe386670c8fb1c"
+    },
+    {
+      "source": "web/public/promogames/brands/windows.svg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "d35703096661a3f7590178d1c6872f2c9ffa15b537f250b4470150d349b30b37"
+    },
+    {
+      "source": "web/public/promogames/brands/xbox.svg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "c5ec61839e921542b3581d9aab7d72b822200975c4b508ea4f9bc02ce4c6f025"
+    },
+    {
+      "source": "web/public/promogames/gift-cards/nintendo.jpg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "0062c60c1b28126aaac007afa2eb1390538d109c6f4be79995e4c18cf79a1103"
+    },
+    {
+      "source": "web/public/promogames/gift-cards/playstation.jpg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "8d477446a494c78e726810373344f885ac8ebf548822cc3067739bad342eb96f"
+    },
+    {
+      "source": "web/public/promogames/gift-cards/steam.jpg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "06f40f5b080b49d7188b984ab0c36b6da305754893bd56d83da6f2915ace8341"
+    },
+    {
+      "source": "web/public/promogames/gift-cards/xbox.jpg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "34d46da4548e8b823208454687ff374d88f923ebf988a9e1b48a00e1df07d4a8"
+    },
+    {
+      "source": "web/public/promogames/gta-art.jpg",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "df663e29c90b037c0bea0f3198c776e8b090323d681dd772bb08ebd7827765a1"
+    },
+    {
+      "source": "web/public/promogames/stores/aliexpress.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "a4a6e60322cb959c0fb728b9ddcc00caba145db457f0429e8ae3d0a46c9d3789"
+    },
+    {
+      "source": "web/public/promogames/stores/amazon.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "f062d7d0e799509ea91d2b4e2f9dce3086583ddd012c7364aaae2c19cc93dbf6"
+    },
+    {
+      "source": "web/public/promogames/stores/kabum.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "4a4f075291a2e575770a151b4d52a9c56b1a8e66fde280b4121e7d5147254587"
+    },
+    {
+      "source": "web/public/promogames/stores/mercado-livre.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "2b76d1c90ed92ae7eeaa15948d03fe852500c771d20dc211ef2d3b49d7d29d3e"
+    },
+    {
+      "source": "web/public/promogames/stores/nuuvem.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "d17124fff677bd2304ac1cd2d33e2194acc4c31a07344ba19276e3e1e9938a76"
+    },
+    {
+      "source": "web/public/promogames/stores/shopee.png",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "d7ffad1f10c7b4c85572d3107bf4bba1d7d2bb710627a3fd14019c11dd210092"
+    },
+    {
+      "source": "web/scripts/audit-cms.mjs",
+      "target": "scripts/audit-cms.mjs",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "2fe3dac569207235a7b7e1f9f568ab74ea11dd698b9019f750a2e9b2c487ac3e"
+    },
+    {
+      "source": "web/scripts/audit-editorial-markers.mjs",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "710a089807fe46307a2d7f7f4dcdcde12e5b9539f169adc343e19ea40b134b94"
+    },
+    {
+      "source": "web/scripts/audit-public-content.mjs",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "22c84253073e44f57eae9c28be194d161bc8799eda85bc6c6d31d987a30a76f0"
+    },
+    {
+      "source": "web/scripts/audit-seo.mjs",
+      "target": "scripts/audit-seo.mjs",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "0e6ce145abcbba62a054ac8edbf8fcc1262e7f0ad4fcd5e40fb3ca84f6407dab"
+    },
+    {
+      "source": "web/scripts/audit-wordpress.mjs",
+      "target": "scripts/audit-wordpress.mjs",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "4204bf1f78b6945b3c6ed23cb37e40c33990c14ead0be89144a56f519d9d9a27"
+    },
+    {
+      "source": "web/scripts/editorial-fixtures.mjs",
+      "target": "scripts/editorial-fixtures.mjs",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "c6470d5830d08cc86d1e6146b9c01ee8cfdaeb1d1ffd4d90039d80274dbefa81"
+    },
+    {
+      "source": "web/scripts/package-beta.mjs",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "5daa1d27d5dda85526fdae889e10215fedd3efdd24c42ad27c6f7987b716e31c"
+    },
+    {
+      "source": "web/scripts/preview-promogames.mjs",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "87ac35f361e930a11961bd4b825d51d26f80e64cf1f09559f2536e53a17ecf55"
+    },
+    {
+      "source": "web/scripts/verify-v7.mjs",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "4e1c37cf8bcbff332b06b212a880569a1370408a7d8e79ea18eb039310a5a6aa"
+    },
+    {
+      "source": "web/src/app/[segment]/loading.tsx",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "8ba5e765b278f7a10d93365abd83f9602134467d012ca7f63fb4f6055d6dde8d"
+    },
+    {
+      "source": "web/src/app/[segment]/page.tsx",
+      "target": "src/app/[segment]/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "f5a8182238e32b94aa519c182640ecbe197d9a6d3c62579469f3bbbc513b92fe"
+    },
+    {
+      "source": "web/src/app/api/comments/route.ts",
+      "target": "src/app/api/comments/route.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "fdd20c2ef072ae26561f6cc39684c4db7ef192c4b870e6749cd23826c7c43663"
+    },
+    {
+      "source": "web/src/app/api/community-clicks/route.test.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "610eb06c9eec2617050b8d907a0b7974d439e6cab5c94b4b870511b9da9a2609"
+    },
+    {
+      "source": "web/src/app/api/community-clicks/route.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "47e6cf41fccce679b75d43857b918a94c3f9569e2d41247a12137acf3113cf27"
+    },
+    {
+      "source": "web/src/app/api/contact/route.test.ts",
+      "target": "src/app/api/contact/route.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "4507451523164b4b271d703476e18e0b3227298774fd31c16da7796088f17230"
+    },
+    {
+      "source": "web/src/app/api/contact/route.ts",
+      "target": "src/app/api/contact/route.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "92e4f5db39202231039584d8b71f57f64e49e02c1c724249947377153d67e965"
+    },
+    {
+      "source": "web/src/app/api/draft/exit/route.ts",
+      "target": "src/app/api/draft/exit/route.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "5b107b780d68d96333237d1af1194dfe2ad8f8b5d35ec68fd7d0a136e640d2b8"
+    },
+    {
+      "source": "web/src/app/api/draft/route.test.ts",
+      "target": "src/app/api/draft/route.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "e2d065900b90afdf765a2cc1f7aecb258a1b62f0130d88f871f0ed4d62e67ff7"
+    },
+    {
+      "source": "web/src/app/api/draft/route.ts",
+      "target": "src/app/api/draft/route.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "4144cca47a42fe02c75f19df2150a42061cd7bfe16f8fbda589d7f2dac644c43"
+    },
+    {
+      "source": "web/src/app/api/revalidate/route.test.ts",
+      "target": "src/app/api/revalidate/route.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "024b5daecaf8f8ef979e116feca98ef10e162ccbd95930cf696a2ef134f060d0"
+    },
+    {
+      "source": "web/src/app/api/revalidate/route.ts",
+      "target": "src/app/api/revalidate/route.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "f813eaf3c29aa5278abe0da6f891a1a048cb69a82f267fe2cc66dfb226b4da47"
+    },
+    {
+      "source": "web/src/app/api/search/route.ts",
+      "target": "src/app/api/search/route.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "6fdb4d041d26edddb387cc7437186e3b93034bee66175c60e0b82a453b98b0cb"
+    },
+    {
+      "source": "web/src/app/author/[slug]/page.tsx",
+      "target": "src/app/author/[slug]/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "d61f69af425fb0c06a2264521cd089aa40ff8ddcfaa5de56b9d32e89a12a18b3"
+    },
+    {
+      "source": "web/src/app/autor/[slug]/page.tsx",
+      "target": "src/app/autor/[slug]/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "27248394cdc66f33cc1295dab917f553b10bef419a6e7adb1d669a2b9335c733"
+    },
+    {
+      "source": "web/src/app/buscar/loading.tsx",
+      "target": "src/app/buscar/loading.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "02da8dccdd8bc0b9f725a113988a19578daca518e179f1794720f11fa01c0401"
+    },
+    {
+      "source": "web/src/app/buscar/page.tsx",
+      "target": "src/app/buscar/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "3d8decc5c194d41a967d7e7bc5dc089b0a76ab6c77ac2a68d7138e054a383cd7"
+    },
+    {
+      "source": "web/src/app/categoria/[slug]/page.tsx",
+      "target": "src/app/categoria/[slug]/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "b65426b6b5f98ddaced075f1656994813150ca69cbdfab05d468e4b735ace68e"
+    },
+    {
+      "source": "web/src/app/category/[...segments]/page.tsx",
+      "target": "src/app/category/[...segments]/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "70ae26a0917478af6ae5555753584211b697fb2dc82133a1230772330356b62b"
+    },
+    {
+      "source": "web/src/app/contato/page.tsx",
+      "target": "src/app/contato/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "0b4281588f116a1f33784910ed9551398321731100816a604eca79dfcf3736a7"
+    },
+    {
+      "source": "web/src/app/entrar/[slug]/route.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "6e697051497032316a8905b024ebebdcaabd2f459b08904cdb6531b519b9abc3"
+    },
+    {
+      "source": "web/src/app/error.tsx",
+      "target": "src/app/error.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "320719157b1bb640ff3c32a47b4bd066b19b60b15200bda4e86e10c0ae10ad73"
+    },
+    {
+      "source": "web/src/app/favicon.ico",
+      "target": "src/app/favicon.ico",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": null
+    },
+    {
+      "source": "web/src/app/favicon.ico/route.ts",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "ba55fe5706ac48bb9bbefa741428294c26524240e68e2bc2e7d0b842c269161e"
+    },
+    {
+      "source": "web/src/app/feed/route.ts",
+      "target": "src/app/feed/route.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "39ae3c76ccba02f902d0ce2bbadacc94771f701865d1147940fb5e9e88874eb4"
+    },
+    {
+      "source": "web/src/app/globals.css",
+      "target": "src/app/globals.css",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "0a64e48d01547a72f155ec13b8e6294454941c212c0d03f86d12902cffdfb5cc"
+    },
+    {
+      "source": "web/src/app/layout.tsx",
+      "target": "src/app/layout.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "fed5976fa99512227bf0d1c217e0d52e28634225f1921a3002e0e91ec0a425d0"
+    },
+    {
+      "source": "web/src/app/mobile/page.tsx",
+      "target": "src/app/mobile/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "343b003d3f77bc8ed8e9d37727516d4bdd3efa68baaff20b47cb262e57c2f773"
+    },
+    {
+      "source": "web/src/app/not-found.tsx",
+      "target": "src/app/not-found.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "edba773b41e3b21e348d512d3f8844064b7fdf180fd86b8ab9d7e7f4cb161bc5"
+    },
+    {
+      "source": "web/src/app/noticias/page.tsx",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "b2ccc757aea34218e21fd0f55c6b1deb2c61ebfd434afd86273e28a82e74d81e"
+    },
+    {
+      "source": "web/src/app/ofertas/page.tsx",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "12d6609811a2b80ffc5e821814525868e1b9de7c8d6455ca1ae64d69fdf8b229"
+    },
+    {
+      "source": "web/src/app/page.tsx",
+      "target": "src/app/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "293fdc763c2848cfa4bcbc5c6145408451d588f66ee3bc87fdbedf6d2def1cad"
+    },
+    {
+      "source": "web/src/app/preview/[id]/page.tsx",
+      "target": "src/app/preview/[id]/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "1e6c14cc307e2f4473b86ca37904d83d19b6cc9334870a0312cbaf2a35009ff3"
+    },
+    {
+      "source": "web/src/app/robots.ts",
+      "target": "src/app/robots.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "672aa945416ba52ec8bfc3947820827774c2b7f09d0ee85ba025016680efd148"
+    },
+    {
+      "source": "web/src/app/sitemap.ts",
+      "target": "src/app/sitemap.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "b9fe8d775cfc059c40793070f5dc3a8ec04212a081820dd23e48880b81633077"
+    },
+    {
+      "source": "web/src/app/tag/[slug]/page.tsx",
+      "target": "src/app/tag/[slug]/page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "05ae6ed8f18a1315f8b4c36a35e3c95c621f00ea634ddec0accb2504f6df6716"
+    },
+    {
+      "source": "web/src/components/brand-icon.tsx",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "8d363be8f435abb72c63df5f4977e5245e61f46a6bb31abd88b946bb7bfa2c29"
+    },
+    {
+      "source": "web/src/components/editorial/admin-toolbar-client.tsx",
+      "target": "src/components/editorial/admin-toolbar-client.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "fd44e9ebbfa681dde4c7d3ba5e332408d4d9adb15aafc79eab0fb3b8ef7c67d4"
+    },
+    {
+      "source": "web/src/components/editorial/admin-toolbar.tsx",
+      "target": "src/components/editorial/admin-toolbar.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "df1c1dc5ba5d2fafa061b4ae6612a687dac9cb265acefcc1d77f2c7b673e0cef"
+    },
+    {
+      "source": "web/src/components/editorial/archive.tsx",
+      "target": "src/components/editorial/archive.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "d918fff7a41d6603f0c60402768cc46151091c497bbe5ec22b06d368b8391195"
+    },
+    {
+      "source": "web/src/components/editorial/article-body.tsx",
+      "target": "src/components/editorial/article-body.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "7ad2bbfd8cefee83a39dd04894f897135a6300444c94ee6044ee76114a4dec35"
+    },
+    {
+      "source": "web/src/components/editorial/article-gallery.tsx",
+      "target": "src/components/editorial/article-gallery.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "799f1c33af54ceaee06e419d7568c9a1adde665bb758b4c76ead641efe03bd73"
+    },
+    {
+      "source": "web/src/components/editorial/category-highlights.tsx",
+      "target": "src/components/editorial/category-highlights.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "ad77be7cbd03899a8c915a00573f20373ac0ce7386c225727a3fa9c8ee664961"
+    },
+    {
+      "source": "web/src/components/editorial/contact-form.tsx",
+      "target": "src/components/editorial/contact-form.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "3fe1f263f687e063f346b527b35657c4a8c8eb3c4d878d1df43cb810fc5752c5"
+    },
+    {
+      "source": "web/src/components/editorial/editorial-home.tsx",
+      "target": "src/components/editorial/editorial-home.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "c9b7cace2427ef0abfc343e77e3980a28a42c12bbdd03537579252b4026248dc"
+    },
+    {
+      "source": "web/src/components/editorial/hero-deck.tsx",
+      "target": "src/components/editorial/hero-deck.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "e058aa1f20724b182cd8feb93158dbe4471fd3da3e0d58c322e5410fb24b4578"
+    },
+    {
+      "source": "web/src/components/editorial/institutional-page.tsx",
+      "target": "src/components/editorial/institutional-page.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "2eb6b4698e05fbc834f48962c190fe6946fc4d4ee93d48e97263c65a99f8b7f0"
+    },
+    {
+      "source": "web/src/components/editorial/promogames-home.tsx",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "0ff4e4fa3a0ff63241908561da47322efd65d730b6564ddd5795b143062855db"
+    },
+    {
+      "source": "web/src/components/editorial/radar.tsx",
+      "target": "src/components/editorial/radar.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "b94593d181abb4666166aa80ee99a4d76aea979b6df7d7c1b498fbb8909da426"
+    },
+    {
+      "source": "web/src/components/editorial/reading-progress.tsx",
+      "target": "src/components/editorial/reading-progress.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "ea705a111bd6a0796d2d05df4a33d34bcab4e9993f6f459d8eda80ecacdf8c15"
+    },
+    {
+      "source": "web/src/components/editorial/review-summary.tsx",
+      "target": "src/components/editorial/review-summary.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "868b9f044c6d1d76857c1ea8612a0b22faafdfdb7b01dae9e0eb17b9301fd141"
+    },
+    {
+      "source": "web/src/components/editorial/search-input.tsx",
+      "target": "src/components/editorial/search-input.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "af569a04b4eb0a04f45c3b0a37434390d31134a059c8581bce29e6574cd7bd7f"
+    },
+    {
+      "source": "web/src/components/editorial/section-header.tsx",
+      "target": "src/components/editorial/section-header.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "f34c9a5e6a4a50eaa86f160c75efa2e0f2b436b87c673c2833024de4f95f799d"
+    },
+    {
+      "source": "web/src/components/editorial/story-article.tsx",
+      "target": "src/components/editorial/story-article.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "3b85a46e3d3447ad75fc3bd6f442f20be3eee46b6ab36112da88d77e7e004169"
+    },
+    {
+      "source": "web/src/components/editorial/story-card.tsx",
+      "target": "src/components/editorial/story-card.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "d599070dc793ed441396eb4d18d9596124540413c9ec665e89f2099a2496283b"
+    },
+    {
+      "source": "web/src/components/editorial/story-image.tsx",
+      "target": "src/components/editorial/story-image.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "77b9c86c6b4abfbd990c472debe85836549054ad62893e4f6ca839482e92838b"
+    },
+    {
+      "source": "web/src/components/icons.tsx",
+      "target": "src/components/icons.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "36479d811fe5f726b03a56fcaee41d3ddd5ab9e3d85f31cfcf9cce9b2b98a9f6"
+    },
+    {
+      "source": "web/src/components/navigation/brand.tsx",
+      "target": "src/components/navigation/brand.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "a5a9fedc91109512ac8dc503c9710a3cb7589c9b7051fa865095dfbf242f5cb8"
+    },
+    {
+      "source": "web/src/components/navigation/mobile-header.tsx",
+      "target": "src/components/navigation/mobile-header.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "ff107acad31ccf7eef6902540590f57691cd967f1319088eccae05f604e5e453"
+    },
+    {
+      "source": "web/src/components/navigation/native-hash-navigation.tsx",
+      "target": "src/components/navigation/native-hash-navigation.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "986a853dbac73a01a3dddf280f76593bd6f8a344ed4953ee3c405313bba7d766"
+    },
+    {
+      "source": "web/src/components/navigation/navigation-data.ts",
+      "target": "src/components/navigation/navigation-data.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "86650df99d685daeb133613281388243077c9996cdafa882cd124b585d2c753a"
+    },
+    {
+      "source": "web/src/components/navigation/navigation-links.tsx",
+      "target": "src/components/navigation/navigation-links.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "452fc93fa28570cb417aefdf83ce707bd33ebdbe88f0081effb40288c5e0fcfa"
+    },
+    {
+      "source": "web/src/components/navigation/promogames-section-nav.tsx",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "6e2141db15f5f618687af0f9ab2aa2a9d19d6d0e631ad6ce31b44c0baa2a2b3e"
+    },
+    {
+      "source": "web/src/components/navigation/promogames-shell.tsx",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "8acc75937d8f6d7a7639c2344fdef14c8b6ba90de067ae8363536221abd0f57d"
+    },
+    {
+      "source": "web/src/components/navigation/public-brand-provider.tsx",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "093795e4a850fd8a713820b6596842298976d55020865ffc63f25af30105fdff"
+    },
+    {
+      "source": "web/src/components/navigation/site-footer.tsx",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "258cbae78ddd0725dba198ed6bf2a8f6194cbae9e1933c431a51062ddefd66b0"
+    },
+    {
+      "source": "web/src/components/navigation/site-shell.tsx",
+      "target": "src/components/navigation/site-shell.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "3620451f02feec0a4bd73da55c90a7301da19cf3912417bb16ad30218723b1e9"
+    },
+    {
+      "source": "web/src/components/navigation/theme-toggle.tsx",
+      "target": "src/components/navigation/theme-toggle.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "e171c01791b4faca4c22d3915f059c1e07244fa11adef04509ae375e24fe38fc"
+    },
+    {
+      "source": "web/src/components/platform/ad-slot.tsx",
+      "target": "src/components/platform/ad-slot.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "70763ce128eec09c94b02aaf742a2a9b9520ad4525e2bd661312b9196104e92f"
+    },
+    {
+      "source": "web/src/components/platform/analytics.tsx",
+      "target": "src/components/platform/analytics.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "6800426a6bf60f8eb16cb780402792c97305a51a8982249028a955e54eb6ada7"
+    },
+    {
+      "source": "web/src/components/platform/community-clicks.tsx",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "d2cdb48d57323ad3b889adf85146dd05cdc9ba2da57a4bf818bb88ecb1ac0291"
+    },
+    {
+      "source": "web/src/components/platform/consent-provider.tsx",
+      "target": "src/components/platform/consent-provider.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "08f1a5e46e02068f2290d2be0eaf433f6de0ed9425263f2c092d26aec4be9a79"
+    },
+    {
+      "source": "web/src/components/platform/consent-settings-button.tsx",
+      "target": "src/components/platform/consent-settings-button.tsx",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "5686d29e5031fdb67d4b6b21896a2bfbf87edd4ccc52f3fb16c2883aec1ab835"
+    },
+    {
+      "source": "web/src/lib/contact-mailto.test.ts",
+      "target": "src/lib/contact-mailto.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "e7b66f303c8e17534e8f7d56518060860c9b6862139a5333c49e2cc587f0578d"
+    },
+    {
+      "source": "web/src/lib/contact-mailto.ts",
+      "target": "src/lib/contact-mailto.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "65d33ea5e4f673ef60b72c6eba5a279a17b0e00d47ff41a47d44c5ee0a482d1b"
+    },
+    {
+      "source": "web/src/lib/content/sanitize.test.ts",
+      "target": "src/lib/content/sanitize.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "b95448c18a2ea11c17706f0953316d886575e473c9a0e5651e43db72c0988ea4"
+    },
+    {
+      "source": "web/src/lib/content/sanitize.ts",
+      "target": "src/lib/content/sanitize.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "fa9dc7ac151e630c164e945390a0fd5f04f4c528b33d9de6aca6de51edc495aa"
+    },
+    {
+      "source": "web/src/lib/format.ts",
+      "target": "src/lib/format.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "95c0aa2bdaf47a07c37bf3a981bfe0e6ca74137f085a81babce519151d6f2753"
+    },
+    {
+      "source": "web/src/lib/home-settings.test.ts",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "a1453a1fdeb715843a1b2dae582a8fa74a6840a9ab06908d36b7e8a20adce4af"
+    },
+    {
+      "source": "web/src/lib/home-settings.ts",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "1a503af575b8c0167de33fc153fe466ca7c0c69db02d38c1f73b1917caa1b9c7"
+    },
+    {
+      "source": "web/src/lib/media-url.test.ts",
+      "target": "src/lib/media-url.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "36bc3d4a28f4f0a47405b5f6e4158c6f43846e8c970e4b2b627a61f754832cac"
+    },
+    {
+      "source": "web/src/lib/media-url.ts",
+      "target": "src/lib/media-url.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "150474d0c88b9c8ebad39412a0ac3a011560e61ce4b9cbbd92ffdc77377675c1"
+    },
+    {
+      "source": "web/src/lib/offers.test.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "3db898129b795928afad0b11a1f69405da5927e3bd0eceb4e90b8ebb8327363f"
+    },
+    {
+      "source": "web/src/lib/offers.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "8ae4ecebd7039c2a7e0b1b5bcadc6df5368ecfaea62d1944068450c01fa186ef"
+    },
+    {
+      "source": "web/src/lib/pagination.test.ts",
+      "target": "src/lib/pagination.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "5e33fd0c35f960335ee1428469459661f2aa866512897d70c9d51cfa4978c7e2"
+    },
+    {
+      "source": "web/src/lib/pagination.ts",
+      "target": "src/lib/pagination.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "a872e3c922bc70bee7042696e1229bb55baa247c0f0b36f7e006136ccad725eb"
+    },
+    {
+      "source": "web/src/lib/promogames-community.test.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "a9235b4ea4dd0f3305fea224e4df9c2591b503aac255e904d95031696a7848f8"
+    },
+    {
+      "source": "web/src/lib/promogames-community.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "cb0a7c2c0792019a7c29554dafb7f8242f8c927d546b2353737fef1186155ccc"
+    },
+    {
+      "source": "web/src/lib/public-site-settings.ts",
+      "target": "src/lib/public-site-settings.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "696a5e41be81fe5ce55258fcb7225076870dabc1b99aa04100e464747752bc5b"
+    },
+    {
+      "source": "web/src/lib/redirects.test.ts",
+      "target": "src/lib/redirects.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "4462d92b5bbe7f73b618ec77d9c620dd022269442d3cf73cb05ee794edce4516"
+    },
+    {
+      "source": "web/src/lib/redirects.ts",
+      "target": "src/lib/redirects.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "0adb7a370c5092d2bb9ac59565d295d94eddbc94c59109de6009a1df0b4de815"
+    },
+    {
+      "source": "web/src/lib/site-config.test.ts",
+      "target": null,
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "4d7ddf086780497047ed00e3d26a698a04a96751977cf21d117f3a63e6df7e22"
+    },
+    {
+      "source": "web/src/lib/site-config.ts",
+      "target": "src/lib/site-config.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "a82b20931662c0337586367107ffbd16a558441189650fbfcb2dabcd9918b746"
+    },
+    {
+      "source": "web/src/lib/wordpress/client.test.ts",
+      "target": "src/lib/wordpress/client.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "6a9b54a029963784cde9929214ddcb68da1fc66e553ff37f1dd6e57c472b3c9e"
+    },
+    {
+      "source": "web/src/lib/wordpress/client.ts",
+      "target": "src/lib/wordpress/client.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "1bd9d8a811e8738dd74696a839fa147630ea26c2c3a84911d4c22182a7bddeaf"
+    },
+    {
+      "source": "web/src/lib/wordpress/comment-submission.test.ts",
+      "target": "src/lib/wordpress/comment-submission.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "76de7f891888aa1cf005b8dcec7049d07314093504709a18c40654e97d17d969"
+    },
+    {
+      "source": "web/src/lib/wordpress/comment-submission.ts",
+      "target": "src/lib/wordpress/comment-submission.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "e26ccf714b6bf254b33dbde2a1f457854f34478bc4bcf8cde84405a4dd712e10"
+    },
+    {
+      "source": "web/src/lib/wordpress/community.test.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "8ec30d559edf6e791b9225aca3aa39163f7504dad315d18c91dc0c74e8d50eb4"
+    },
+    {
+      "source": "web/src/lib/wordpress/community.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "4a3a8819395579285432768dc19184262c39d140213ec8895565661c16ec513d"
+    },
+    {
+      "source": "web/src/lib/wordpress/contact-submission.test.ts",
+      "target": "src/lib/wordpress/contact-submission.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "60b210d22c65041793dc21526044709fd7f1a0cf7f52ee177c519fd1f46973fd"
+    },
+    {
+      "source": "web/src/lib/wordpress/contact-submission.ts",
+      "target": "src/lib/wordpress/contact-submission.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "2fc5605241d018482d29a902ef9ced824d7ecc285b2343830e427d887800d485"
+    },
+    {
+      "source": "web/src/lib/wordpress/mappers.test.ts",
+      "target": "src/lib/wordpress/mappers.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "5d1ea03e2fda534efc88dcdc0ffad088d8d09157acabdff9f1c0530ee7630c86"
+    },
+    {
+      "source": "web/src/lib/wordpress/mappers.ts",
+      "target": "src/lib/wordpress/mappers.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "f8f36737437746f21686fb77804d8cc888e2cad94ece8fe2cde1b75265026339"
+    },
+    {
+      "source": "web/src/lib/wordpress/metadata.test.ts",
+      "target": "src/lib/wordpress/metadata.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "c9291f2797c054777e1e649cb7aa0b566eb26658f02dbc959b3f4ee3befee8c7"
+    },
+    {
+      "source": "web/src/lib/wordpress/metadata.ts",
+      "target": "src/lib/wordpress/metadata.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "73826d2471ecc90fc063c99c075e4deb681f3b8fed2064d884572b402d349c84"
+    },
+    {
+      "source": "web/src/lib/wordpress/offers.ts",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "1fb117d22808d60f1082c0618ef218f0781f1fe5fb0bbc6ca026ef98e0cfae73"
+    },
+    {
+      "source": "web/src/lib/wordpress/preview.test.ts",
+      "target": "src/lib/wordpress/preview.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "bc41e94f2def6e1ab6bd2e644f006b3de4e8e99a5d0645a684669d3ad82e2e48"
+    },
+    {
+      "source": "web/src/lib/wordpress/preview.ts",
+      "target": "src/lib/wordpress/preview.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "942a96b0ac9d449807ad98ed6ea4553ffe2578d45b6ed26ec9e2422153959161"
+    },
+    {
+      "source": "web/src/lib/wordpress/queries.ts",
+      "target": "src/lib/wordpress/queries.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "35a6f5f6df6fbf529273fddb83e73b06187dc9cd477ae145d4a114f0344b00d6"
+    },
+    {
+      "source": "web/src/lib/wordpress/raw-types.ts",
+      "target": "src/lib/wordpress/raw-types.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "79f2bc53e7b191bfd6705578d301e85428fd14567b4922251b9b8b40212bf141"
+    },
+    {
+      "source": "web/src/lib/wordpress/site-settings.ts",
+      "target": "src/lib/wordpress/site-settings.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "5d7463c400f1a40ad550279144330531fcc2c61ff95b3a5211bb017c2337a834"
+    },
+    {
+      "source": "web/src/lib/wordpress/sitemap.test.ts",
+      "target": "src/lib/wordpress/sitemap.test.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "4742acad17387844cbb72085fdc3b3969b5e694bf0cbafc9f0f4b9bde8862ca7"
+    },
+    {
+      "source": "web/src/lib/wordpress/sitemap.ts",
+      "target": "src/lib/wordpress/sitemap.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "73e07c4ae293466148ca0c5d8e7e2655db2a5557d2f5e5cbeac06d1c980a212e"
+    },
+    {
+      "source": "web/src/lib/wordpress/text.ts",
+      "target": "src/lib/wordpress/text.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "1d8465ee35ae7c2275731866fbb76a88f18aea3c3810ff275b54d6dbb7bf3c67"
+    },
+    {
+      "source": "web/src/lib/wordpress/types.ts",
+      "target": "src/lib/wordpress/types.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": true,
+      "sourceSha256": "92ff1f35f3711b14e2d3cb723cc4a7f0b569da2e0bc17ad80e2088dddaac3781"
+    },
+    {
+      "source": "web/src/proxy.ts",
+      "target": "src/proxy.ts",
+      "classification": "Candidato editorial compartilhável; verificar comparação/registro funcional",
+      "sameBytes": false,
+      "sourceSha256": "ed437c2c664a4e617ad65fc6b50b45aadeb6ada7b6d31a9f35f666809d5e38b3"
+    },
+    {
+      "source": "web/tests/e2e/editorial.spec.ts",
+      "target": "tests/e2e/editorial.spec.ts",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": true,
+      "sourceSha256": "c9334b69d6787a33ded7c96df420c0f72089b878345357fc14fb6c9049f219ad"
+    },
+    {
+      "source": "web/tsconfig.json",
+      "target": "tsconfig.json",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "b8abd5ec66391b638c7ba07ea376a4e9dcc4225f7f59843fc30aabc4d0afd23d"
+    },
+    {
+      "source": "web/vitest.config.mts",
+      "target": "vitest.config.mts",
+      "classification": "Configuração/testes/artefatos: preservar configuração própria do JoysticKnights",
+      "sameBytes": false,
+      "sourceSha256": "7702befb7db1e6207fab573e47da3e40847c05d763474403ec67dedbb13689aa"
+    },
+    {
+      "source": "wordpress/promogames-contact/README.md",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "e33fc3ed90d4fbcf0a5b800a6a89555e8359a232eacd80c1e32a68d8ce26d604"
+    },
+    {
+      "source": "wordpress/promogames-contact/contract-test.php",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "2615031b5344405f0dbd0ae4b432bb7efcd6a500565084c03dcb1dafa8a986b1"
+    },
+    {
+      "source": "wordpress/promogames-contact/promogames-contact.php",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "1e14990a906e6d36e2d5171c5a29623f0af59b503be79378776ea40916d60962"
+    },
+    {
+      "source": "wordpress/promogames-core/README.md",
+      "target": "wordpress/promogames-core/README.md",
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "14c4c6baab0a3eb00c9ed136a8aae84aabc7162d0fdd5c88879edd659baf0620"
+    },
+    {
+      "source": "wordpress/promogames-core/admin-contract-test.php",
+      "target": null,
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "f5e096e4eb8ed879214e1ff800bac61c0996e08e956354ae6618c9cb13f92571"
+    },
+    {
+      "source": "wordpress/promogames-core/admin.css",
+      "target": null,
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "072779898e8852f6022e1016795136a99672d72b9192d74815702051ea5cbcfc"
+    },
+    {
+      "source": "wordpress/promogames-core/community-settings.php",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "2ce15e049e64ad43939cab13bbd697a830b620ed1edd3ee64dbf5243987ba46a"
+    },
+    {
+      "source": "wordpress/promogames-core/contract-test.php",
+      "target": "wordpress/promogames-core/contract-test.php",
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "34747f3313f796acdca2de1156eca13bbb338a93402973e3d37275b935958df1"
+    },
+    {
+      "source": "wordpress/promogames-core/editor-toolbar.php",
+      "target": "wordpress/promogames-core/editor-toolbar.php",
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "65bb723a1dcf19841912491854ff4b2f880d87111e063cf0b1e2a66616c9eda2"
+    },
+    {
+      "source": "wordpress/promogames-core/home-editor.js",
+      "target": null,
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "43ded1d72e833e64dcc94226df75a49a9431082d381e8ff68ca7819d09c11512"
+    },
+    {
+      "source": "wordpress/promogames-core/home-settings.php",
+      "target": null,
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "98441629a43517e17599f7ab4f3440010e007a32aa9bb8ee36dba249e9d612ce"
+    },
+    {
+      "source": "wordpress/promogames-core/metrics-dashboard.php",
+      "target": null,
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "2941d9fe1206e559e83ff4d9c2d7019f26d70fd98d79debc9694a0ac12ea215d"
+    },
+    {
+      "source": "wordpress/promogames-core/offers.php",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "040613371c71bb2bd455c13f01e1d453b9133290f62c831192b6dd17a1119c1e"
+    },
+    {
+      "source": "wordpress/promogames-core/preview.php",
+      "target": "wordpress/promogames-core/preview.php",
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": true,
+      "sourceSha256": "6898aca48dd402c53f330cb8e8cf72830b6b9eea43e5d5da94515d0a6d711574"
+    },
+    {
+      "source": "wordpress/promogames-core/promogames-core.php",
+      "target": "wordpress/promogames-core/promogames-core.php",
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "b669b1ac4993b7b091ac16d56357256cb5d6a0b007768e208e9573e02c0e1a76"
+    },
+    {
+      "source": "wordpress/promogames-core/redirects.php",
+      "target": "wordpress/promogames-core/redirects.php",
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "5c33960826c375ac728c1cc7bdc179a1ab101cc49fe2a97ee61e4b8df758feec"
+    },
+    {
+      "source": "wordpress/promogames-core/site-editor.js",
+      "target": "wordpress/promogames-core/site-editor.js",
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": true,
+      "sourceSha256": "b86e589170e91e9bf720c8f171711d18a98b2eb607864b1d5678d94e5f488186"
+    },
+    {
+      "source": "wordpress/promogames-core/site-settings.php",
+      "target": "wordpress/promogames-core/site-settings.php",
+      "classification": "Core compartilhável; módulos editoriais portados seletivamente",
+      "sameBytes": false,
+      "sourceSha256": "85581272814e72f8e7e330b561c2c206de2da483dc709941f35f21ac4350a2cd"
+    },
+    {
+      "source": "wordpress/promogames-staging-guard/contract-test.php",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "7231472a17356ef155c6c0972b087710fc5e4bb58ed744c3f28c32671ef47b91"
+    },
+    {
+      "source": "wordpress/promogames-staging-guard/promogames-staging-guard.php",
+      "target": null,
+      "classification": "Específico do PromoGames: marca, comunidade, canais, afiliados ou operação comercial",
+      "sameBytes": false,
+      "sourceSha256": "d7bfe6b449cd6b24db4e529ec5e6c300b7bad263b49a198ecab82f5d2e382aae"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/editorial/contact-form";
+import { getPublicSiteSettings } from "@/lib/wordpress/site-settings";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contato/" },
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const settings = await getPublicSiteSettings();
   return <section className="mx-auto max-w-[1280px] px-5 py-10 sm:px-8 lg:px-10 lg:py-16">
     <div className="mb-10 border-b border-line pb-8">
       <p className="text-sm font-semibold text-brand">{siteConfig.name}</p>
@@ -21,11 +23,11 @@ export default function ContactPage() {
         <p className="mt-4 text-base leading-7 text-muted">Se encontrou um problema no site ou em alguma publicação, inclua o link e conte o que aconteceu. Para parcerias, apresente sua proposta e como podemos entrar em contato.</p>
         <div className="mt-8 rounded-2xl border border-line bg-surface p-6">
           <p className="mb-3 text-sm font-bold">Prefere enviar diretamente?</p>
-          <a href={`mailto:${siteConfig.contactEmail}`} aria-label={`Enviar e-mail para ${siteConfig.contactEmail}`} className="break-all text-base font-bold text-brand underline underline-offset-4 sm:text-lg">{siteConfig.contactEmail}</a>
+          <a href={`mailto:${settings.contactEmail}`} aria-label={`Enviar e-mail para ${settings.contactEmail}`} className="break-all text-base font-bold text-brand underline underline-offset-4 sm:text-lg">{settings.contactEmail}</a>
           <p className="mt-4 text-sm leading-6 text-muted">Use o formulário ou escreva para o nosso e-mail.</p>
         </div>
       </div>
-      <ContactForm delivery={(process.env.WORDPRESS_CONTACT_SECRET || process.env.WORDPRESS_COMMENTS_SECRET) ? "api" : "email"} email={siteConfig.contactEmail} />
+      <ContactForm delivery={(process.env.WORDPRESS_CONTACT_SECRET || process.env.WORDPRESS_COMMENTS_SECRET) ? "api" : "email"} email={settings.contactEmail} />
     </div>
   </section>;
 }

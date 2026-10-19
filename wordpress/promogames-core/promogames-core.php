@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: PromoGames Core
+ * Plugin Name: JoysticKnights Core
  * Description: Integração editorial headless: metacampos, SEO, curadoria, preview e revalidação.
- * Version: 1.4.1
- * Author: PromoGames
+ * Version: 1.5.0-jk.1
+ * Author: JoysticKnights
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * Text Domain: promogames-core
@@ -13,7 +13,12 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-const PROMOGAMES_CORE_VERSION = '1.4.1';
+const PROMOGAMES_CORE_VERSION = '1.5.0-jk.1';
+require_once __DIR__ . '/preview.php';
+require_once __DIR__ . '/editor-toolbar.php';
+require_once __DIR__ . '/redirects.php';
+require_once __DIR__ . '/editorial-settings.php';
+require_once __DIR__ . '/site-settings.php';
 
 /**
  * Registra os metacampos que formam o contrato editorial do front headless.
@@ -24,6 +29,7 @@ function promogames_core_register_meta(): void
         'object_subtype' => 'post',
         'single' => true,
         'auth_callback' => static fn (): bool => current_user_can('edit_posts'),
+        'revisions_enabled' => true,
     ];
 
     foreach (promogames_core_review_fields() as $field => $label) {
@@ -53,6 +59,11 @@ function promogames_core_register_meta(): void
         'type' => 'number',
         'sanitize_callback' => 'promogames_core_sanitize_score',
         'show_in_rest' => ['schema' => ['type' => 'number', 'minimum' => 0, 'maximum' => 10]],
+    ]);
+    register_post_meta('post', 'promogames_review_display', $common + [
+        'type' => 'string', 'default' => 'auto',
+        'sanitize_callback' => static fn (mixed $value): string => in_array($value, ['auto', 'show', 'hide'], true) ? $value : 'auto',
+        'show_in_rest' => ['schema' => ['type' => 'string', 'enum' => ['auto', 'show', 'hide']]],
     ]);
     register_post_meta('post', 'promogames_featured', $common + [
         'type' => 'boolean',
@@ -171,7 +182,7 @@ add_action('add_meta_boxes', 'promogames_core_add_meta_box');
 function promogames_core_site_name(): string
 {
     $name = defined('PROMOGAMES_SITE_NAME') ? (string) PROMOGAMES_SITE_NAME : (string) get_bloginfo('name');
-    return sanitize_text_field($name ?: 'PromoGames');
+    return sanitize_text_field($name ?: 'JoysticKnights');
 }
 
 function promogames_core_render_meta_box(WP_Post $post): void
@@ -197,6 +208,7 @@ function promogames_core_render_meta_box(WP_Post $post): void
         <label style="display:block;margin:.35rem 0"><input type="checkbox" name="promogames_platforms[]" value="<?php echo esc_attr($value); ?>" <?php checked(in_array($value, $platforms, true)); ?>> <?php echo esc_html($label); ?></label>
     <?php endforeach; ?>
     <p><label for="promogames_review_score"><strong>Nota (0–10)</strong></label><input class="widefat" type="number" min="0" max="10" step="0.1" id="promogames_review_score" name="promogames_review_score" value="<?php echo esc_attr((string) $score); ?>"></p>
+    <p><label for="promogames_review_display"><strong>Ficha e nota no site</strong></label><select class="widefat" id="promogames_review_display" name="promogames_review_display"><?php $display = get_post_meta($post->ID, 'promogames_review_display', true) ?: 'auto'; foreach (['auto' => 'Exibir quando houver dados', 'show' => 'Exibir ficha', 'hide' => 'Ocultar ficha e nota'] as $value => $label) { ?><option value="<?php echo esc_attr($value); ?>" <?php selected($display, $value); ?>><?php echo esc_html($label); ?></option><?php } ?></select></p>
     <details><summary>Ficha da análise</summary>
     <?php foreach (promogames_core_review_fields() as $field => $label) : $key = 'promogames_review_' . $field; ?>
         <p><label for="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></label>
@@ -222,6 +234,8 @@ function promogames_core_save_meta(int $post_id): void
     $platforms = promogames_core_sanitize_platforms(isset($_POST['promogames_platforms']) ? (array) wp_unslash($_POST['promogames_platforms']) : []);
     $score = isset($_POST['promogames_review_score']) && $_POST['promogames_review_score'] !== '' ? promogames_core_sanitize_score(wp_unslash($_POST['promogames_review_score'])) : null;
     $featured = isset($_POST['promogames_featured']);
+    $display = isset($_POST['promogames_review_display']) ? wp_unslash($_POST['promogames_review_display']) : 'auto';
+    update_post_meta($post_id, 'promogames_review_display', in_array($display, ['auto', 'show', 'hide'], true) ? $display : 'auto');
     $order = isset($_POST['promogames_featured_order']) ? min(99, absint($_POST['promogames_featured_order'])) : 0;
 
     $deck === '' ? delete_post_meta($post_id, 'promogames_deck') : update_post_meta($post_id, 'promogames_deck', $deck);
@@ -319,7 +333,7 @@ function promogames_core_create_comment(WP_REST_Request $request): WP_REST_Respo
         'comment_type' => 'comment',
         'comment_parent' => 0,
         'user_id' => 0,
-        'comment_agent' => 'PromoGames Headless',
+        'comment_agent' => 'JoysticKnights Headless',
     ], true);
 
     if (is_wp_error($comment_id)) {
@@ -489,7 +503,7 @@ function promogames_core_home_endpoint(WP_REST_Request $request): WP_REST_Respon
 /** @return array{frontend:string,preview_secret:string,revalidate_url:string,revalidate_secret:string,comments_secret:string} */
 function promogames_core_config(): array
 {
-    // Preserve the existing JoystickNights cutover defaults when upgrading 1.1.
+    // Preserve the existing JoysticKnights cutover defaults when upgrading 1.1.
     // Constants remain authoritative for other installations and staging.
     $default_frontend = wp_parse_url(home_url(), PHP_URL_HOST) === 'cms.joysticknights.com.br' ? 'https://joysticknights.com.br' : '';
     $frontend = defined('PROMOGAMES_FRONTEND_URL') ? untrailingslashit(PROMOGAMES_FRONTEND_URL) : $default_frontend;
@@ -626,7 +640,7 @@ function promogames_core_redirect_public_frontend(): void
     }
 
     if ($path === '/' && is_user_logged_in()) {
-        wp_safe_redirect(admin_url(), 302, 'PromoGames Core');
+        wp_safe_redirect(admin_url(), 302, 'JoysticKnights Core');
         exit;
     }
 
@@ -635,7 +649,7 @@ function promogames_core_redirect_public_frontend(): void
         return;
     }
 
-    wp_redirect(promogames_core_frontend_url($request_uri), 301, 'PromoGames Core');
+    wp_redirect(promogames_core_frontend_url($request_uri), 301, 'JoysticKnights Core');
     exit;
 }
 add_action('template_redirect', 'promogames_core_redirect_public_frontend', 0);
@@ -668,7 +682,7 @@ function promogames_core_preview_link(string $preview_link, WP_Post $post): stri
     if ($config['frontend'] === '' || $config['preview_secret'] === '') {
         return $preview_link;
     }
-    return add_query_arg(['id' => $post->ID, 'secret' => $config['preview_secret']], $config['frontend'] . '/api/draft/');
+    return promogames_core_authorized_preview_link($preview_link, $post);
 }
 add_filter('preview_post_link', 'promogames_core_preview_link', 10, 2);
 
@@ -726,7 +740,7 @@ function promogames_core_record_revalidation_result(bool $success, string $resul
     ], false);
 
     if (!$success) {
-        error_log(sprintf('[PromoGames Core] Falha na revalidação (%s).', $safe_result));
+        error_log(sprintf('[JoysticKnights Core] Falha na revalidação (%s).', $safe_result));
     }
 }
 
@@ -902,7 +916,7 @@ function promogames_core_admin_notice(): void
     if ($config['frontend'] && $config['preview_secret'] && $config['revalidate_url'] && $config['revalidate_secret'] && $config['comments_secret']) {
         return;
     }
-    echo '<div class="notice notice-warning"><p><strong>PromoGames Core:</strong> configure as constantes de integração no <code>wp-config.php</code> para habilitar preview e revalidação.</p></div>';
+    echo '<div class="notice notice-warning"><p><strong>JoysticKnights Core:</strong> configure as constantes de integração no <code>wp-config.php</code> para habilitar preview e revalidação.</p></div>';
 }
 add_action('admin_notices', 'promogames_core_admin_notice');
 
@@ -910,7 +924,7 @@ add_action('admin_notices', 'promogames_core_admin_notice');
 function promogames_core_register_site_health_test(array $tests): array
 {
     $tests['direct']['promogames_core_configuration'] = [
-        'label' => 'Integração headless do PromoGames Core',
+        'label' => 'Integração headless do JoysticKnights Core',
         'test' => 'promogames_core_site_health_test',
     ];
     return $tests;
@@ -982,7 +996,7 @@ function promogames_core_site_health_test(): array
     return [
         'label' => $label,
         'status' => $status,
-        'badge' => ['label' => 'PromoGames Core', 'color' => 'blue'],
+        'badge' => ['label' => 'JoysticKnights Core', 'color' => 'blue'],
         'description' => '<p>' . esc_html($description) . '</p>',
         'actions' => '',
         'test' => 'promogames_core_configuration',
@@ -996,7 +1010,11 @@ add_filter('rest_post_collection_params', static function (array $params): array
 });
 add_filter('rest_post_query', static function (array $args, WP_REST_Request $request): array {
     $clauses = [];
-    if ($request->get_param('platform')) {
+    if ($request->get_param('platform') === 'mobile') {
+        // Editors may classify Mobile with the native category or with the
+        // platform field. Match either without rewriting their saved metadata.
+        $args['promogames_mobile_filter'] = true;
+    } elseif ($request->get_param('platform')) {
         $clauses[] = ['key' => 'promogames_platforms', 'value' => '"' . sanitize_key($request->get_param('platform')) . '"', 'compare' => 'LIKE'];
     }
     if ($request->get_param('editorial_type')) {
@@ -1006,6 +1024,18 @@ add_filter('rest_post_query', static function (array $args, WP_REST_Request $req
         $args['meta_query'] = ['relation' => 'AND', $args['meta_query'] ?? [], ...$clauses];
     }
     return $args;
+}, 10, 2);
+
+add_filter('posts_where', static function (string $where, WP_Query $query): string {
+    if (!$query->get('promogames_mobile_filter')) return $where;
+    global $wpdb;
+    // EXISTS keeps one row per post, even when both classifications match;
+    // WordPress still applies status, category, type and pagination constraints.
+    return $where . $wpdb->prepare(
+        " AND (EXISTS (SELECT 1 FROM {$wpdb->postmeta} pg_mobile_meta WHERE pg_mobile_meta.post_id = {$wpdb->posts}.ID AND pg_mobile_meta.meta_key = %s AND pg_mobile_meta.meta_value LIKE %s)
+        OR EXISTS (SELECT 1 FROM {$wpdb->term_relationships} pg_mobile_rel INNER JOIN {$wpdb->term_taxonomy} pg_mobile_tax ON pg_mobile_tax.term_taxonomy_id = pg_mobile_rel.term_taxonomy_id INNER JOIN {$wpdb->terms} pg_mobile_term ON pg_mobile_term.term_id = pg_mobile_tax.term_id WHERE pg_mobile_rel.object_id = {$wpdb->posts}.ID AND pg_mobile_tax.taxonomy = %s AND pg_mobile_term.slug = %s))",
+        'promogames_platforms', '%' . $wpdb->esc_like('"mobile"') . '%', 'category', 'mobile'
+    );
 }, 10, 2);
 
 function promogames_core_editorial_type_from_terms(array $terms): string

@@ -175,7 +175,8 @@ export function mapPost(post: RawPost): Story {
       pros: (post.meta?.promogames_review_pros ?? "").split(/\r?\n/).map(plainText).filter(Boolean),
       cons: (post.meta?.promogames_review_cons ?? "").split(/\r?\n/).map(plainText).filter(Boolean),
     } : undefined,
-    reviewScore: Number.isFinite(reviewScore) && reviewScore! >= 0 && reviewScore! <= 10 ? reviewScore : undefined,
+    reviewScore: post.meta?.promogames_review_display !== "hide" && Number.isFinite(reviewScore) && reviewScore! >= 0 && reviewScore! <= 10 ? reviewScore : undefined,
+    reviewDisplay: post.meta?.promogames_review_display ?? "auto",
     featured: toBoolean(post.meta?.promogames_featured),
   };
 }

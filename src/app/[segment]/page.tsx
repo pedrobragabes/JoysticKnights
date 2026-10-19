@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { CategoryHighlights } from "@/components/editorial/category-highlights";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ArchiveHeader, StoryArchive } from "@/components/editorial/archive";
 import { InstitutionalPage } from "@/components/editorial/institutional-page";
@@ -73,7 +72,6 @@ export default async function SlugPage({ params, searchParams }: PageProps<"/[se
       <>
         <ArchiveHeader eyebrow="Categoria" title={content.category.name} description={content.category.description || `Confira as últimas publicações de ${content.category.name} no ${siteConfig.name}.`} count={result.total} />
         <StoryArchive basePath={content.category.href} result={result} emptyMessage={`Ainda não há matérias em ${content.category.name}.`} />
-        {page === 1 ? <CategoryHighlights categoryId={content.category.id} /> : null}
       </>
     );
   }

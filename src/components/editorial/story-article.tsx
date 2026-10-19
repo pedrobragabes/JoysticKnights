@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AdminToolbar } from "./admin-toolbar";
 import { CommentsSection } from "@/components/editorial/comments-section";
 import { AdSlot } from "@/components/platform/ad-slot";
 import { StructuredData } from "@/components/structured-data";
@@ -72,6 +73,7 @@ export async function StoryArticle({ story, preview = false }: { story: Story; p
 
   return (
     <article key={story.id} data-story-id={story.id} data-story-href={story.href} className="story-entry pb-20">
+      {!preview ? <AdminToolbar postId={story.id} /> : null}
       <ReadingProgress />
       {!preview ? <StructuredData data={jsonLd} /> : null}
       <header className="border-b border-line bg-surface px-4 py-10 sm:px-6 sm:py-14 lg:px-10 lg:py-16">

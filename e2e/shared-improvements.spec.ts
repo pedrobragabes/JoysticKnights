@@ -5,10 +5,10 @@ test.beforeEach(async ({ context }) => {
   await context.addInitScript(() => localStorage.setItem("editorial-site-consent", JSON.stringify({ version: 1, statistics: false, marketing: false, updatedAt: new Date().toISOString() })));
 });
 
-test("melhorias editoriais preservam a identidade e os destinos do JoystickNights", async ({ page, isMobile, request }) => {
+test("melhorias editoriais preservam a identidade e os destinos do JoysticKnights", async ({ page, isMobile, request }) => {
   await page.goto("/");
   await expect(page.locator("html")).toHaveAttribute("data-profile", "joysticknights");
-  await expect(page).toHaveTitle(/JoystickNights/);
+  await expect(page).toHaveTitle(/JoysticKnights/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Notícias");
   await expect(page.locator('a[href*="chat.whatsapp.com"], a[href*="t.me/"], img[src*="promogames"], [data-promogames-area]')).toHaveCount(0);
   const heroImages = page.getByTestId("featured-carousel").locator("img");
@@ -63,4 +63,11 @@ test("contato oferece o e-mail da redação e preserva privacidade e contraste",
     const { violations } = await new AxeBuilder({ page }).withRules(["color-contrast"]).analyze();
     expect(violations).toEqual([]);
   }
+});
+
+test("Mobile opens a platform archive independently of category existence", async ({ page }) => {
+  const response = await page.goto("/mobile/");
+  expect(response?.status()).toBe(200);
+  await expect(page.getByRole("heading", { name: "Mobile", exact: true })).toBeVisible();
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/mobile\/$/);
 });

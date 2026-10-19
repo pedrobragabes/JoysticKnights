@@ -3,7 +3,7 @@ export type SiteProfile = "promogames" | "joysticknights";
 type NavigationCategory = {
   slug: string;
   label: string;
-  icon: "playstation" | "xbox" | "nintendo" | "pc" | "news" | "anime" | "review" | "guide" | "deal";
+  icon: "playstation" | "xbox" | "nintendo" | "pc" | "mobile" | "news" | "anime" | "review" | "guide" | "deal";
 };
 
 type SiteConfig = {
@@ -67,14 +67,14 @@ const profiles: Record<SiteProfile, SiteConfig> = {
   },
   joysticknights: {
     profile: "joysticknights",
-    name: "JoystickNights",
-    brandLines: ["Joystick", "Nights"],
+    name: "JoysticKnights",
+    brandLines: ["Joystic", "Knights"],
     brandMark: "J",
     defaultSiteUrl: "https://joysticknights.com.br",
     defaultWordPressApiUrl: "https://cms.joysticknights.com.br/wp-json/wp/v2",
     description: "Notícias, análises e cultura gamer para quem joga no PlayStation, Xbox, Nintendo e PC.",
     shortDescription: "Notícias, análises e cultura gamer para quem joga até tarde.",
-    newsroomLabel: "Redação JoystickNights",
+    newsroomLabel: "Redação JoysticKnights",
     contactEmail: "contact@joysticknights.com.br",
     twitterHandle: "@errinhopog",
     social: {
@@ -89,6 +89,7 @@ const profiles: Record<SiteProfile, SiteConfig> = {
       { slug: "xbox", label: "Xbox", icon: "xbox" },
       { slug: "nintendo", label: "Nintendo", icon: "nintendo" },
       { slug: "pc", label: "PC", icon: "pc" },
+      { slug: "mobile", label: "Mobile", icon: "mobile" },
     ],
     featuredChannelSlugs: ["playstation", "xbox", "nintendo", "pc"],
     theme: {
@@ -112,6 +113,7 @@ export function getSiteUrl() {
 }
 
 export function getCategoryHref(slug: string) {
+  if (slug === "mobile") return "/mobile/";
   if (siteConfig.profile === "joysticknights") {
     const parent = siteConfig.featuredChannelSlugs.includes(slug) || slug === "mobile" ? "/plataformas" : "";
     return `/category${parent}/${slug}/`;

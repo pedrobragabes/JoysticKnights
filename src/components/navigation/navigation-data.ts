@@ -6,7 +6,7 @@ export type NavigationGroup = { label: string; links: NavigationLink[] };
 
 const categories = siteConfig.navigationCategories.map((category) => ({
   href: getCategoryHref(category.slug), label: category.label, icon: category.icon,
-  platform: siteConfig.featuredChannelSlugs.includes(category.slug),
+  platform: siteConfig.featuredChannelSlugs.includes(category.slug) || category.slug === "mobile",
 }));
 
 export const navigationGroups: NavigationGroup[] = [
