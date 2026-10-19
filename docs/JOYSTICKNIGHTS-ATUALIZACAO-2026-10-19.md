@@ -32,6 +32,14 @@ Node 22: lint, TypeScript, build e 101 testes unitários aprovados. E2E: 56 apro
 
 Uma variação não canônica de base64url na assinatura de prévia foi identificada ao rodar o teste portado com Node 22 e corrigida no JoysticKnights. O PromoGames foi apenas lido e permanece sem alterações por esta tarefa.
 
+## Implantação confirmada em 19/10/2026
+
+PR #25 integrada em `main` (`abeaf8b`), CI e varredura de segredos aprovadas. Hostinger concluiu a implantação com Node 22. Core 1.5.0-jk.1 instalado e as quatro flags acima ativadas. Página inicial e `/mobile/` respondem; a barra administrativa apareceu na sessão real do CMS e o formulário nativo da home foi salvo com os valores existentes. Prévia privada ainda requer validação real com um rascunho.
+
+Exportações WordPress antes/depois: 709 itens originais, 709 preservados, nenhum ausente/alterado/adicionado na comparação de conteúdo, título, slug, status, tipo, anexos e datas. Pacote atual, pacote de retorno baseado no código anterior, exportações e relatório ficam privadamente em `%LOCALAPPDATA%/JoysticKnights/releases-20261019/`. O pacote de retorno não substitui backup integral da hospedagem.
+
+Os números e versões anteriores descrevem a inspeção inicial. A newsroom foi criada como app separado; sua ativação editorial depende do banco e das credenciais próprios.
+
 ## Retorno
 
 Repor o par frontend/Core anterior e as variáveis anteriores. Preservar o banco, uploads, matérias e opções atuais; nunca restaurar dump antigo sobre notícias novas. As opções e metadados desta versão não são apagados na desativação.
